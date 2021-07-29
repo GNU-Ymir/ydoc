@@ -1,0 +1,1876 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "12", 
+		"name" : "std::args::printf", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"doc" : "\n  The list of tokens that can be found inside a list of arguments\n  \n ", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "std::args::ArgsTokens", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "DHYPHEN", 
+			"value" : " --"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "SHYPHEN", 
+			"value" : " -"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EQUALS", 
+			"value" : "="
+		}, 
+		{
+			"doc" : "", 
+			"name" : "QUOTE", 
+			"value" : "\""
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "23", 
+		"name" : "std::args::ArgsTokens", 
+		"protection" : "prv", 
+		"type" : "enum"
+	}, 
+	{
+		"doc" : "\n  Enumeration used to specify a parameter that can be set or not in an argument line\n  @example: \n  =================\n  let command_line = [\"./a.out\", \"--foo\"];\n \n  struct \n  | foo : YesNo\n  | bar : YesNo\n   -> MyArguments;\n  \n  let parser = ArgumentParser!{MyArguments}::new ();\n  let args : MyArguments = parser.parse (command_line);\n  assert (args.foo && !args.bar);\n  =================\n ", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "std::args::YesNo", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "YES", 
+			"value" : "true"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "NO", 
+			"value" : "false"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "44", 
+		"name" : "std::args::YesNo", 
+		"protection" : "pub", 
+		"type" : "enum"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : " The long name of the argument (example 'foo')", 
+			"mut" : "false", 
+			"name" : "long", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}, 
+		{
+			"doc" : " The short name of the argument (example 'f')", 
+			"mut" : "false", 
+			"name" : "short", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}, 
+		{
+			"doc" : " The comment printed in the help", 
+			"mut" : "false", 
+			"name" : "comment", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "51", 
+		"name" : "std::args::Argument", 
+		"protection" : "prv", 
+		"type" : "struct"
+	}, 
+	{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "\n      Create a new argument parser, where each field of the structure are used to initialized the parser \n      By default, the argument only have a long name and are all named, the methods info, and positional can be used to change that\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+				"loc_line" : "121", 
+				"name" : "self", 
+				"param" : [], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "", 
+			"fields" : [{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_content", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_helps", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_positional", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_knwon_pos", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "11", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "110", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Perform the parse of the command line\n      @params: \n        - line: the command line options (for example, the arguments passed to the main function)\n      @returns: the structure T, filled by the command line options*\n      @throws: \n        - ArgumentError: if the parsing failed, the method diagnosis can be used to compute a readable error\n        - HelpRequired: a argument set as 'isHelp', has been filled\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+				"loc_line" : "214", 
+				"name" : "parse", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "line", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "[[c8]]", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(ArgumentError)", 
+					"type" : "unknown"
+				}, 
+				{
+					"name" : "&(HelpRequired)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Perform the parse of the command line\n      @params: \n        - line: the command line options (for example, the arguments passed to the main function)\n      @returns: the structure T, filled by the command line options*\n      @throws: \n        - ArgumentError: if the parsing failed, the method diagnosis can be used to compute a readable error\n        - HelpRequired: a argument set as 'isHelp', has been filled\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+				"loc_line" : "235", 
+				"name" : "parse", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "line", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "[[c32]]", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(ArgumentError)", 
+					"type" : "unknown"
+				}, 
+				{
+					"name" : "&(HelpRequired)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Perform the parse of the command line (encoded in utf32)\n      @params: \n        - line: the command line options\n      @returns: the structure T, filled by the command line options*\n      @throws: \n        - ArgumentError: if the parsing failed, the method diagnosis can be used to compute a readable error\n        - HelpRequired: a argument set as 'isHelp', has been filled\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+				"loc_line" : "256", 
+				"name" : "parse", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "content", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "[c32]", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(ArgumentError)", 
+					"type" : "unknown"
+				}, 
+				{
+					"name" : "&(HelpRequired)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Create a string containing a readable error from a argument parsing error\n      @params: \n         - err: the error thrown by parse method\n         - isSub: internal parameter (do not set it if your are not sure), used to append sub errors \n      @example: \n      ==================\n      Missing argument 'N' of type '[int... ]'\n      ==================\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+				"loc_line" : "273", 
+				"name" : "diagnosis", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "err", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(ArgumentError)", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "isSub", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "bool", 
+						"type" : "unknown"
+					}, 
+					"value" : "false"
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Create a string containing the usage of the argument parser\n      This usage is the complete help of the program, in multiple line\n      It can be used to print the help, when the exception HelpRequired is thrown\n      @example: \n      =================\n      usage: [--h] [--sum] [--v] [--o str] --useless int [ int... ](N)\n\n      positional arguments : \n     	      N	list of integers to process\n     \n      required arguments : \n     	         --useless     a useless but mandatory argument\n     \n      optional arguments : \n             -h, --help	print this help and exit\n     	          --sum	        sum the integers (default find the max)\n     	      -v, --verbose	prints the intermediate operations\n     	      -o, --output	does nothing\n     \n      =================\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+				"loc_line" : "342", 
+				"name" : "usage", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "cmd", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "[c32]", 
+						"type" : "unknown"
+					}, 
+					"value" : "usage"
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Create a string containing the usage of the argument parse in a single line\n      This can be used to display the usage of the argument parser when a argument error occured\n      @example: \n      =====================\n      usage: [--h] [--sum] [--v] [--o str] --useless int [ int... ](N)\n      =====================\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+				"loc_line" : "396", 
+				"name" : "simpleUsage", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "cmd", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "[c32]", 
+						"type" : "unknown"
+					}, 
+					"value" : "usage"
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "ArgumentParser", 
+			"others" : [{
+				"child" : {
+					"attributes" : [], 
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+					"loc_line" : "148", 
+					"name" : "info", 
+					"params" : [{
+						"mut" : "true", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}, 
+					{
+						"mut" : "false", 
+						"name" : "short", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "[c32]", 
+							"type" : "unknown"
+						}, 
+						"value" : ""
+					}, 
+					{
+						"mut" : "false", 
+						"name" : "comments", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "[c32]", 
+							"type" : "unknown"
+						}, 
+						"value" : ""
+					}, 
+					{
+						"mut" : "false", 
+						"name" : "isHelp", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "bool", 
+							"type" : "unknown"
+						}, 
+						"value" : "false"
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "dmut &(ArgumentParser)", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				"doc" : "\n      Set information about a named argument (called with --{long|short}, or -{long|short})\n      @templates: \n         - long: the name of the field in the structure T (must be in the structure to compile)\n      @params: \n         - short: the short name of the argument (optional)\n         - comments: the comments to display in the help  (optional)\n         - isHelp: if true, when set the parser will throw the exception HelpRequired\n      @returns: the actual parser, but with updated informations\n      @info: the parser is returned, to be able to set it in a single line fashion\n      @example: \n      ===================\n      let line = [\"./a.out\", \"-f\", \"1\", \"--bar\", \"2\"];\n      let parser = ArgumentParser!{MyStruct}::new () \n                     :.info!\"foo\" (short-> \"f\", comments-> \"an integer\"), \n                     :.info!\"bar\" (comments-> \"an integer\"),\n                     :.info!\"help\" (short-> \"h\", isHelp-> true);\n      let args = parser.parse (line);\n      assert (args.foo == 1 && args.bar == 2);\n      ===================\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+				"loc_line" : "148", 
+				"name" : "info", 
+				"params" : ["long : [c32]"], 
+				"protection" : "pub", 
+				"type" : "template"
+			}, 
+			{
+				"child" : {
+					"attributes" : [], 
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+					"loc_line" : "192", 
+					"name" : "positional", 
+					"params" : [{
+						"mut" : "true", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}, 
+					{
+						"mut" : "false", 
+						"name" : "comments", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "[c32]", 
+							"type" : "unknown"
+						}, 
+						"value" : ""
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "dmut &(ArgumentParser)", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				"doc" : "\n      Set information about a positional argument, set by the argument at the given position\n      @info: \n      ===================\n      If there is multiple positional argument, the position is the same as this method call\n      For example, with two positional argument foo and bar, `:.positional!\"foo\" ():.positional!\"bar\" ()`.\n      'foo' will be the first positional argument, and 'bar' the second\n      ===================\n      @known_bug: \n      ================\n      If a positional argument is an array, the argument parser will never pass to the next positional argument, even if the type is incorrect\n      ================\n      @templates: \n          - long: the name of the field in the structure T, it must be in the structure to compile, and must be a mandatory field (no default value)\n      @params: \n         - comments: the comments to display in the help\n      @returns: the actual parser, but with updated informations\n      @info: the parser is returned, to be able to set it in a single line fashion\n      @example: \n      ===================\n      let line = [\"./a.out\", \"1\", \"2\"];\n      let parser = ArgumentParser!{MyStruct}::new () \n                     :.positional!\"foo\" (comments-> \"an integer\"), \n                     :.positional!\"bar\" (comments-> \"another integer\"),\n                     :.info!\"help\" (short-> \"h\", isHelp-> true);\n      let args = parser.parse (line);\n      assert (args.foo == 1 && args.bar == 2);\n      ===================\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+				"loc_line" : "192", 
+				"name" : "positional", 
+				"params" : ["long : [c32]"], 
+				"protection" : "pub", 
+				"type" : "template"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  An argument parser used to parse the argument of the command line\n  This class takes a structure as template parameter, this structure defines the list of arguments\n  @example: \n  ===========================\n  import std::args;\n  import std::io;\n \n  struct\n  | help : YesNo // Can be set or not\n  | sum : YesNo  // Can be set or not  \n  | N : [i32] // A list of integer, mandatory \n  | verbose : YesNo // Can be set or not  \n  | output : [c32] = \"\" // A string, optional          \n   -> Foo;\n \n  def main (args : [[c8]]) {\n     let x = ArgumentParser!(Foo)::new ()\n         :.info!\"help\" (short-> \"h\", comments-> \"print this help and exit\", isHelp-> true)\n         :.info!\"sum\" (comments-> \"sum the integers (default find the max)\")\n         :.info!\"output\" (short-> \"o\", comments-> \"does nothing\")\n         :.info!\"verbose\" (short-> \"v\", comments-> \"prints the intermediate operations\")\n         :.positional!\"N\" (comments-> \"list of integers to process\");    \n \n     {\n         let f = x.parse (args);\n         if (f.sum) {\n             let mut res = f.N [0];\n             for i in f.N[1u64..$] {\n                 if (f.verbose) println (res, \" + \", i, \" = \", res + i);\n                 res += i\n             }\n             println (res);\n         } else {\n             let mut res = f.N [0];\n             for i in f.N [1u64..$] {\n                 if (f.verbose) println (res, \" < \", i, \" = \", if (res < i) i else res);\n                 if (i > res) res = i;\n             }\n             println (res);\n         }\n     } catch {\n         err : &ArgumentError => {\n             println (x.simpleUsage ()); // Print the usage in a single line\n             println (x.diagnosis (err)); // Print the error in a readable way for the user\n         }\n         _ : &HelpRequired => {\n             println (x.usage ()); // Print the help in multiple line\n         }\n         err: _ => {\n             println (err);\n         }\n     }\n  }\n  ===========================\n ", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "110", 
+		"name" : "std::args::ArgumentParser", 
+		"params" : ["struct T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "460", 
+			"name" : "parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Lexer)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Parse the value from a class\n  The parsing of a class is let to the class\n  @example: \n  ======================\n  import std::lexer;\n  \n  class X {\n    pub self (args : [[c32]]) {\n        // Perform the parsing\n    }\n  }\n  \n  struct\n  | a : &X\n   -> MyArgs;\n  \n  let args = ArgumentParser!{MyArgs}::new ();\n  ======================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "460", 
+		"name" : "std::args::parseValue", 
+		"params" : ["class T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "492", 
+			"name" : "parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Lexer)", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "cuts", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(HashMap!([c32], Argument))", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "helps", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(HashSet!([c32]))", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "positional", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Vec!([c32]))", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentError)", 
+				"type" : "unknown"
+			}, 
+			{
+				"name" : "&(HelpRequired)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Parse the values to fill a structure\n  This is the main function of the parser\n  @params: \n    - lex: the lexer of the command line option\n    - cuts: the list of arguments\n    - helps: the list of arguments that throw HelpRequired\n    - positional: the list of positional arguments\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "492", 
+		"name" : "std::args::parseValue", 
+		"params" : ["struct T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "550", 
+			"name" : "parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Lexer)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "550", 
+		"name" : "std::args::parseValue", 
+		"params" : ["struct T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "574", 
+			"name" : "parseField", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Lexer)", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "name", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "init", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[u8]", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "574", 
+		"name" : "std::args::parseField", 
+		"params" : ["struct T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "610", 
+			"name" : "parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Lexer)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentCastError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Parse an array value in the lexer\n  @info: the returned array can be empty\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "610", 
+		"name" : "std::args::parseValue", 
+		"params" : ["T of [U]", "U"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "641", 
+			"name" : "parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Lexer)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "i64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentCastError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Parse a int literal in the lexer\n  @throws: \n     - &ArgumentError: if the next word in the lexer does not contains a int value\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "641", 
+		"name" : "std::args::parseValue", 
+		"params" : ["T of i64"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "653", 
+			"name" : "parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Lexer)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "i32", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentCastError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Parse a int literal in the lexer\n  @throws: \n     - &ArgumentError: if the next word in the lexer does not contains a int value\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "653", 
+		"name" : "std::args::parseValue", 
+		"params" : ["T of i32"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "665", 
+			"name" : "parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "txt", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "i32", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentCastError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Try to transform a string into a int value\n  @throws: \n     - &ArgumentError: if the string does not contain a int value (nor a hexa decimal value)\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "665", 
+		"name" : "std::args::parseValue", 
+		"params" : ["T of i32"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "676", 
+			"name" : "parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "txt", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "i64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentCastError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Try to transform a string into a int value\n  @throws: \n     - &ArgumentError: if the string does not contain a int value (nor a hexa decimal value)\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "676", 
+		"name" : "std::args::parseValue", 
+		"params" : ["T of i64"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "700", 
+			"name" : "parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "_", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Lexer)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "YesNo", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: YesNo::YES\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "700", 
+		"name" : "std::args::parseValue", 
+		"params" : ["T of YesNo"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "33", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "709", 
+			"name" : "parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Lexer)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "bool", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentCastError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Parse a bool value in a lexer\n  @throws: \n     - &ArgumentError: if neither \"true\" or \"false\" is found in the next word of the lexer\n ", 
+		"loc_col" : "33", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "709", 
+		"name" : "std::args::parseValue", 
+		"params" : ["T of bool"], 
+		"protection" : "prv", 
+		"test" : "!(template!(T)(U of YesNo))", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "33", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "721", 
+			"name" : "parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "txt", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "bool", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentCastError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Try to transform a string into a bool value\n  @throws: \n     - &ArgumentError: if the string is neither equal to \"true\" or \"false\" \n ", 
+		"loc_col" : "33", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "721", 
+		"name" : "std::args::parseValue", 
+		"params" : ["T of bool"], 
+		"protection" : "prv", 
+		"test" : "!(template!(T)(U of YesNo))", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "738", 
+			"name" : "parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Lexer)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "f64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentCastError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Parse a float value into a lexer\n  @throws: \n     - &ArgumentError: if the next word in the lexer does not contains a float value\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "738", 
+		"name" : "std::args::parseValue", 
+		"params" : ["T of f64"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "750", 
+			"name" : "parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "txt", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "f64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentCastError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a string into a float value\n  @throws: \n     - &ArgumentError: if string does not contain a float value\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "750", 
+		"name" : "std::args::parseValue", 
+		"params" : ["T of f64"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "772", 
+			"name" : "parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Lexer)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentCastError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Parse a string literal in the lexer\n  @throws : \n     - &ArgumentError: if the reading of the string failed\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "772", 
+		"name" : "std::args::parseValue", 
+		"params" : ["T of [U]", "U of c32"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Parse a string literal in the lexer\n  This function is used to read a string enclosed by quotes\n  @throws : \n     - &SyntaxError: if the reading of the string failed\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "795", 
+		"name" : "std::args::parseString", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "lex", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::lexer::Lexer", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "c32", 
+				"type" : "char"
+			}], 
+			"mut" : "false", 
+			"type" : "slice"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::lexer::SyntaxError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "824", 
+			"name" : "verifyInit", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "used", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(HashSet!([c32]))", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "init", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[u8]", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ArgumentError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Verify that the struct is correctly filled, and that no mandatory arguments are missing\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "824", 
+		"name" : "std::args::verifyInit", 
+		"params" : ["struct T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: a string containing the name of the type for usage printing\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "856", 
+		"name" : "std::args::usageValue", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "t", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "core::typeinfo::TypeInfo", 
+				"type" : "struct"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "c32", 
+				"type" : "char"
+			}], 
+			"mut" : "false", 
+			"type" : "slice"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "49", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "871", 
+			"name" : "usageValue", 
+			"params" : [], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: a string containing the name of the type for usage printing\n ", 
+		"loc_col" : "49", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "871", 
+		"name" : "std::args::usageValue", 
+		"params" : ["T"], 
+		"protection" : "prv", 
+		"test" : "(template!(T)(U of i32) || template!(T)(U of i64))", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "36", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "878", 
+			"name" : "usageValue", 
+			"params" : [], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: a string containing the name of the type for usage printing\n ", 
+		"loc_col" : "36", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "878", 
+		"name" : "std::args::usageValue", 
+		"params" : ["T of bool"], 
+		"protection" : "prv", 
+		"test" : "!(template!(T)(U of YesNo))", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "885", 
+			"name" : "usageValue", 
+			"params" : [], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: a string containing the name of the type for usage printing\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "885", 
+		"name" : "std::args::usageValue", 
+		"params" : ["T of [U]", "U of c32"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "892", 
+			"name" : "usageValue", 
+			"params" : [], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: a string containing the name of the type for usage printing\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "892", 
+		"name" : "std::args::usageValue", 
+		"params" : ["T of f64"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "899", 
+			"name" : "usageValue", 
+			"params" : [], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: a string containing the name of the type for usage printing\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "899", 
+		"name" : "std::args::usageValue", 
+		"params" : ["T of [U]", "U"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "903", 
+			"name" : "usageValue", 
+			"params" : [], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "903", 
+		"name" : "std::args::usageValue", 
+		"params" : ["struct T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "931", 
+			"name" : "usageValue", 
+			"params" : [], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "931", 
+		"name" : "std::args::usageValue", 
+		"params" : ["class T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "935", 
+			"name" : "usageValue", 
+			"params" : [], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "935", 
+		"name" : "std::args::usageValue", 
+		"params" : ["U of YesNo"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "core::exception::Exception", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      @params: \n         - from, the type from which we want a cast\n         - to, the type to which we want a cast\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "953", 
+			"name" : "std::args::ArgumentError::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "name", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}, 
+				"value" : ""
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "subError", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "core::exception::Exception", 
+							"type" : "class"
+						}], 
+						"mut" : "false", 
+						"type" : "class_pointer"
+					}], 
+					"mut" : "false", 
+					"type" : "option"
+				}, 
+				"value" : "Err (null)"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "type", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "core::typeinfo::TypeInfo", 
+					"type" : "struct"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "field", 
+			"protection" : "pub", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "subError", 
+			"protection" : "pub", 
+			"type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "core::exception::Exception", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}], 
+				"mut" : "false", 
+				"type" : "option"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "type", 
+			"protection" : "pub", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "core::typeinfo::TypeInfo", 
+				"type" : "struct"
+			}
+		}], 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "\n          Just print the error to stdout\n         ", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+				"loc_line" : "960", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "955", 
+			"name" : "std::args::ArgumentError", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "940", 
+		"methods" : [], 
+		"name" : "std::args::ArgumentError", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::args::ArgumentError", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "985", 
+			"name" : "std::args::ArgumentCastError::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "name", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}, 
+				"value" : ""
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "subError", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "core::exception::Exception", 
+							"type" : "class"
+						}], 
+						"mut" : "false", 
+						"type" : "class_pointer"
+					}], 
+					"mut" : "false", 
+					"type" : "option"
+				}, 
+				"value" : "Err (null)"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "to", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "core::typeinfo::TypeInfo", 
+					"type" : "struct"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "from", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "from", 
+			"protection" : "pub", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "\n          Just print the error to stdout\n         ", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+				"loc_line" : "993", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "988", 
+			"name" : "std::args::ArgumentCastError", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "982", 
+		"methods" : [], 
+		"name" : "std::args::ArgumentCastError", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::args::ArgumentError", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "1006", 
+			"name" : "std::args::ArgumentUnknownError::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "name", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [], 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "\n          Just print the error to stdout\n         ", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+				"loc_line" : "1013", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "1008", 
+			"name" : "std::args::ArgumentUnknownError", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "1004", 
+		"methods" : [], 
+		"name" : "std::args::ArgumentUnknownError", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "core::exception::Exception", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "1024", 
+			"name" : "std::args::HelpRequired::self", 
+			"params" : [], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [], 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+				"loc_line" : "1027", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+			"loc_line" : "1026", 
+			"name" : "std::args::HelpRequired", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+		"loc_line" : "1022", 
+		"methods" : [], 
+		"name" : "std::args::HelpRequired", 
+		"protection" : "pub", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/args.yr", 
+	"loc_line" : "1", 
+	"name" : "std::args", 
+	"protection" : "prv", 
+	"type" : "module"
+}

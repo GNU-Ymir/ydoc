@@ -1,0 +1,755 @@
+{
+	"childs" : [{
+		"doc" : "\n  Some constants for the vec implementation\n ", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "std::collection::vec::VecConst", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : " The size that is allocated after the first push", 
+			"name" : "DEFAULT_ALLOC_SIZE", 
+			"value" : "10"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+		"loc_line" : "17", 
+		"name" : "std::collection::vec::VecConst", 
+		"protection" : "prv", 
+		"type" : "enum"
+	}, 
+	{
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+			"loc_line" : "35", 
+			"name" : "std::collection::vec::vec::self", 
+			"protection" : "pub", 
+			"rule" : "(fst=__expr rest=(',' val=__expr)*)", 
+			"skips" : ["' '", "'\n'", "'\r'", "'\t'"]
+		}], 
+		"doc" : "\n  Macro that can be used to declare a vector easily\n  @example: \n  ==========\n  let x = vec#[1, 2, 3];\n  {\n     assert (x == [1, 2, 3]);\n  } catch {\n    _: &AssertError => {}\n  }\n  \n  ==========\n ", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+		"loc_line" : "33", 
+		"name" : "std::collection::vec::vec", 
+		"protection" : "pub", 
+		"rules" : [], 
+		"type" : "macro"
+	}, 
+	{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "69", 
+				"name" : "self", 
+				"param" : [{
+					"mut" : "false", 
+					"name" : "data", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "[T]", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "len", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}, 
+			{
+				"doc" : "\n      Create an empty vector\n      The vector does not allocate until push\n      @example: \n      =================\n      let x = Vec!(i32)::new ();\n      \n      assert (x.capacity () == 0);\n      =================\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "83", 
+				"name" : "self", 
+				"param" : [], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "", 
+			"fields" : [{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_data", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "[mut T]", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_len", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "18", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+			"loc_line" : "63", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Append an element at the end of the vector\n      @params: \n         - val: the element to append\n      @example: \n      ===============\n      let dmut x = Vec!(i32)::new ();\n      x:.push (1);\n      x:.push (1);\n      \n      ===============\n      @complexity: O (n), with n = self._len\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "98", 
+				"name" : "push", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Remove the last element of the vector, and returns it\n      @throws: \n         - OutOfArray: if the vector is empty\n      @example: \n      ======================\n      let dmut x = Vec!(i32)::new ();\n      \n      x:.push (1);\n      {\n         assert (x:.pop () == 1);\n      } catch {\n         ex : &OutOfArray => { \n              println (\"Vector was empty\");\n         } \n      } \n      ======================\n      @complexity: O (n), with n = self._len\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "128", 
+				"name" : "pop", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(OutOfArray)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Change the capacity of the vector to the number of element it stores\n      @example: \n      ==============\n      let dmut x = Vec!(i32)::new ();\n      for i in 0 ... 4 \n          x:.push (i);\n      println (x.capacity ()); // 10\n      x:.fit ();\n      assert (x.capacity () == 5us); \n      assert (x == [0, 1, 2, 3, 4]);\n      ==============\n      @complexity: O (n), with n = self._len\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "156", 
+				"name" : "fit", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Pre allocate some memory space for the vector\n      Does nothing if the capacity is already higher than the requested size\n      @example: \n      =============\n      let dmut x = Vec!(i32)::new ();\n      let dmut y = Vec!(i32)::new ();\n      x:.reserve (1000);\n      let mut old_cap_x = x.capacity ();\n      let mut old_cap_y = y.capacity ();\n      for i in 0 .. 1000 {\n         x:.push (i);\n         y:.push (i);\n         if (old_cap != x.capacity ())  {\n            println (\"X grew\");\n            old_cap_x = x.capacity ();\n         } \n     \n         if (old_cap_y != y.capacity ())  {\n            println (\"Y grew\");\n            old_cap_y = y.capacity ();\n         } \n      }\n      =============\n      @complexity: O (n), with n = self._len\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "188", 
+				"name" : "reserve", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "size", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Remove all element inside the array\n      @example: \n      =============\n      let dmut x = Vec!(i32)::new ();\n      for i in 0 .. 1_000 {\n          x:.push (i);\n      }\n      \n      x:.clear ();\n      assert (x == []);\n      assert (x.capacity () == 0);\n      =============\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "209", 
+				"name" : "clear", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Get the slice content of the vec \n      @example: \n      ==========\n      let dmut x = Vec!(i32)::new ();\n      for i in 0 .. 3 {\n          x:.push (i);\n      }\n      assert (x [] == [0, 1, 2]);\n      ==========\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "285", 
+				"name" : "opIndex", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "[T]", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Change the value in the vec at a given index\n      @params:\n         - i: the index\n     @throws: \n        - &OutOfArray: if the index is not inside the vector\n      @example: \n      ===========\n      let dmut x = Vec!(i32)::new ();\n      x:.push (12);\n      {\n         (alias x)[0] = 78;\n         assert (x [0] == 78);\n      } catch {\n        _: &OutOfArray => {}\n        _: &AssertError => {}\n      }\n     \n      ===========\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "314", 
+				"name" : "opIndexAssign", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "i", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(OutOfArray)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      @return: the number of element the vector can store without reallocation\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "325", 
+				"name" : "capacity", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      @returns: an iterator to the beginning of the vector\n      @example: \n      ==========\n      let x = vec#[1, 2, 3];\n      for i in x {\n          println (i);\n      }\n      ==========\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "340", 
+				"name" : "begin", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "dmut &(VecIterator!(T))", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      @returns: an iterator to the end of the vector\n      @example: \n      ==========\n      let x = vec#[1, 2, 3];\n      for i in x {\n          println (i);\n      }\n      ==========\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "354", 
+				"name" : "end", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "&(VecIterator!(T))", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Change the size of the capacity to write other elements\n      @complexity: O (n), with n = self._len\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "423", 
+				"name" : "grow", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "Vec", 
+			"others" : [{
+				"condition" : "__pragma!operator(==, T, T)", 
+				"cstrs" : [], 
+				"doc" : "", 
+				"else" : {
+				
+				}, 
+				"fields" : [], 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "218", 
+				"methods" : [{
+					"attributes" : [], 
+					"doc" : "\n          Compare two vectors of same type\n          @example: \n          ============\n          let x = Vec!(i32)::new ();\n          let y = Vec!(i32)::new ();\n          let z = Vec!(i32)::new ();\n          x:.push (12);\n          y:.push (12);\n          z:.push (42);\n          {\n             assert (x == y);\n             assert (x != z);\n          } catch {\n             _: &AssertError => {}\n          }\n          ============\n         ", 
+					"loc_col" : "17", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+					"loc_line" : "238", 
+					"name" : "opEquals", 
+					"params" : [{
+						"mut" : "false", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}, 
+					{
+						"mut" : "false", 
+						"name" : "o", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "&(Vec!(T))", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "bool", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				{
+					"attributes" : [], 
+					"doc" : "\n          Compare a vector and an array of same inner type\n          @example: \n          ============\n          let x = Vec!(i32)::new ();\n          for i in 0 .. 3 \n              x:.push (i);\n          {\n             assert (x == [1, 2, 3]);\n          } catch {\n             _: &AssertError => {}\n          }\n          ============\n         ", 
+					"loc_col" : "17", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+					"loc_line" : "262", 
+					"name" : "opEquals", 
+					"params" : [{
+						"mut" : "false", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}, 
+					{
+						"mut" : "false", 
+						"name" : "o", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "[T]", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "bool", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}], 
+				"name" : "if", 
+				"others" : [], 
+				"protection" : "prot", 
+				"type" : "template_condition"
+			}, 
+			{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "358", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "(((std :: collection) :: seq) :: Seq)!(T)", 
+				"type" : "impl"
+			}, 
+			{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "397", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}, 
+			{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "435", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "Copiable", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  Vec is a growable array\n  It stores immutable values, but is itself mutable\n  @templates: \n     - T: the type of the values stored in the vector\n  @example: \n  ===========================\n  let dmut x = Vec!(i32)::new ();\n  x:.push (1);\n  x:.push (2);\n  x:.push (3);\n  \n  assert (x == [1, 2, 3]);\n  ===========================\n ", 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+		"loc_line" : "63", 
+		"name" : "std::collection::vec::Vec", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "\n      @params: \n         - index: the index in the array to point (can be equal to len, to point to nothing)\n         - len: the length of the vector\n         - data: the data contained in the vector\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "474", 
+				"name" : "self", 
+				"param" : [{
+					"mut" : "false", 
+					"name" : "index", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "len", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "data", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "[T]", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "", 
+			"fields" : [{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_index", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_len", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_data", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "[T]", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "18", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+			"loc_line" : "460", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Compare two iterators\n      Iterators are equals if they points to the same index\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "484", 
+				"name" : "opEquals", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "o", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(VecIterator!(T))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Move the iterator to the next element in the vector\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "491", 
+				"name" : "next", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "VecIterator", 
+			"others" : [{
+				"child" : {
+					"attributes" : [], 
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+					"loc_line" : "502", 
+					"name" : "get", 
+					"params" : [{
+						"mut" : "false", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				"doc" : "\n      @returns: \n      =======\n      the value pointed by the iterator\n      None, if the iterator points to nothing\n      =======\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "502", 
+				"name" : "get", 
+				"params" : ["0"], 
+				"protection" : "pub", 
+				"type" : "template"
+			}, 
+			{
+				"child" : {
+					"attributes" : [], 
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+					"loc_line" : "509", 
+					"name" : "get", 
+					"params" : [{
+						"mut" : "false", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				"doc" : "\n      @returns: the index in the vector, to which the iterator is pointing\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+				"loc_line" : "509", 
+				"name" : "get", 
+				"params" : ["1"], 
+				"protection" : "pub", 
+				"type" : "template"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  Class used to iter on a vector\n  @example: \n  ============\n  let x = vec#[1, 2, 3];\n  for val, index in x {\n      assert (x [index] == val);\n  } catch {\n     _ : &OutOfArray => { } // Impossible\n  }\n  ============\n ", 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+		"loc_line" : "460", 
+		"name" : "std::collection::vec::VecIterator", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/vec.yr", 
+	"loc_line" : "1", 
+	"name" : "std::collection::vec", 
+	"protection" : "prv", 
+	"type" : "module"
+}

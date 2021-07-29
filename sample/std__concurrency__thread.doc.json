@@ -1,0 +1,540 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "id", 
+			"type" : {
+				"mut" : "true", 
+				"name" : "usize", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "pipe", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::concurrency::pipe::ThreadPipe", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+		"loc_line" : "12", 
+		"name" : "std::concurrency::thread::Thread", 
+		"protection" : "pub", 
+		"type" : "struct"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Spawn the function inside of a thread\n  @warning: This type of thread are heavy thread\n  @info: to spawn light thread, use std::concurrency::future module instead\n  @params: \n     - func: the function to run inside a thread\n  \n  @example: \n  ============\n  import std::io;\n  import std::concurrency::thread;\n  import std::any;\n \n  def thread_func (th : Thread) -> void {\n    let msg = th.pipe.read ();\n    match msg {\n       x : &Some!{i32} => {\n           println (\"Ping : \", x);\n           th.pipe.write (x.unwrap () + 19);\n       }\n    }\n  }\n \n  def main () {\n    let th = spawn (&thread_func);\n    th.pipe.write (23);\n    println (\"Pong : \", th.pipe.read ());\n    th.join ();\n  }\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+		"loc_line" : "46", 
+		"name" : "std::concurrency::thread::spawn", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "func", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::concurrency::thread::Thread", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "fn_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "std::concurrency::thread::Thread", 
+			"type" : "struct"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Spawn a function from a closure inside a thread\n  @warning: This type of thread are heavy thread\n  @info: to spawn light thread, use std::concurrency::future module instead\n  @params: \n     - func: the function to run inside a thread\n  \n  @example: \n  ==========\n  import std::box;\n  \n  let dmut i = Box::new (0); // a box is a reference, so it's modification will be visible from a closure\n  let th = spawn (move |_| => {\n       loop {\n          println (\"I : \", i.get ()); // accessible by closure\n          if (i.get () == 1) break {}\n       }\n  });\n  \n  i:.set (1);\n  th.join ();\n  ==========\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+		"loc_line" : "75", 
+		"name" : "std::concurrency::thread::spawn", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "func", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::concurrency::thread::Thread", 
+						"type" : "struct"
+					}], 
+					"mut" : "false", 
+					"ret_type" : {
+						"mut" : "false", 
+						"name" : "void", 
+						"type" : "void"
+					}, 
+					"type" : "fn_pointer"
+				}], 
+				"mut" : "false", 
+				"type" : "dg_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "std::concurrency::thread::Thread", 
+			"type" : "struct"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Spawn a thread by does not create pipe description\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+		"loc_line" : "85", 
+		"name" : "std::concurrency::thread::spawnNoPipe", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "func", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::concurrency::thread::Thread", 
+						"type" : "struct"
+					}], 
+					"mut" : "false", 
+					"ret_type" : {
+						"mut" : "false", 
+						"name" : "void", 
+						"type" : "void"
+					}, 
+					"type" : "fn_pointer"
+				}], 
+				"mut" : "false", 
+				"type" : "dg_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "std::concurrency::thread::Thread", 
+			"type" : "struct"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Wait the end of execution of a thread\n  @params: \n     - th: the thread to wait\n  @example: \n  =============\n  let x = spawn (|_| => {\n      for i in 0 .. 1_000_000 {\n          println (i);\n      }\n  });\n  \n  x.join ();\n  println (\"Printed a million times already !\");\n  =============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+		"loc_line" : "108", 
+		"name" : "std::concurrency::thread::join", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "th", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "std::concurrency::thread::Thread", 
+				"type" : "struct"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Kill a running thread\n  @params: \n     - th: the thread to kill\n  @example: \n  ==============\n  let x = spawn (|_| => {\n     loop {\n        println (\"Looping forever?\");\n     }\n  });\n  x.kill ();\n  println (\"I guess not!\");\n  ==============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+		"loc_line" : "127", 
+		"name" : "std::concurrency::thread::kill", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "th", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "std::concurrency::thread::Thread", 
+				"type" : "struct"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"child" : {
+			"childs" : [{
+				"childs" : [{
+					"childs" : [{
+						"childs" : [{
+							"attributes" : [], 
+							"doc" : "", 
+							"loc_col" : "24", 
+							"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+							"loc_line" : "132", 
+							"name" : "_yrt_thread_create", 
+							"params" : [{
+								"mut" : "false", 
+								"name" : "id", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "&(usize)", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "attr", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "&(void)", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "func", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "fn (T)-> void", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "data", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "T", 
+									"type" : "unknown"
+								}
+							}], 
+							"protection" : "pub", 
+							"ret_type" : {
+								"name" : "i32", 
+								"type" : "unknown"
+							}, 
+							"throwers" : [], 
+							"type" : "function"
+						}], 
+						"doc" : "", 
+						"loc_col" : "18", 
+						"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+						"loc_line" : "132", 
+						"name" : ")", 
+						"protection" : "pub", 
+						"type" : "block"
+					}], 
+					"doc" : "", 
+					"from" : "C", 
+					"loc_col" : "9", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+					"loc_line" : "132", 
+					"name" : "extern", 
+					"protection" : "pub", 
+					"space" : "", 
+					"type" : "extern"
+				}], 
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+				"loc_line" : "132", 
+				"name" : "pub", 
+				"protection" : "prv", 
+				"type" : "block"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+			"loc_line" : "131", 
+			"name" : "Runtime", 
+			"protection" : "prv", 
+			"type" : "module"
+		}, 
+		"doc" : "", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+		"loc_line" : "131", 
+		"name" : "std::concurrency::thread::Runtime", 
+		"params" : ["class T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"childs" : [{
+			"attributes" : [], 
+			"doc" : "\n      This function is used to run a thread in a runtime created\n      thread We cannot directly give the closure of run, for obvious\n      reason, this function is a proxy that perform a sort of closure\n      on the thread\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+			"loc_line" : "143", 
+			"name" : "std::concurrency::thread::internal::thread_fn_main", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "actor", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::concurrency::thread::internal::FnThreadLauncher", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"asserts" : [], 
+			"cstrs" : [{
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+				"loc_line" : "159", 
+				"name" : "std::concurrency::thread::internal::FnThreadLauncher::self", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "func", 
+					"ref" : "false", 
+					"type" : {
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "std::concurrency::thread::Thread", 
+							"type" : "struct"
+						}], 
+						"mut" : "false", 
+						"ret_type" : {
+							"mut" : "false", 
+							"name" : "void", 
+							"type" : "void"
+						}, 
+						"type" : "fn_pointer"
+					}
+				}], 
+				"protection" : "pub", 
+				"type" : "cstr"
+			}], 
+			"doc" : "\n      A thread is a sequence of instruction that are managed independently\n      They are used to perform asynchronus operation\n     ", 
+			"fields" : [{
+				"doc" : " The id and the pipe to communicate with the spawned thread", 
+				"mut" : "false", 
+				"name" : "th_content", 
+				"protection" : "pub", 
+				"type" : {
+					"mut" : "true", 
+					"name" : "std::concurrency::thread::Thread", 
+					"type" : "struct"
+				}, 
+				"value" : "std::concurrency::thread::Thread (let mut id : mut usize, let pipe : &(std::concurrency::pipe::ThreadPipe)) (0, self ()-> mut &(mut std::concurrency::pipe::ThreadPipe) ())"
+			}, 
+			{
+				"doc" : " The function that is launch for the thread", 
+				"mut" : "false", 
+				"name" : "func", 
+				"protection" : "pub", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::concurrency::thread::Thread", 
+						"type" : "struct"
+					}], 
+					"mut" : "false", 
+					"ret_type" : {
+						"mut" : "false", 
+						"name" : "void", 
+						"type" : "void"
+					}, 
+					"type" : "fn_pointer"
+				}
+			}], 
+			"final" : "true", 
+			"impls" : [], 
+			"loc_col" : "22", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+			"loc_line" : "151", 
+			"methods" : [], 
+			"name" : "std::concurrency::thread::internal::FnThreadLauncher", 
+			"protection" : "pub", 
+			"type" : "class"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      This function is used to run a thread in a runtime created\n      thread We cannot directly give the closure of run, for obvious\n      reason, this function is a proxy that perform a sort of closure\n      on the thread\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+			"loc_line" : "169", 
+			"name" : "std::concurrency::thread::internal::thread_dg_main", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "actor", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::concurrency::thread::internal::DgThreadLauncher", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"asserts" : [], 
+			"cstrs" : [{
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+				"loc_line" : "185", 
+				"name" : "std::concurrency::thread::internal::DgThreadLauncher::self", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "func", 
+					"ref" : "false", 
+					"type" : {
+						"childs" : [{
+							"childs" : [{
+								"mut" : "false", 
+								"name" : "std::concurrency::thread::Thread", 
+								"type" : "struct"
+							}], 
+							"mut" : "false", 
+							"ret_type" : {
+								"mut" : "false", 
+								"name" : "void", 
+								"type" : "void"
+							}, 
+							"type" : "fn_pointer"
+						}], 
+						"mut" : "false", 
+						"type" : "dg_pointer"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "pipes", 
+					"ref" : "false", 
+					"type" : {
+						"mut" : "false", 
+						"name" : "bool", 
+						"type" : "bool"
+					}
+				}], 
+				"protection" : "pub", 
+				"type" : "cstr"
+			}], 
+			"doc" : "\n      A thread is a sequence of instruction that are managed independently\n      They are used to perform asynchronus operation\n     ", 
+			"fields" : [{
+				"doc" : " The id and the pipe to communicate with the spawned thread", 
+				"mut" : "false", 
+				"name" : "th_content", 
+				"protection" : "pub", 
+				"type" : {
+					"mut" : "true", 
+					"name" : "std::concurrency::thread::Thread", 
+					"type" : "struct"
+				}, 
+				"value" : "std::concurrency::thread::Thread (let mut id : mut usize, let pipe : &(std::concurrency::pipe::ThreadPipe)) (0, self ()-> mut &(mut std::concurrency::pipe::ThreadPipe) ())"
+			}, 
+			{
+				"doc" : " The function that is launch for the thread", 
+				"mut" : "false", 
+				"name" : "func", 
+				"protection" : "pub", 
+				"type" : {
+					"childs" : [{
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "std::concurrency::thread::Thread", 
+							"type" : "struct"
+						}], 
+						"mut" : "false", 
+						"ret_type" : {
+							"mut" : "false", 
+							"name" : "void", 
+							"type" : "void"
+						}, 
+						"type" : "fn_pointer"
+					}], 
+					"mut" : "false", 
+					"type" : "dg_pointer"
+				}
+			}], 
+			"final" : "true", 
+			"impls" : [], 
+			"loc_col" : "22", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+			"loc_line" : "177", 
+			"methods" : [], 
+			"name" : "std::concurrency::thread::internal::DgThreadLauncher", 
+			"protection" : "pub", 
+			"type" : "class"
+		}], 
+		"doc" : "", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+		"loc_line" : "135", 
+		"name" : "std::concurrency::thread::internal", 
+		"protection" : "prv", 
+		"type" : "module"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/thread.yr", 
+	"loc_line" : "1", 
+	"name" : "std::concurrency::thread", 
+	"protection" : "prv", 
+	"type" : "module"
+}

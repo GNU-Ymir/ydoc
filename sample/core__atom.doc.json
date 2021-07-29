@@ -1,0 +1,44 @@
+{
+	"childs" : [{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/atom.yr", 
+		"loc_line" : "3", 
+		"name" : "core::atom::_YRT_MUTEX_INIT", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "core::atom::pthread_mutex_t (let data : [u8 ; 40]) ([0 ; 40])"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : " sizeof pthread_mutex_t", 
+			"mut" : "false", 
+			"name" : "data", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "u8", 
+					"type" : "int"
+				}], 
+				"mut" : "false", 
+				"size" : "28", 
+				"type" : "array"
+			}
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/atom.yr", 
+		"loc_line" : "7", 
+		"name" : "core::atom::pthread_mutex_t", 
+		"protection" : "pub", 
+		"type" : "struct"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/core/atom.yr", 
+	"loc_line" : "1", 
+	"name" : "core::atom", 
+	"protection" : "prv", 
+	"type" : "module"
+}

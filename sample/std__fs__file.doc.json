@@ -1,0 +1,542 @@
+{
+	"childs" : [{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Open a file in the file system\n      @throws: FsError, if the file failed to be created or opened\n      @info: if the file already existed, it will be erased\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "43", 
+			"name" : "std::fs::file::File::self::create", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "path", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::fs::path::Path", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "read", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "true"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "write", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "false"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "append", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "false"
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}, 
+		{
+			"doc" : "\n      Open a file in the file system\n      @throws: FsError, if the file does not exists\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "58", 
+			"name" : "std::fs::file::File::self::open", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "path", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::fs::path::Path", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "read", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "true"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "write", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "false"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "append", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "false"
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  This class is a reference to a file in the file system\n  @warning: files are disposable\n  @example: \n  ===========\n  with dmut file = File::create (\"foo.txt\", write-> true) {\n      file:.write (\"Hello world !!\\n\"s8);\n   } catch {\n       err : &FsError => {\n           println (err);\n       }\n   }\n  ===========\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_handle", 
+			"protection" : "prv", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}, 
+			"value" : "null"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "_filename", 
+			"protection" : "prv", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_read", 
+			"protection" : "prv", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_write", 
+			"protection" : "prv", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_append", 
+			"protection" : "prv", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : ["mut"], 
+				"doc" : "\n          Close the file\n          @info: if the file was not open, this method does nothing\n         ", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+				"loc_line" : "378", 
+				"name" : "dispose", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "372", 
+			"name" : "std::fs::file::File", 
+			"protection" : "prot", 
+			"trait" : "core::dispose::Disposable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+		"loc_line" : "26", 
+		"methods" : [{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Open the file \n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "71", 
+			"name" : "open", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Read all the char contained in the file from the current cursor position\n      @example: \n      ==============\n      let dmut fs = File::create (\"foo.txt\", write-> true);\n      fs:.write (\"Hello World !\"s8);\n      fs:.seek (0u64);\n      \n      let res = fs:.readAll ();\n      assert (res == \"Hello World !\"s8);\n      ==============\n      @throws: \n        - FsError: if the file is not opened, or not readable\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "95", 
+			"name" : "readAll", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Read the content of a file until the delimiter text if found or EOF\n      @example: \n      ==============\n      let dmut fs = File::create (\"foo.txt\", write-> true);\n      fs:.write (\"Hello World !\"s8);\n      fs:.seek (0u64);\n      \n      let res = fs:.readUntil (\" !\"s8);\n      assert (res == \"Hello World\"s8);\n      ==============\n      @throws: \n        - FsError: if the file is not opened, or not readable\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "135", 
+			"name" : "readUntil", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "delim", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Read the content of a file until the delimiter text if found or EOF\n      @params: \n         - delim: the delimiter \n      @example: \n      ==============\n      let dmut fs = File::create (\"foo.txt\", write-> true);\n      fs:.write (\"Hello World !\"s8);\n      fs:.seek (0u32);\n      \n      let res = fs:.readUntil (\" !\");\n      assert (res == \"Hello World\"s8);\n      ==============\n      @throws: \n        - FsError: if the file is not opened, or not readable\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "184", 
+			"name" : "readUntil", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "delim", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Write some text to a file\n      @throws: \n        - FsError: if the file is not opened, or not writable\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "202", 
+			"name" : "write", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "text", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Read all the char contained in the file from the current cursor position\n      @example: \n      ==============\n      let dmut fs = File::create (\"foo.txt\", write-> true);\n      fs:.write (\"Hello World !\"s8);\n      fs:.seek (0u32);\n      \n      let res : [u8] = fs:.readBytesAll ();\n      ==============\n      @throws: \n        - FsError: if the file is not opened, or not readable\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "229", 
+			"name" : "readBytesAll", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "u8", 
+					"type" : "int"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Read the content of a file until the delimiter bytes is found or EOF\n      @example: \n      ==============\n      let dmut fs = File::create (\"foo.txt\", write-> true);\n      fs:.write (\"Hello World !\"s8);\n      fs:.seek (0u32);\n      \n      let res : [u8] = fs:.readBytesUntil ([cast!(u8)('\n'c8)]);\n      ==============\n      @throws: \n        - FsError: if the file is not opened, are not readable\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "268", 
+			"name" : "readBytesUntil", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "delim", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "u8", 
+						"type" : "int"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "u8", 
+					"type" : "int"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Write some bytes to a file\n      @throws: \n        - FsError: if the file is not opened, are not writable\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "306", 
+			"name" : "writeBytes", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "text", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "u8", 
+						"type" : "int"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Move the position of the cursor of the file\n      @info: the cursor position is relative to the beginning of the file\n      @throws: \n        - FsError: if the file is not opened\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "325", 
+			"name" : "seek", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "cursor", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u32", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Tell the position of the cursor in the file relative to the beginning of the file\n      @throws: \n        - FsError: if the file is not opened\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "339", 
+			"name" : "tell", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the len of the file (from beginning to end)\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "351", 
+			"name" : "len", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Close the file\n      @info: if the file was not open, this method does nothing\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "365", 
+			"name" : "close", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Create the mode of reading \n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+			"loc_line" : "386", 
+			"name" : "createMode", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::fs::file::File", 
+		"protection" : "pub", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/file.yr", 
+	"loc_line" : "1", 
+	"name" : "std::fs::file", 
+	"protection" : "prv", 
+	"type" : "module"
+}

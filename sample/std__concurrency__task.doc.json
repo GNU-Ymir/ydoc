@@ -1,0 +1,532 @@
+{
+	"childs" : [{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Create an empty task pool, no threads are launched before the first submission\n      @params: \n         - nbThreads: The number of threads to spawn in the task pool\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "60", 
+			"name" : "std::concurrency::task::TaskPool::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "nbThreads", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}, 
+		{
+			"doc" : "\n      Create an empty task pool\n      @info: the number of thread in the pool is the number of cores available in the system - 1, or 1 if there is only one available core\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "66", 
+			"name" : "std::concurrency::task::TaskPool::self", 
+			"params" : [], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  A task pool is a set of threads that are performing a list of given jobs\n  @example: \n  ===============\n  \n  let dmut pool = TaskPool::new (2); // Creating a task pool with at most two threads\n  \n  // Only two threads are spawned to perform 1_000_000 jobs\n  for i in 0 .. 1_000_000 {\n      pool:.submit (move || => {\n           println (\"Job : \", i);\n      });\n  }\n  \n  pool:.join () // Wait for the completion of all jobs in the task pool\n  // Does not need to empty the pool, the thread are exited if there is no job to do\n  ===============\n  @warning: \n    - There is no guarantee on the order of execution of the jobs\n    - There is no preemption of jobs, so if there is in a task pool infinite jobs, (at least as many as there is threads) they will block the execution of the following submissions\n    - If jobs are to short (as the example above), there will be loss of efficiency due to spawning and killing many threads \n    - Task pools don't communicate, meaning that if you have two task pools spawning n threads, there can be n*2 threads spawned at a time\n ", 
+		"fields" : [{
+			"doc" : " The list of submitted jobs that are not completed yet", 
+			"mut" : "false", 
+			"name" : "_jobs", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::concurrency::mailbox::MailBox(&(std::concurrency::task::Task))::MailBox", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::concurrency::mailbox::MailBox(&(std::concurrency::task::Task))::MailBox) ()"
+		}, 
+		{
+			"doc" : " The maximum number of thread to spawn", 
+			"mut" : "false", 
+			"name" : "_nbThreads", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}, 
+			"value" : "0"
+		}, 
+		{
+			"doc" : " The threads that are currently running threads", 
+			"mut" : "false", 
+			"name" : "_runningThreads", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::collection::map::HashMap(usize,std::concurrency::thread::Thread)::HashMap", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::collection::map::HashMap(usize,std::concurrency::thread::Thread)::HashMap) ()"
+		}, 
+		{
+			"doc" : " The mail box used by the thread to tell they are dead", 
+			"mut" : "false", 
+			"name" : "_exited", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::concurrency::mailbox::MailBox(usize)::MailBox", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::concurrency::mailbox::MailBox(usize)::MailBox) ()"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_mutex", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::concurrency::sync::Mutex", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::concurrency::sync::Mutex) ()"
+		}], 
+		"final" : "true", 
+		"impls" : [], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+		"loc_line" : "39", 
+		"methods" : [{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Submit a new job to execute in the task pool\n      @example: \n      =============\n      class MyTask over Task {\n          let n : i32;\n          \n          pub self (n : i32) with n = n {}\n          \n          pub over execute (self) { \n              println (\"Asynchronus printing of n = \", n, \" messages\");\n              for i in 0 .. n {\n                  println (\"Message nb : \", i);\n              }\n          }\n      }\n      \n      let dmut pool = TaskPool::new (2u64); // Two threads\n      for _ in 0 .. 100 {\n          pool:.submit (MyTask::new (100));\n      }\n      pool.join ();\n      =============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "92", 
+			"name" : "submit", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "task", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::concurrency::task::Task", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      \n      def foo () {\n          println (\"Function pointer job\");\n      }\n      \n      let dmut pool = TaskPool::new (2u64); // Two threads\n      for _ in 0 .. 100 {\n          pool:.submit (|| => {\n                println (\"Lambda function job\");\n          });\n      }\n      \n      for _ in 0 .. 100 {\n          pool:.submit (&foo); \n      }\n      pool.join ();\n      =============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "123", 
+			"name" : "submit", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "task", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [], 
+					"mut" : "false", 
+					"ret_type" : {
+						"mut" : "false", 
+						"name" : "void", 
+						"type" : "void"
+					}, 
+					"type" : "fn_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      class Foo {\n         let mut i = 0;\n      \n         pub self () {}\n         \n         pub def foo (mut self) {\n             println (\"Method job \", self.i);\n             self.i += 1;\n         }\n      }\n      \n      let dmut pool = TaskPool::new (2u64); // Two threads\n      for i in 0 .. 100 {\n          pool:.submit (move || => {\n                println (\"Closure function job : \", i);\n          });\n      }\n      \n      let dmut f = Foo::new ();\n      for _ in 0 .. 100 {\n          pool:.submit (&(f:.foo));  // closure from method\n      }\n      pool.join ();\n      =============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "153", 
+			"name" : "submit", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "task", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"childs" : [], 
+						"mut" : "false", 
+						"ret_type" : {
+							"mut" : "false", 
+							"name" : "void", 
+							"type" : "void"
+						}, 
+						"type" : "fn_pointer"
+					}], 
+					"mut" : "false", 
+					"type" : "dg_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Wait the completion of all submitted jobs\n      @example:\n      =============\n      let dmut pool = TaskPool::new (2u64);\n      pool:.submit (&heavy_function_1 ());\n      pool:.submit (&heavy_function_2 ());\n      pool.join (); // wait the completion of heavy_functions 1 and 2\n      \n      pool:.submit (&heavy_function_3 ()); // pool is still usable afterwards\n      pool.join (); // wait the completion of heavy_function_3\n      =============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "170", 
+			"name" : "join", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Get the number of spawnable threads in the task pool\n      @example: \n      ===============\n      let dmut pool = TaskPool::new (2u64);\n      assert (pool.getNbThreads () == 2u64); \n      ===============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "184", 
+			"name" : "getNbThreads", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Spawn threads that can perform actions\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "191", 
+			"name" : "spawnThreads", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "nb", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "id", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Remove all the threads that have exited because there were no job to execute\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "216", 
+			"name" : "removeExitedThreads", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::concurrency::task::TaskPool", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"abstract" : "true", 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : " Does nothing", 
+			"loc_col" : "10", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "262", 
+			"name" : "std::concurrency::task::Task::self", 
+			"params" : [], 
+			"protection" : "prot", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  Ancestor of all class Task that can be launch in the task Pool\n  @info: Not really usefull for external use, and kind of too wordy, you may prefer submit jobs with function and closure \n  @example: \n  ===========\n  class MyTask over Task {\n      pub self () {}\n  \n      pub over execute (self, id : u64) {\n           println (\"I'm executed by thread number : \", id);\n           assert (id == 0u64 || id == 1u64); // Only two threads\n      }\n  }\n  \n  let dmut pool = TaskPool::new (2u64); \n  let task = MyTask::new (12);\n  for _ in 0 .. 100 {\n      pool:.submit (task); // Execute the task 100 times\n  }\n  pool.join (); \n  ===========\n ", 
+		"fields" : [], 
+		"impls" : [], 
+		"loc_col" : "21", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+		"loc_line" : "260", 
+		"methods" : [{
+			"attributes" : ["virtual"], 
+			"doc" : "\n      Method called by a task pool thread\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "267", 
+			"name" : "execute", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "id", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::concurrency::task::Task", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::concurrency::task::Task", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "284", 
+			"name" : "std::concurrency::task::FnTask::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "func", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [], 
+					"mut" : "false", 
+					"ret_type" : {
+						"mut" : "false", 
+						"name" : "void", 
+						"type" : "void"
+					}, 
+					"type" : "fn_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  A FnTask is a callable task pool task, that calls a function\n  @example: \n  ==============\n  let dmut pool = TaskPool::new (2u64);\n  pool:.submit (FnTask::new (|| => println (\"foo\")));\n  // Exactly the same as \n  pool:.submit (|| => println (\"foo\"));\n  pool.join ();\n  ==============\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "func", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [], 
+				"mut" : "false", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "fn_pointer"
+			}
+		}], 
+		"final" : "true", 
+		"impls" : [], 
+		"loc_col" : "14", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+		"loc_line" : "282", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "285", 
+			"name" : "execute", 
+			"over" : "true", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "_", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::concurrency::task::FnTask", 
+		"protection" : "prv", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::concurrency::task::Task", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "304", 
+			"name" : "std::concurrency::task::DgTask::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "func", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"childs" : [], 
+						"mut" : "false", 
+						"ret_type" : {
+							"mut" : "false", 
+							"name" : "void", 
+							"type" : "void"
+						}, 
+						"type" : "fn_pointer"
+					}], 
+					"mut" : "false", 
+					"type" : "dg_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  A DgTask is a callable task pool task, that calls a closure\n  @example: \n  ==============\n  let dmut pool = TaskPool::new (2u64);\n  let i = 0;\n  pool:.submit (DgTask::new (move || => println (\"foo \", i)));\n  // Exactly the same as \n  pool:.submit (move || => println (\"foo \", i));\n  pool.join ();\n  ==============\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "func", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"childs" : [], 
+					"mut" : "false", 
+					"ret_type" : {
+						"mut" : "false", 
+						"name" : "void", 
+						"type" : "void"
+					}, 
+					"type" : "fn_pointer"
+				}], 
+				"mut" : "false", 
+				"type" : "dg_pointer"
+			}
+		}], 
+		"final" : "true", 
+		"impls" : [], 
+		"loc_col" : "14", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+		"loc_line" : "302", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+			"loc_line" : "305", 
+			"name" : "execute", 
+			"over" : "true", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "_", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::concurrency::task::DgTask", 
+		"protection" : "prv", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/task.yr", 
+	"loc_line" : "1", 
+	"name" : "std::concurrency::task", 
+	"protection" : "prv", 
+	"type" : "module"
+}

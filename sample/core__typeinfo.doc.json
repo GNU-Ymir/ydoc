@@ -1,0 +1,223 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "\n  This module list all the possible type info, and the system to compare type at runtime\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "typeid", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "size", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "inner", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "core::typeinfo::TypeInfo", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "name", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/typeinfo.yr", 
+		"loc_line" : "15", 
+		"name" : "core::typeinfo::TypeInfo", 
+		"protection" : "pub", 
+		"type" : "struct"
+	}, 
+	{
+		"doc" : "", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "core::typeinfo::TypeIDs", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "ARRAY", 
+			"value" : "1"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "BOOL", 
+			"value" : "2"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "CHAR", 
+			"value" : "3"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "CLOSURE", 
+			"value" : "4"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "FLOAT", 
+			"value" : "5"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "FUNC_PTR", 
+			"value" : "6"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "SIGNED_INT", 
+			"value" : "7"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "UNSIGNED_INT", 
+			"value" : "8"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "POINTER", 
+			"value" : "9"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "SLICE", 
+			"value" : "10"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "STRUCT", 
+			"value" : "11"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "TUPLE", 
+			"value" : "12"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "OBJECT", 
+			"value" : "13"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "VOID", 
+			"value" : "14"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/typeinfo.yr", 
+		"loc_line" : "32", 
+		"name" : "core::typeinfo::TypeIDs", 
+		"protection" : "pub", 
+		"type" : "enum"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/typeinfo.yr", 
+		"loc_line" : "34", 
+		"name" : "core::typeinfo::_yrt_type_equals", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "a", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "core::typeinfo::TypeInfo", 
+				"type" : "struct"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "b", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "core::typeinfo::TypeInfo", 
+				"type" : "struct"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "bool", 
+			"type" : "bool"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/typeinfo.yr", 
+		"loc_line" : "36", 
+		"name" : "core::typeinfo::equals", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "left", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "core::typeinfo::TypeInfo", 
+				"type" : "struct"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "right", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "core::typeinfo::TypeInfo", 
+				"type" : "struct"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "bool", 
+			"type" : "bool"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/core/typeinfo.yr", 
+	"loc_line" : "1", 
+	"name" : "core::typeinfo", 
+	"protection" : "prv", 
+	"type" : "module"
+}

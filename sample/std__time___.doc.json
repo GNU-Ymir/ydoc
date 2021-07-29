@@ -1,0 +1,10 @@
+{
+	"childs" : [], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/_.yr", 
+	"loc_line" : "1", 
+	"name" : "std::time::_", 
+	"protection" : "prv", 
+	"type" : "module"
+}

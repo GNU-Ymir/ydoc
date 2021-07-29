@@ -1,0 +1,76 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "\n  @returns: the list of arguments that are passed to the program\n  @info: this arguments are traditionnaly passed to the main function\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/env.yr", 
+		"loc_line" : "13", 
+		"name" : "std::env::args", 
+		"params" : [], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}], 
+			"mut" : "false", 
+			"type" : "slice"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: the current working directory path\n  @info: \n  ================\n  the path is empty if the current directory is invalid, possible explanation : \n    - not sufficiant rights to access current working dir\n    - the current working dir does not exists\n  ===============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/env.yr", 
+		"loc_line" : "26", 
+		"name" : "std::env::currentDir", 
+		"params" : [], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "true", 
+				"name" : "std::fs::path::Path", 
+				"type" : "class"
+			}], 
+			"mut" : "true", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: the name of the current user\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/env.yr", 
+		"loc_line" : "33", 
+		"name" : "std::env::whoami", 
+		"params" : [], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "c8", 
+				"type" : "char"
+			}], 
+			"mut" : "false", 
+			"type" : "slice"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/env.yr", 
+	"loc_line" : "1", 
+	"name" : "std::env", 
+	"protection" : "prv", 
+	"type" : "module"
+}

@@ -1,0 +1,543 @@
+{
+	"childs" : [{
+		"childs" : [{
+			"attributes" : [], 
+			"doc" : "\n      Transform an object into a u64\n      By default, it transform the class raw data into an array\n      @complexity: O (n), with n = recursive number of field of the class \n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+			"loc_line" : "33", 
+			"name" : "hash", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "self", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}], 
+		"doc" : "\n  This trait is used to implement that hash function, that can be used within the std\n  @example: \n  ============\n  import std::collection::map;\n  \n  class CustomKey {\n      let _name : [c32];\n   \n      pub self (name : [c32]) with _name = name {}\n  \n      impl std::hash::Hashable {\n           pub over hash (self)-> u64 {\n               hash (self._name)\n           }\n      }\n  \n  }\n   \n  let dmut h = HashMap!(&CustomKey, u32)::new ();\n  h:.insert (CustomKey::new (\"foo\"), 12);\n  assert (h [CustomKey::new (\"foo\")] == 12);\n  ============\n ", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "27", 
+		"name" : "std::hash::Hashable", 
+		"protection" : "pub", 
+		"type" : "trait"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a string into a u64\n      @complexity: O(n), with n = str.len\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "55", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "str", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a string into a u64\n      @complexity: O(n), with n = str.len\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "71", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "str", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a char into a u64\n      @complexity: O(1)\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "87", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "c8", 
+				"type" : "char"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a char into a u64\n      @complexity: O(1)\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "95", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "c32", 
+				"type" : "char"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a isize into a u64\n      @complexity: O (1)\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "103", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "isize", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a usize into a u64\n      @complexity: O (1)\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "111", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a i64 into a u64\n      @complexity: O (1)\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "119", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i64", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a u64 into a u64\n      @complexity: O (1)\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "127", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a i32 into a u64\n      @complexity: O (1)\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "135", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a u32 into a u64\n      @complexity: O (1)\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "143", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a i16 into a u64\n      @complexity: O (1)\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "151", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i16", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a u16 into a u64\n      @complexity: O (1)\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "159", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u16", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a i8 into a u64\n      @complexity: O (1)\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "167", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i8", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a u8 into a u64\n      @complexity: O (1)\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "175", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u8", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Transform a bool into a u64\n      @complexity: O (1)\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "183", 
+		"name" : "std::hash::hash", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "b", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u64", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform an array into a u64\n      @complexity: O (n), with n = a.len\n      @templates: \n         - U: a hashable type\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+			"loc_line" : "194", 
+			"name" : "hash", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform an array into a u64\n      @complexity: O (n), with n = a.len\n      @templates: \n         - U: a hashable type\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "194", 
+		"name" : "std::hash::hash", 
+		"params" : ["T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a pointer into a u64 \n      @complexity: O (1)\n     ", 
+			"loc_col" : "32", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+			"loc_line" : "210", 
+			"name" : "hash", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "x", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a pointer into a u64 \n      @complexity: O (1)\n     ", 
+		"loc_col" : "32", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "210", 
+		"name" : "std::hash::hash", 
+		"params" : ["T of &(U)", "U"], 
+		"protection" : "pub", 
+		"test" : "!(template!(T)(class U))", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a class that implement the trait Hashable into a u64\n      @complexity: O (1)\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+			"loc_line" : "218", 
+			"name" : "hash", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a class that implement the trait Hashable into a u64\n      @complexity: O (1)\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+		"loc_line" : "218", 
+		"name" : "std::hash::hash", 
+		"params" : ["T impl Hashable"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/hash.yr", 
+	"loc_line" : "1", 
+	"name" : "std::hash", 
+	"protection" : "prv", 
+	"type" : "module"
+}

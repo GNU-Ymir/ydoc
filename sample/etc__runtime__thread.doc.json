@@ -1,0 +1,772 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "\n  \n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "data", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "u8", 
+					"type" : "int"
+				}], 
+				"mut" : "false", 
+				"size" : "28", 
+				"type" : "array"
+			}
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "8", 
+		"name" : "etc::runtime::thread::_yrt_thread_mutex_t", 
+		"protection" : "pub", 
+		"type" : "struct"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "data", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "u8", 
+					"type" : "int"
+				}], 
+				"mut" : "false", 
+				"size" : "30", 
+				"type" : "array"
+			}
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "12", 
+		"name" : "etc::runtime::thread::_yrt_thread_cond_t", 
+		"protection" : "pub", 
+		"type" : "struct"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "data", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "u8", 
+					"type" : "int"
+				}], 
+				"mut" : "false", 
+				"size" : "20", 
+				"type" : "array"
+			}
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "16", 
+		"name" : "etc::runtime::thread::_yrt_thread_barrier_t", 
+		"protection" : "pub", 
+		"type" : "struct"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "data", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "u8", 
+					"type" : "int"
+				}], 
+				"mut" : "false", 
+				"size" : "20", 
+				"type" : "array"
+			}
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "20", 
+		"name" : "etc::runtime::thread::sem_t", 
+		"protection" : "pub", 
+		"type" : "struct"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "30", 
+		"name" : "etc::runtime::thread::_yrt_read_pipe", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "stream", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "size", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}], 
+			"mut" : "false", 
+			"type" : "pointer"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "39", 
+		"name" : "etc::runtime::thread::_yrt_write_pipe", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "stream", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "data", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "size", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "50", 
+		"name" : "etc::runtime::thread::_yrt_thread_create", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "id", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "usize", 
+					"type" : "int"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "attr", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "func", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "void", 
+						"type" : "void"
+					}], 
+					"mut" : "false", 
+					"type" : "pointer"
+				}], 
+				"mut" : "false", 
+				"ret_type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "void", 
+						"type" : "void"
+					}], 
+					"mut" : "false", 
+					"type" : "pointer"
+				}, 
+				"type" : "fn_pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "data", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "59", 
+		"name" : "etc::runtime::thread::_yrt_thread_join", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "id", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "retVal", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "void", 
+						"type" : "void"
+					}], 
+					"mut" : "false", 
+					"type" : "pointer"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "66", 
+		"name" : "etc::runtime::thread::_yrt_thread_detach", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "id", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "73", 
+		"name" : "etc::runtime::thread::_yrt_thread_cancel", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "id", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "80", 
+		"name" : "etc::runtime::thread::_yrt_thread_exit", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "val", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "89", 
+		"name" : "etc::runtime::thread::_yrt_thread_mutex_init", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "lock", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "etc::runtime::thread::_yrt_thread_mutex_t", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "data", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "96", 
+		"name" : "etc::runtime::thread::_yrt_thread_mutex_lock", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "lock", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "etc::runtime::thread::_yrt_thread_mutex_t", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "103", 
+		"name" : "etc::runtime::thread::_yrt_thread_mutex_unlock", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "lock", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "etc::runtime::thread::_yrt_thread_mutex_t", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "112", 
+		"name" : "etc::runtime::thread::_yrt_thread_cond_init", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "id", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "etc::runtime::thread::_yrt_thread_cond_t", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "data", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "121", 
+		"name" : "etc::runtime::thread::_yrt_thread_cond_wait", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "id", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "etc::runtime::thread::_yrt_thread_cond_t", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "mutex", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "etc::runtime::thread::_yrt_thread_mutex_t", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "128", 
+		"name" : "etc::runtime::thread::_yrt_thread_cond_signal", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "id", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "etc::runtime::thread::_yrt_thread_cond_t", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "138", 
+		"name" : "etc::runtime::thread::_yrt_thread_sem_init", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "id", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "etc::runtime::thread::sem_t", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "shared", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "value", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "145", 
+		"name" : "etc::runtime::thread::_yrt_thread_sem_destroy", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "id", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "etc::runtime::thread::sem_t", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "152", 
+		"name" : "etc::runtime::thread::_yrt_thread_sem_wait", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "id", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "etc::runtime::thread::sem_t", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+		"loc_line" : "160", 
+		"name" : "etc::runtime::thread::_yrt_thread_sem_post", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "id", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "etc::runtime::thread::sem_t", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/thread.yr", 
+	"loc_line" : "1", 
+	"name" : "etc::runtime::thread", 
+	"protection" : "prv", 
+	"type" : "module"
+}

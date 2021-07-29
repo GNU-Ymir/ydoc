@@ -1,0 +1,26 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "19", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/sysinfo.yr", 
+		"loc_line" : "6", 
+		"name" : "etc::c::sysinfo::get_nprocs", 
+		"params" : [], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/sysinfo.yr", 
+	"loc_line" : "1", 
+	"name" : "etc::c::sysinfo", 
+	"protection" : "prv", 
+	"type" : "module"
+}

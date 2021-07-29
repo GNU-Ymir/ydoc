@@ -1,0 +1,141 @@
+{
+	"childs" : [{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/mailbox.yr", 
+				"loc_line" : "43", 
+				"name" : "self", 
+				"param" : [], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "", 
+			"fields" : [{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_mails", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_mutex", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "18", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/mailbox.yr", 
+			"loc_line" : "37", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Send a mail in the mail box\n      @info: this function is not blocking\n      @params: \n         - x: the value to send \n      @templates: \n         - T: any type\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/mailbox.yr", 
+				"loc_line" : "53", 
+				"name" : "send", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "x", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Check if there is mail to receive in the mail box, and return it encapsulated in option type\n      @info: this function is not blocking\n      @templates: \n          - T: any type\n      @return: \n         - Some!(T): if a message was found in the box\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/mailbox.yr", 
+				"loc_line" : "69", 
+				"name" : "receive", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "(T)?", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      @returns: the number of mails in the box\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/mailbox.yr", 
+				"loc_line" : "81", 
+				"name" : "len", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "MailBox", 
+			"others" : [], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  A mail box is a way of sending messages between threads in a non blocking manner unlike pipes\n  Its implementation is just an atomic list (Cf. std::collection::list)\n  @example: \n  ===========\n  let dmut box = MailBox::new ();\n  let th = spawn (move |_| => {\n      loop {\n          let msg = box:.receive!(i32) ();\n          match msg {\n              x : &Some!(i32) => {\n                  println (\"Finally received a message : \", x, \" !!\");\n                  break {}\n              }\n              _ => {\n                  println (\"Still waiting for a mail\");\n              }\n          }\n      }\n  });\n  \n  for i in 0 .. 1_000_000 {} // unecessarily long useless action\n  \n  box:.send (42);\n  th.join ();\n  =======\n ", 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/mailbox.yr", 
+		"loc_line" : "37", 
+		"name" : "std::concurrency::mailbox::MailBox", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/mailbox.yr", 
+	"loc_line" : "1", 
+	"name" : "std::concurrency::mailbox", 
+	"protection" : "prv", 
+	"type" : "module"
+}

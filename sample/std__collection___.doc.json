@@ -1,0 +1,10 @@
+{
+	"childs" : [], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/_.yr", 
+	"loc_line" : "1", 
+	"name" : "std::collection::_", 
+	"protection" : "prv", 
+	"type" : "module"
+}

@@ -1,0 +1,441 @@
+{
+	"childs" : [{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Create a new path from a utf32 path (simply converts it into a [c8])\n      @example: \n      =========\n      let dmut path = Path::new (\"foo/bar/baz.txt\");\n      assert (path.parts () == [\"foo\"s8, \"bar\"s8, \"baz.txt\"s8]);\n      =========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "24", 
+			"name" : "std::fs::path::Path::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "path", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}, 
+		{
+			"doc" : "\n      Create a new path from a utf8 path\n      @example: \n      =========\n      let dmut path = Path::new (\"foo/bar/baz.txt\"s8);\n      assert (path.parts () == [\"foo\"s8, \"bar\"s8, \"baz.txt\"s8]);\n      =========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "34", 
+			"name" : "std::fs::path::Path::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "path", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "sep", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}, 
+				"value" : "'2f'"
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}, 
+		{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "48", 
+			"name" : "std::fs::path::Path::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "path", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::collection::vec::Vec([c8])::Vec", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "prv", 
+			"type" : "cstr"
+		}, 
+		{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "50", 
+			"name" : "std::fs::path::Path::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "path", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "c8", 
+							"type" : "char"
+						}], 
+						"mut" : "false", 
+						"type" : "slice"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "prv", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_parts", 
+			"protection" : "prv", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::collection::vec::Vec([c8])::Vec", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::collection::vec::Vec([c8])::Vec) ()"
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "", 
+			"loc_col" : "1", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "307", 
+			"name" : "std::fs::path::Path", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+		"loc_line" : "12", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "\n      Transform the path into a os usable path\n      @example: \n      ============\n      let dmut path = Path::new (\"/\"s8);\n      path:.push (\"foo\"s8);\n      path:.push (\"test.txt\"s8)\n      assert (path.toStr () == \"/foo/test.txt\"s8);\n      ============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "66", 
+			"name" : "toStr", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "sep", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}, 
+				"value" : "'2f'"
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Append a path to the current path\n      @example: \n      ===========\n      let dmut path = Path::new (\"/\"s8);\n      path:.push (\"foo/bar/\"s8);\n      path:.push (\"test.txt\"s8)\n      assert (path.toStr () == \"/foo/bar/test.txt\"s8);\n      ===========\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "91", 
+			"name" : "push", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "path", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "sep", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}, 
+				"value" : "'2f'"
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Append a path to the current path\n      @example: \n      ===========\n      let dmut path = Path::new (\"/\"s8);\n      path:.push (Path::new (\"foo/bar/\"s8));\n      path:.push (Path::new (\"test.txt\"s8))\n      assert (path.toStr () == \"/foo/bar/test.txt\"s8);\n      ===========\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "123", 
+			"name" : "push", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "path", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::fs::path::Path", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the parts composing the path\n      @example: \n      ==========\n      let dmut path = Path::new (\"/\"s8);\n      path:.push (\"foo/bar/\"s8);\n      path:.push (\"test.txt\"s8)\n      assert (path.parts () == [\"\"s8, \"foo\"s8, \"bar\"s8, \"test.txt\"s8]);\n      ==========\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "142", 
+			"name" : "parts", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Create a new path pointing to the parent directory of the current path\n      @info: if self points to the root dir, its parent will also point to root\n      @example: \n      ===========\n      let path = Path::new (\"/foo/bar/baz.txt\"s8);\n      let parent = path.parent ();\n      assert (parent.toStr () == \"/foo/bar\"s8);\n      ===========\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "156", 
+			"name" : "parent", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the file name of the current path\n      @example: \n      =============\n      let path = Path::new (\"/foo/bar/baz.txt\"s8);\n      assert (path.file () == \"baz.txt\"s8);\n      let path2 = Path::new (\"\"s8);\n      assert (path2.file () == \"\"s8);\n      =============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "181", 
+			"name" : "file", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: a new path where the extension of the file has been removed\n      @example: \n      ============\n      let path = Path::new (\"/foo/bar/baz.txt\"s8).stripExtension ();\n      assert (path.file () == \"baz\"s8);\n     \n      let path2 = Path::new (\"/foo/bar/baz.tar.gz\"s8).stripExtension ();\n      assert (path2.file () == \"baz.tar\"s8);\n     \n      let path3 = Path::new (\"/foo/bar/baz\"s8).stripExtension ();\n      assert (path3.file () == \"baz\"s8);\n      ============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "204", 
+			"name" : "stripExtension", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the extension of the file of the path\n      @example: \n      ==============\n      let path = Path::new (\"/foo/bar/baz.txt\"s8);\n      assert (path.extension () == \"txt\"s8);\n     \n      let path2 = Path::new (\"/foo/bar/baz.tar.gz\"s8);\n      assert (path2.extension () == \"gz\"s8);\n     \n      let path3 = Path::new (\"/foo/bar/baz\"s8);\n      assert (path3.extension () == \"\"s8);\n      ==============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "236", 
+			"name" : "extension", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: a new path where the extension of the file has been removed\n      @example: \n      ============\n      let path = Path::new (\"/foo/bar/baz\"s8).addExtension (\"txt\"s8);\n      assert (path.file () == \"baz.txt\"s8);\n     \n      let path2 = Path::new (\"/foo/bar/baz.tar\"s8).addExtension (\"gz\"s8);\n      assert (path2.file () == \"baz.tar.gz\"s8);\n      ============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "263", 
+			"name" : "addExtension", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "ext", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: a new path with the prefix removed\n      @example: \n      =====================\n      let path = Path::new (\"/foo/bar/baz/file.txt\"s8).removePrefix (Path::new (\"/foo/bar\"s8));\n      assert (path.toStr () == \"baz/file.txt\"s8);\n      =====================\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+			"loc_line" : "282", 
+			"name" : "removePrefix", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "prefix", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::fs::path::Path", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::fs::path::Path", 
+		"protection" : "pub", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/path.yr", 
+	"loc_line" : "1", 
+	"name" : "std::fs::path", 
+	"protection" : "prv", 
+	"type" : "module"
+}

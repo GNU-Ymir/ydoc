@@ -1,0 +1,446 @@
+{
+	"childs" : [{
+		"abstract" : "true", 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "10", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "7", 
+			"name" : "std::net::address::IpAddress::self", 
+			"params" : [], 
+			"protection" : "prot", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [], 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "9", 
+			"name" : "std::net::address::IpAddress", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "21", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+		"loc_line" : "6", 
+		"methods" : [], 
+		"name" : "std::net::address::IpAddress", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"abstract" : "true", 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "10", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "13", 
+			"name" : "std::net::address::SockAddress::self", 
+			"params" : [], 
+			"protection" : "prot", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [], 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "15", 
+			"name" : "std::net::address::SockAddress", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "21", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+		"loc_line" : "12", 
+		"methods" : [], 
+		"name" : "std::net::address::SockAddress", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"doc" : "", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "std::net::address::Ipv4", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "LOCALHOST", 
+			"value" : "self (a : u8, b : u8, c : u8, d : u8)-> mut &(mut std::net::address::Ipv4Address) (127, 0, 0, 1)"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "UNSPECIFIED", 
+			"value" : "self (a : u8, b : u8, c : u8, d : u8)-> mut &(mut std::net::address::Ipv4Address) (0, 0, 0, 0)"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "BROADCAST", 
+			"value" : "self (a : u8, b : u8, c : u8, d : u8)-> mut &(mut std::net::address::Ipv4Address) (255, 255, 255, 255)"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+		"loc_line" : "22", 
+		"name" : "std::net::address::Ipv4", 
+		"protection" : "pub", 
+		"type" : "enum"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::net::address::IpAddress", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Create a new ip address\n      @example: \n      ==========\n      let ip = Ipv4Address::new (127u8, 0u8, 0u8, 1u8);\n      assert (ip == Ipv4::LOCALHOST);\n      ==========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "42", 
+			"name" : "std::net::address::Ipv4Address::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u8", 
+					"type" : "int"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "b", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u8", 
+					"type" : "int"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "c", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u8", 
+					"type" : "int"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "d", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u8", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  An ip v4 address, composed of four part A.B.C.D\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_a", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u8", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_b", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u8", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_c", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u8", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_d", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u8", 
+				"type" : "int"
+			}
+		}], 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "110", 
+			"name" : "std::net::address::Ipv4Address", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+		"loc_line" : "27", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "\n      @returns: true if this is a loopback address (in range 127.0.0.0/8), false otherwise\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "52", 
+			"name" : "isLoopback", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: true if this is an unspecified address (0.0.0.0), false otherwise\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "59", 
+			"name" : "isUnspecified", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: true if this is a private address : \n      @info: \n      ============ \n      Private address are ranges in : \n         - 10.0.0.0/8\n         - 172.16.0.0/12\n         - 192.168.0.0/16\n      =============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "73", 
+			"name" : "isPrivate", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Test the equality between two ipv4 address\n      @example: \n      ============\n      assert (Ipv4Address::new (127u8, 0u8, 0u8, 1u8) == Ipv4::LOCALHOST);\n      ============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "86", 
+			"name" : "opEquals", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "other", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::net::address::Ipv4Address", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Store the four part of the ip A.B.C.D in a single u64 (A << 24 | B << 16 | C << 8 | D)\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "96", 
+			"name" : "toN", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::net::address::Ipv4Address", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::net::address::SockAddress", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Create a new sock address from a ip address and a port\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "122", 
+			"name" : "std::net::address::SockAddrV4::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "addr", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::net::address::Ipv4Address", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "port", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u16", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_addr", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::net::address::Ipv4Address", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_port", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u16", 
+				"type" : "int"
+			}
+		}], 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "150", 
+			"name" : "std::net::address::SockAddrV4", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+		"loc_line" : "114", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "\n      @return: the address part \n      @example: \n      ============\n      let s_addr : SockAddress = SockAddrV4::new (Ipv4Address (127u8, 0u8, 0u8, 1u8), 8080u16);\n      assert (s_addr.ip () == Ipv4Address::new (127u8, 0u8, 0u8, 1u8));\n      ============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "134", 
+			"name" : "ip", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::net::address::Ipv4Address", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @return: the port part \n      @example: \n      ============\n      let s_addr : SockAddress = SockAddrV4::new (Ipv4Address (127u8, 0u8, 0u8, 1u8), 8080u16);\n      assert (s_addr.port () == 8080u16);\n      ============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+			"loc_line" : "146", 
+			"name" : "port", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "u16", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::net::address::SockAddrV4", 
+		"protection" : "pub", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/address.yr", 
+	"loc_line" : "1", 
+	"name" : "std::net::address", 
+	"protection" : "prv", 
+	"type" : "module"
+}

@@ -1,0 +1,798 @@
+{
+	"childs" : [{
+		"childs" : [{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "11", 
+			"name" : "serialize", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "self", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"name" : "&(Config)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}], 
+		"doc" : "\n  Simple trait to impl in a class to be convertible to a Config\n ", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "10", 
+		"name" : "std::config::conv::Serializable", 
+		"protection" : "pub", 
+		"type" : "trait"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "48", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "cfg", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Config)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "mut T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ConfigError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Try to transform the configuration into a structure\n  @example: \n  ============\n  import std::config::toml;\n  import std::io;\n  \n  struct \n  | mut package : Foo\n   -> Package;\n   \n  struct \n  | mut name : [c32]\n  | mut version : [c32]\n   -> Foo;\n \n  let tomlFile = str#{ \n      [package]\n      name = \"package name\"\n      version = \"1.0.0\"\n  };\n  \n  { \n     let cfg = tomlFile.parse ().to!Package ();\n     println (cfg);\n  } catch {\n     err: &ConfigError => { \n          println (err); \n     }\n  }\n  ============\n  @throws: \n    - &ConfigError: if the cast cannot be made\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "48", 
+		"name" : "std::config::conv::to", 
+		"params" : ["struct T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "85", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "cfg", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Config)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ConfigError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a configuration into a class\n  @info: The class must have a constructor taking a configuration as a parameter\n  @example: \n  ===========================\n  class A {\n     let i = 0;\n     pub self (c : &Config) {\n         match c {\n              Int (i-> i:_) => { self.i = i; }\n         }\n     }\n  }\n  \n  {\n      let c = tomlFile.parse ().to!(&A) ();\n      println (c);\n  } catch {\n      err: &ConfigError => { \n           println (err); \n      }\n  }\n  ===========================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "85", 
+		"name" : "std::config::conv::to", 
+		"params" : ["class T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "109", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "cfg", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Config)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ConfigError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a configuration into a i64\n  @example: \n  =============\n  let i = Int::new (12);\n  assert (i.to!(i64) () == 12i64);\n  =============\n  @throws: \n    - &ConfigError: if the cast cannot be made\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "109", 
+		"name" : "std::config::conv::to", 
+		"params" : ["T of i64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "130", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "cfg", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Config)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ConfigError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a configuration into a i64\n  @example: \n  =============\n  let i = Int::new (12);\n  assert (i.to!(i32) () == 12);\n  =============\n  @throws: \n    - &ConfigError: if the cast cannot be made\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "130", 
+		"name" : "std::config::conv::to", 
+		"params" : ["T of i32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "151", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "cfg", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Config)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ConfigError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a configuration into a f64\n  @example: \n  =============\n  let i = Float::new (12.0);\n  assert (i.to!(f64) () == 12.0);\n  =============\n  @throws: \n    - &ConfigError: if the cast cannot be made\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "151", 
+		"name" : "std::config::conv::to", 
+		"params" : ["T of f64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "172", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "cfg", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Config)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ConfigError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a configuration into a string\n  @example: \n  =============\n  let i = Str::new (\"foo\");\n  assert (i.to!([c32]) () == \"foo\");\n  =============\n  @throws: \n    - &ConfigError: if the cast cannot be made\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "172", 
+		"name" : "std::config::conv::to", 
+		"params" : ["T of [U]", "U of c32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "193", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "cfg", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Config)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ConfigError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a configuration into a string\n  @example: \n  =============\n  let i = Str::new (\"foo\");\n  assert (i.to!([c8]) () == \"foo\"s8);\n  =============\n  @throws: \n    - &ConfigError: if the cast cannot be made\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "193", 
+		"name" : "std::config::conv::to", 
+		"params" : ["T of [U]", "U of c8"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "215", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "cfg", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Config)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ConfigError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a configuration into a bool\n  @example: \n  =============\n  let i = Bool::new (false);\n  assert (i.to!(bool) () == false);\n  =============\n  @throws: \n    - &ConfigError: if the cast cannot be made\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "215", 
+		"name" : "std::config::conv::to", 
+		"params" : ["T of bool"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "236", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "cfg", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Config)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(ConfigError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a configuration into an array\n  @example: \n  =============\n  let i = Array::new (Int::new (1), Int::new (2));\n  assert (i.to!([i32]) () == [1, 2]);\n  =============\n  @throws: \n    - &ConfigError: if the cast cannot be made\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "236", 
+		"name" : "std::config::conv::to", 
+		"params" : ["T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"childs" : [{
+			"child" : {
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+				"loc_line" : "273", 
+				"name" : "fromDict", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "dict", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(Dict)", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "mut T", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(ConfigError)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			"doc" : "\n      Transform the dictionnary into a struct\n      @example: \n      ============ \n      ============ \n      @throws: \n        - &ConfigError: if the configuration does not contains every field of the struct\n      @info: if the configuration contains more information they are ignored\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "273", 
+			"name" : "std::config::conv::CfgToConfig::fromDict", 
+			"params" : ["struct T"], 
+			"protection" : "pub", 
+			"type" : "template"
+		}, 
+		{
+			"child" : {
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+				"loc_line" : "330", 
+				"name" : "fromArray", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "cfg", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(Array)", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(ConfigError)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			"doc" : "\n      Transform an array configuration into an array\n      @example: \n      ============ \n      ============ \n      @throws: \n        - &ConfigError: if the configuration casting failed\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "330", 
+			"name" : "std::config::conv::CfgToConfig::fromArray", 
+			"params" : ["T of [U]", "U"], 
+			"protection" : "pub", 
+			"type" : "template"
+		}], 
+		"doc" : "", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "262", 
+		"name" : "std::config::conv::CfgToConfig", 
+		"protection" : "prv", 
+		"type" : "module"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "360", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "value", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Config)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a class into a configuration\n  @example:\n  ===================\n  class A {\n      impl std::config::conv::Serializable {\n           pub over seralize (self)-> &Config {\n               let dmut d = Dict::new ();\n               d:.insert (\"foo\", Float::new (12.0));\n               d\n           }\n      }\n  }\n  ===================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "360", 
+		"name" : "std::config::conv::to", 
+		"params" : ["C of &(Config)", "T impl Serializable"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "365", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "value", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Config)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "365", 
+		"name" : "std::config::conv::to", 
+		"params" : ["C of &(Config)", "class T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "378", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "value", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Config)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a i64 into a configuration\n  @example: \n  ============\n  let i = 90i64;\n  let cfg : &Config = i.to!(&Config) ();\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "378", 
+		"name" : "std::config::conv::to", 
+		"params" : ["C of &(Config)", "T of i64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "390", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "value", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Config)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a i32 into a configuration\n  @example: \n  ============\n  let i = 90;\n  let cfg : &Config = i.to!(&Config) ();\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "390", 
+		"name" : "std::config::conv::to", 
+		"params" : ["C of &(Config)", "T of i32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "402", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "value", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Config)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a bool into a configuration\n  @example: \n  ============\n  let b = false;\n  let cfg : &Config = b.to!(&Config) ();\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "402", 
+		"name" : "std::config::conv::to", 
+		"params" : ["C of &(Config)", "T of bool"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "414", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "value", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Config)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a f64 into a configuration\n  @example: \n  ============\n  let f = 3.14;\n  let cfg : &Config = f.to!(&Config) ();\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "414", 
+		"name" : "std::config::conv::to", 
+		"params" : ["C of &(Config)", "T of f64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "426", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "value", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Config)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a [c32] into a configuration\n  @example: \n  ============\n  let str = \"test\";\n  let cfg : &Config = str.to!(&Config) ();\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "426", 
+		"name" : "std::config::conv::to", 
+		"params" : ["C of &(Config)", "T of [U]", "U of c32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "438", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "value", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Config)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a [c8] into a configuration\n  @example: \n  ============\n  let str = \"test\"s8;\n  let cfg : &Config = str.to!(&Config) ();\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "438", 
+		"name" : "std::config::conv::to", 
+		"params" : ["C of &(Config)", "T of [U]", "U of c8"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "451", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "value", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Config)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a slice into a configuration\n  @example: \n  ============\n  let slc = [1, 2, 3];\n  let cfg : &Config = slc.to!(&Config) ();\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "451", 
+		"name" : "std::config::conv::to", 
+		"params" : ["C of &(Config)", "T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+			"loc_line" : "474", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "value", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Config)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a structure into a configuration\n  @example: \n  ===============\n  struct \n  | x : i32\n  | foo : [c32]\n  | inner : [X]\n   -> X;\n  \n  let st = X (1, \"foo\", [X (2, \"bar\", [])]);\n  let cfg : &Config = st.to!(&Config} ();\n  ===============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+		"loc_line" : "474", 
+		"name" : "std::config::conv::to", 
+		"params" : ["C of &(Config)", "struct T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/conv.yr", 
+	"loc_line" : "1", 
+	"name" : "std::config::conv", 
+	"protection" : "prv", 
+	"type" : "module"
+}

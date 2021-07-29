@@ -1,0 +1,608 @@
+{
+	"childs" : [{
+		"doc" : "", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "etc::c::files::SeekWhence", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "SEEK_SET", 
+			"value" : "0"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "SEEK_CUR", 
+			"value" : "1"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "SEEK_END", 
+			"value" : "2"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+		"loc_line" : "7", 
+		"name" : "etc::c::files::SeekWhence", 
+		"protection" : "pub", 
+		"type" : "enum"
+	}, 
+	{
+		"doc" : "", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "etc::c::files::AccessMode", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "F_OK", 
+			"value" : "0"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "X_OK", 
+			"value" : "1"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "W_OK", 
+			"value" : "2"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "R_OK", 
+			"value" : "4"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+		"loc_line" : "14", 
+		"name" : "etc::c::files::AccessMode", 
+		"protection" : "pub", 
+		"type" : "enum"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "padd", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "u8", 
+					"type" : "int"
+				}], 
+				"mut" : "false", 
+				"size" : "58", 
+				"type" : "array"
+			}, 
+			"value" : "[0 ; 88]"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "st_mtime", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "padd2", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "u8", 
+					"type" : "int"
+				}], 
+				"mut" : "false", 
+				"size" : "30", 
+				"type" : "array"
+			}, 
+			"value" : "[0 ; 48]"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+		"loc_line" : "21", 
+		"name" : "etc::c::files::stat_t", 
+		"protection" : "pub", 
+		"type" : "struct"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+		"loc_line" : "23", 
+		"name" : "etc::c::files::fopen", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "filename", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "mode", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "true", 
+				"name" : "void", 
+				"type" : "void"
+			}], 
+			"mut" : "true", 
+			"type" : "pointer"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+		"loc_line" : "25", 
+		"name" : "etc::c::files::fclose", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "handle", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+		"loc_line" : "27", 
+		"name" : "etc::c::files::fseek", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "handle", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "pos", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "cursor", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "etc::c::files::SeekWhence", 
+				"type" : "enum"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+		"loc_line" : "29", 
+		"name" : "etc::c::files::ftell", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "handle", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+		"loc_line" : "31", 
+		"name" : "etc::c::files::fgets", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "buf", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "len", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "handle", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+		"loc_line" : "33", 
+		"name" : "etc::c::files::fread", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "buf", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "blockSize", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "len", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "handle", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+		"loc_line" : "35", 
+		"name" : "etc::c::files::feof", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "handle", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "bool", 
+			"type" : "bool"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+		"loc_line" : "37", 
+		"name" : "etc::c::files::fgetc", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "handle", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+		"loc_line" : "39", 
+		"name" : "etc::c::files::fwrite", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "text", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "blockSize", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "len", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "handle", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+		"loc_line" : "41", 
+		"name" : "etc::c::files::access", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "name", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "mode", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "etc::c::files::AccessMode", 
+				"type" : "enum"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+		"loc_line" : "43", 
+		"name" : "etc::c::files::stat", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "name", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "stat", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "etc::c::files::stat_t", 
+					"type" : "struct"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/files.yr", 
+	"loc_line" : "1", 
+	"name" : "etc::c::files", 
+	"protection" : "prv", 
+	"type" : "module"
+}

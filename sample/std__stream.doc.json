@@ -1,0 +1,404 @@
+{
+	"childs" : [{
+		"childs" : [{
+			"attributes" : [], 
+			"doc" : "\n      Print the content of the class on stdout\n      @returns: true if something has been printed, false otherwise    \n     ", 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+			"loc_line" : "63", 
+			"name" : "__utils_stream__streamContent", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "self", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "stream", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(StringStream)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "bool", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Print the class name and content into the stream\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+			"loc_line" : "90", 
+			"name" : "toStream", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "self", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "stream", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(StringStream)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"name" : "void", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}], 
+		"doc" : "\n  When a class implement it, we can call the function write with it\n  @example: \n  ====================\n  class X {\n  // ...\n  impl utils::stream::Streamable;\n  }\n \n  let a = X::new ();\n  let dmut stream = StringStream::new ();\n  stream:.write (\"Test on : \", a); \n  println (stream);\n  ====================\n  @warning: \n  ===========\n  Streamable function stream static typeinfo\n  Which means that for the following example: \n  @example: \n  ===========\n  mod main;\n  \n  class Foo {\n      pub self () {}\n      \n      impl std::io::Streamable;\n  }\n  \n  class Bar over Foo {\n     pub self () {}\n  }\n  \n  def main () {\n      let x = Bar::new ();\n      let dmut stream = StringStream::new ();\n      stream:.write (x);\n      println (stream);\n  }\n  ===========\n  The result will be : \n  @example: \n  ============\n  main::Foo ()\n  ============\n  Because, main::Bar does not reimplement Streamable, so the definition of main::Foo is used\n  ===========\n ", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+		"loc_line" : "57", 
+		"name" : "std::stream::Streamable", 
+		"protection" : "pub", 
+		"type" : "trait"
+	}, 
+	{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Create an empty stringstream\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+			"loc_line" : "132", 
+			"name" : "std::stream::StringStream::self", 
+			"params" : [], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  A stringstream is used to write content to a string in a more efficient manner than concatenation\n  @example: \n  =============\n  class X {\n   // ...\n   impl Streamable;\n  }\n \n  def foo () -> i32 {\n     // ... \n  }\n \n  def bar () -> [c8] {\n    // ...\n  }\n  \n  let dmut stream = Stringstream::new ();\n  stream:.write (\"Foo\");\n  stream:.write (X::new ();\n  stream:.writef (\"Foo %, Bar %\", foo (), bar ());\n  =============\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_content", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::collection::vec::Vec(c8)::Vec", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::collection::vec::Vec(c8)::Vec) ()"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_entabing", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::collection::vec::Vec([c8])::Vec", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::collection::vec::Vec([c8])::Vec) ()"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "_willEntab", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "true", 
+				"name" : "bool", 
+				"type" : "bool"
+			}, 
+			"value" : "false"
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "\n          Print the content of the stream to stdout\n         ", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+				"loc_line" : "366", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+			"loc_line" : "361", 
+			"name" : "std::stream::StringStream", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}, 
+		{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "\n          Write the content of the stream inside another stream\n         ", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+				"loc_line" : "376", 
+				"name" : "toStream", 
+				"over" : "true", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "stream", 
+					"ref" : "false", 
+					"type" : {
+						"childs" : [{
+							"mut" : "true", 
+							"name" : "std::stream::StringStream", 
+							"type" : "class"
+						}], 
+						"mut" : "true", 
+						"type" : "class_pointer"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+			"loc_line" : "371", 
+			"name" : "std::stream::StringStream", 
+			"protection" : "prot", 
+			"trait" : "std::stream::Streamable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+		"loc_line" : "121", 
+		"methods" : [{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Stores a list of entabing string, and write them at the beginning of each new line\n      To stop the writting, cf detabing\n      @example: \n      ==================\n      let dmut str = StringStream::new ();\n      str:.write (\"Array {\n\");\n      str:.entabing ();\n      for i in 0 .. 10 {\n          str:.write (i, \"\n\");\n      }\n      str:.detabing ();\n      str:.write (\"}\"); \n      ==================\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+			"loc_line" : "149", 
+			"name" : "entabing", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "txt", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}, 
+				"value" : "	"
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Stop the current entabing (if there is any, does nothing otherwise)\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+			"loc_line" : "156", 
+			"name" : "detabing", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Write a c8 into the stream\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+			"loc_line" : "163", 
+			"name" : "write", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "c", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::stream::StringStream", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Write a string in utf8 into the stream\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+			"loc_line" : "183", 
+			"name" : "write", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "c", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::stream::StringStream", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Write a string into the stream\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+			"loc_line" : "223", 
+			"name" : "write", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "c", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::stream::StringStream", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+			"loc_line" : "302", 
+			"name" : "writeln", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::stream::StringStream", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      The content of the stream, in a [c8]\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+			"loc_line" : "357", 
+			"name" : "opIndex", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::stream::StringStream", 
+		"protection" : "pub", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/stream.yr", 
+	"loc_line" : "1", 
+	"name" : "std::stream", 
+	"protection" : "prv", 
+	"type" : "module"
+}

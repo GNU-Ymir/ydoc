@@ -1,0 +1,443 @@
+{
+	"childs" : [{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "21", 
+			"name" : "std::fs::iteration::FsEntry::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "path", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::fs::path::Path", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  A FsEntry is a entry of a file system element, ancestor of DirEntry and FileEntry\n  A FsEntry is also used to represent unknwon entries \n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_path", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "30", 
+			"name" : "std::fs::iteration::FsEntry", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+		"loc_line" : "17", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the path of the entry\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "26", 
+			"name" : "getPath", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::fs::iteration::FsEntry", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::fs::iteration::FsEntry", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Create a new dir entry from a given path\n      @warning: \n      =================\n      this construction should be used only in readDir, or by iterating through a directory\n      There is no verification in the constructor that the path actually leads to a directory\n      ================\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "56", 
+			"name" : "std::fs::iteration::DirEntry::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "path", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::fs::path::Path", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  A directory entry in the file system\n  A DirEntry can be iterated to get all the entries within the directory\n  @example: \n  ===================\n  import std::fs;\n  \n  let dir = readDir (\"./some/dir\");\n  for entry : &FsEntry in dir {\n      println (entry);\n  }\n  ===================\n ", 
+		"fields" : [], 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "66", 
+			"name" : "std::fs::iteration::DirEntry", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+		"loc_line" : "46", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "58", 
+			"name" : "begin", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::fs::iteration::DirIterator", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "62", 
+			"name" : "end", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::iteration::DirIterator", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::fs::iteration::DirEntry", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::fs::iteration::FsEntry", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Create a new file entry from a given path\n      @warning: \n      =============\n      this construction should be used when iterating through a directory\n      There is no verification in the constructor that the path actually leads to a file\n      =============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "97", 
+			"name" : "std::fs::iteration::FileEntry::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "path", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::fs::path::Path", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  A file entry in the file system\n  A file entry is not iterable, but can be used to open File (std::fs::file), and read contents\n  @example: \n  =================\n  let dir = readDir (\"./some/dir\");\n  for entry in dir {\n      match entry {\n          f : &FileEntry => {\n              let dmut file = File::open (f.getPath (), read-> true);\n              println (file:.readAll ());\n              file:.close ();\n          }\n      }\n  }\n  =================\n ", 
+		"fields" : [], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "99", 
+			"name" : "std::fs::iteration::FileEntry", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+		"loc_line" : "87", 
+		"methods" : [], 
+		"name" : "std::fs::iteration::FileEntry", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::fs::iteration::FsEntry", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Create a new link entry from a given path\n      @warning: \n      =============\n      this construction should be used when iterating through a directory\n      There is no verification in the constructor that the path actually leads to a link\n      =============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "128", 
+			"name" : "std::fs::iteration::LinkEntry::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "path", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::fs::path::Path", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  A link entry in the file system\n  @example: \n  =================\n  let dir = readDir (\"./some/dir\");\n  for entry in dir {\n      match entry {\n          l : &LinkEntry => {\n              println (l);\n              println (l.resolve ());\n          }\n      }\n  }\n  =================\n ", 
+		"fields" : [], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "147", 
+			"name" : "std::fs::iteration::LinkEntry", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+		"loc_line" : "118", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "\n      Follow the link, and return the path\n      @returns: the path where the link leads\n      @throws: \n        - FsError: if the link is invalid\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "136", 
+			"name" : "follow", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::fs::iteration::LinkEntry", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "157", 
+			"name" : "std::fs::iteration::DirIterator::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "dir", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "void", 
+						"type" : "void"
+					}], 
+					"mut" : "true", 
+					"type" : "pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "_dir", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "_curr", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "etc::c::dirent::dirent", 
+					"type" : "struct"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : ["mut"], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+				"loc_line" : "200", 
+				"name" : "dispose", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "198", 
+			"name" : "std::fs::iteration::DirIterator", 
+			"protection" : "prot", 
+			"trait" : "core::dispose::Disposable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "14", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+		"loc_line" : "151", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "161", 
+			"name" : "opEquals", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "o", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::fs::iteration::DirIterator", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+			"loc_line" : "165", 
+			"name" : "next", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::fs::iteration::DirIterator", 
+		"protection" : "prv", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/iteration.yr", 
+	"loc_line" : "1", 
+	"name" : "std::fs::iteration", 
+	"protection" : "prv", 
+	"type" : "module"
+}

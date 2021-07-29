@@ -1,0 +1,1030 @@
+{
+	"childs" : [{
+		"doc" : "\n  The number of allocated node in the table of a HashSet\n ", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "std::collection::set::SetConst", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "DEFAULT_ALLOC_SIZE", 
+			"value" : "10"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+		"loc_line" : "18", 
+		"name" : "std::collection::set::SetConst", 
+		"protection" : "prv", 
+		"type" : "enum"
+	}, 
+	{
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+			"loc_line" : "31", 
+			"name" : "std::collection::set::hset::self", 
+			"protection" : "pub", 
+			"rule" : "(fst=__expr rest=(',' val=__expr)*)", 
+			"skips" : ["' '", "'\n'", "'\r'", "'\t'"]
+		}], 
+		"doc" : "\n  Macro that can be used to declare a set as a literal\n  @example: \n  ============\n  let x = hset#{1, 2, 3};\n  println (x); // {1, 2, 3};\n  ============\n ", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+		"loc_line" : "29", 
+		"name" : "std::collection::set::hset", 
+		"protection" : "pub", 
+		"rules" : [], 
+		"type" : "macro"
+	}, 
+	{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "\n      Create a new empty set, with a default loaded factor of 0.75, and minimum load factor of 0.5\n      Does not allocate memory until first insertion\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "85", 
+				"name" : "self", 
+				"param" : [], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}, 
+			{
+				"doc" : "\n      Create a new empty hash set, with a default allocated table of size len\n      @params:\n         - len: the size of the table reserved to avoid growing\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "92", 
+				"name" : "self", 
+				"param" : [{
+					"mut" : "false", 
+					"name" : "len", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "", 
+			"fields" : [{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_data", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "[dmut &(SetNode!(T))]", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_loaded", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_size", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_load_factor", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_min_load_factor", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "/ Allocated only once to optimize memory usage", 
+				"mut" : "false", 
+				"name" : "_empty", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "dmut &(SetNode!(T))", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "18", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+			"loc_line" : "61", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Insert a new element inside the set\n      If the element was already in the set, does nothing\n      @params:\n         - val: the value to insert\n      @complexity: O (1 + n/k + z) with n the number of possible collision, and k the number of elements in the set, and z the time taken by resizing if the load is higher than the load factor, in average n/k and z are negligeable\n      @example: \n      ============\n      let dmut x = HashSet!([c32])::new ();\n      x:.insert (\"foo\");\n      x:.insert (\"bar\");\n      x:.insert (\"foo\");\n      assert (x.len () == 2us);\n      ============\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "119", 
+				"name" : "insert", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Search the value in the set\n      @returns: true if the value is in the set, false otherwise\n      @example: \n      ============\n      let dmut x = HashSet!([c32])::new ();\n      x:.insert (\"foo\");\n      assert (\"foo\" in x);\n      assert (\"bar\" !in x);\n      ============\n      @complexity: O (1 + n/k), with n the number of possible collision and k the number of elements in the set, in average n/k are negligeable\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "139", 
+				"name" : "opContains", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Remove an element from the set\n      If the value was no present, does nothing\n      @params: \n         - val: the value to remove\n      @example:\n      ==========\n      let dmut x = HashSet!([c32])::new ();\n      x:.insert (\"foo\");\n      x:.remove (\"foo\");\n      x:.remove (\"bar\");\n      assert (x.len () == 0);\n      ==========\n      @complexity: O (1 + n/k), with n the number of possible collision and k the number of elements in the set, in average n/k are negligeable\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "169", 
+				"name" : "remove", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Remove all the elements contained in the set\n      @example: \n      ===========\n      let dmut x = HashSet!([c32])::new ();\n      x:.insert (\"foo\");\n      x:.insert (\"bar\");\n      x:.insert (\"baz\");\n      assert (x.len () == 3us);\n      x:.clear ();\n      assert (x.len () == 0us);\n      ===========\n      @complexity: O (1)\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "204", 
+				"name" : "clear", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Iteration over the set can be done with set iterators\n      This iterators implement the ymir interface for iteration with one or two variable (next, get!0, get!1)\n      @example: \n      ============\n      let dmut x = HashSet!([c32])::new ();\n      x:.insert (\"foo\");\n      x:.insert (\"bar\");\n      for v in x {\n          println (v);\n      }    \n      ============\n      @return: an iterator on the beginning of the set\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "225", 
+				"name" : "begin", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "dmut &(SetIterator!(T))", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      @returns: the iterator on the end of the set\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "243", 
+				"name" : "end", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "&(SetIterator!(T))", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Insert an element in the hash set, without making the table grow \n      @assume: the table is able to contain the value to insert\n      @params: \n         - h: the hash of the value\n         - val: the value to insert\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "323", 
+				"name" : "insertFast", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "h", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Make the table containing the value shrink\n      @complexity: O (n + m), with n the new size, and m the number of element contained in the old table and reinserted\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "346", 
+				"name" : "shrink", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Make the table containing the values grow\n      This function is called when the _load_factor is reached\n      If the table was empty it is allocated with a size of SetConst::DEFAULT_ALLOC_SIZE,\n      otherwise the size is mutliplied by 2\n      @complexity: O (n + m), with n the new size, and m the number of element contained in the old table that are reinserted\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "389", 
+				"name" : "grow", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "HashSet", 
+			"others" : [{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "247", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}, 
+			{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "274", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((core :: duplication) :: Copiable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  A hash set implementation that stores a list of uniq values\n  The data in the set are unordered\n  @drawbacks \n  ============\n  The value contained in the hash set are considered equivalent if their hash is equivalent\n  Depending on the hash function, there may be more or less collisions\n  ============\n  \n  @example : \n  =============\n  let dmut x = HashSet!([c32], i32)::new ();\n  x:.insert (\"foo\");\n  x:.insert (\"foo\");\n  x:.insert (\"bar\");\n  assert (x.len () == 2us);\n  =============\n ", 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+		"loc_line" : "61", 
+		"name" : "std::collection::set::HashSet", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "", 
+				"loc_col" : "10", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "438", 
+				"name" : "self", 
+				"param" : [], 
+				"protection" : "prot", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "\n  Each index of a table of a hash set is a linked list\n  This list is composed of SetNode(s)\n ", 
+			"fields" : [], 
+			"loc_col" : "17", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+			"loc_line" : "437", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "440", 
+				"name" : "opEquals", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "_", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(SetNode!(T))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "SetNode", 
+			"others" : [{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "442", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  Each index of a table of a hash set is a linked list\n  This list is composed of SetNode(s)\n ", 
+		"loc_col" : "17", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+		"loc_line" : "437", 
+		"name" : "std::collection::set::SetNode", 
+		"params" : ["T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"ancestor" : "SetNode!(T)", 
+			"cstrs" : [{
+				"doc" : "\n      @params: \n         - h: == hash (val)\n         - val: the value to store\n         - next: the reference to the next element of the list\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "469", 
+				"name" : "self", 
+				"param" : [{
+					"mut" : "false", 
+					"name" : "h", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "next", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(SetNode!(T))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "\n  An actual node of the list that contains a value\n  @example: \n  ===========\n  let list = SetValue!(i32)::new (hash (12), 12, SetValue!(i32)::new (hash(42), 42, Empty!(i32)::new ()));\n  ===========\n ", 
+			"fields" : [{
+				"doc" : " The reference to the next element of the list", 
+				"mut" : "false", 
+				"name" : "next", 
+				"protection" : "pub", 
+				"type" : {
+					"name" : "&(SetNode!(T))", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : " The hash of the value contained in the list", 
+				"mut" : "false", 
+				"name" : "h", 
+				"protection" : "pub", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : " The value contained in the list", 
+				"mut" : "false", 
+				"name" : "val", 
+				"protection" : "pub", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+			"loc_line" : "452", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Insert a new element in the list if it does not already exists\n      @params: \n         - h: == hash (val)\n         - val: the value to insert\n      @complexity: O (n), with n the length of the list\n      @returns: true if a new node has been allocated, false otherwise\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "504", 
+				"name" : "insert", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "h", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Remove the key inside the list, if there is no node containing the value, just return the list as it was\n      @info: the returned list is not a copy, no allocation are made\n      @complexity: O (n), with n the length of the list\n      @returns: \n         - rm: true if a node has been removed, false otherwise\n         - the list, with no node containing the hash h\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "527", 
+				"name" : "remove", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "h", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "true", 
+					"name" : "rm", 
+					"ref" : "true", 
+					"type" : {
+						"name" : "bool", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "dmut &(SetNode!(T))", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Search a node whose hash key is h in the linked list\n      @returns: true if such node exists, false otherwise\n      @complexity: O (n), with n the length of the list\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "546", 
+				"name" : "opContains", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "h", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Compare two nodes\n      @returns: true if o is SetValue and o.h == self.h, false otherwise\n     ", 
+				"loc_col" : "14", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "563", 
+				"name" : "opEquals", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "o", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(SetNode!(T))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "SetValue", 
+			"others" : [{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "474", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  An actual node of the list that contains a value\n  @example: \n  ===========\n  let list = SetValue!(i32)::new (hash (12), 12, SetValue!(i32)::new (hash(42), 42, Empty!(i32)::new ()));\n  ===========\n ", 
+		"loc_col" : "14", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+		"loc_line" : "452", 
+		"name" : "std::collection::set::SetValue", 
+		"params" : ["T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"ancestor" : "SetNode!(T)", 
+			"cstrs" : [{
+				"doc" : "", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "579", 
+				"name" : "self", 
+				"param" : [], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "\n  An empty node that encode the end of a linked list in a set\n ", 
+			"fields" : [], 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+			"loc_line" : "578", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Compare two nodes\n      @returns: true if o is Empty!T\n     ", 
+				"loc_col" : "14", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "593", 
+				"name" : "opEquals", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "o", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(SetNode!(T))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "Empty", 
+			"others" : [{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "581", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  An empty node that encode the end of a linked list in a set\n ", 
+		"loc_col" : "14", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+		"loc_line" : "578", 
+		"name" : "std::collection::set::Empty", 
+		"params" : ["T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "\n      An iterator is always constructed to point somewhere, or must point to (0, 0, [], empty)\n      @params: \n         - i: the index in the table of this iterator\n         - branch: the index in the branch at iterator i\n         - data: the table of data\n         - current: the current traversed node in the branch (data [i][branch])\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "638", 
+				"name" : "self", 
+				"param" : [{
+					"mut" : "false", 
+					"name" : "i", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "branch", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "data", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "[&(SetNode!(T))]", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "current", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(SetNode!(T))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "\n  The set iterator class is used to traverse a set\n  It can be acquired in a hash set with the methods begin () and end ()\n  @example: \n  ===========\n  let x = hset#{\"foo\"};\n  let dmut beg_it = x.begin ();\n  assert (beg_it.get!0 == \"foo\");\n  \n  beg_it:.next ();\n  assert (beg_it == x.end ());\n  ===========\n ", 
+			"fields" : [{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_data", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "[&(SetNode!(T))]", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "/ The current index of the iterator, in the table", 
+				"mut" : "true", 
+				"name" : "_index", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "/ The current index in the current branch (linked list of SetValues)", 
+				"mut" : "true", 
+				"name" : "_branch", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "/ The reference on node containing the value we are pointing at", 
+				"mut" : "true", 
+				"name" : "_currentNode", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "&(SetNode!(T))", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+			"loc_line" : "617", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Two iterators are equals, if the current nodes are equals\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "648", 
+				"name" : "opEquals", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "o", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(SetIterator!(T))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Create a new iterator that point to the next value contained in the set\n      If there is no more value, the returned iterator is equals to set.end ()\n      @example: \n      ===========\n      let dmut x = HashSet!([c32])::new ();\n      x:.insert (\"foo\");\n      x:.insert (\"bar\");\n      let dmut it = alias x.begin ();\n      let end = x.end (); // put in a var to avoid multiple useless calls and allocations\n      while (it != end) {\n         println (it.get!0);\n         it:.next ();\n      }\n      ===========\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "684", 
+				"name" : "next", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "SetIterator", 
+			"others" : [{
+				"child" : {
+					"attributes" : [], 
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+					"loc_line" : "659", 
+					"name" : "get", 
+					"params" : [{
+						"mut" : "false", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				"doc" : "\n      @returns: \n      =======\n      the value of the current node, in an option type\n      None, it the current node is empty\n      =======     \n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+				"loc_line" : "659", 
+				"name" : "get", 
+				"params" : ["0"], 
+				"protection" : "pub", 
+				"type" : "template"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  The set iterator class is used to traverse a set\n  It can be acquired in a hash set with the methods begin () and end ()\n  @example: \n  ===========\n  let x = hset#{\"foo\"};\n  let dmut beg_it = x.begin ();\n  assert (beg_it.get!0 == \"foo\");\n  \n  beg_it:.next ();\n  assert (beg_it == x.end ());\n  ===========\n ", 
+		"loc_col" : "14", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+		"loc_line" : "617", 
+		"name" : "std::collection::set::SetIterator", 
+		"params" : ["T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/set.yr", 
+	"loc_line" : "1", 
+	"name" : "std::collection::set", 
+	"protection" : "prv", 
+	"type" : "module"
+}

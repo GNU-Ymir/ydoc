@@ -1,0 +1,462 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "\n  Create the directory at path \n  @params: \n    - recursive: if true, create the parent directories if they don't exists\n  @throws:\n    - FsError: if there was an error in the creation of the directory, cf FsErrorCode\n  @example: \n  ========================\n  import std::fs;\n  \n  createDir (Path::new (\"./some/dir\"))?\n  ========================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs.yr", 
+		"loc_line" : "34", 
+		"name" : "std::fs::createDir", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "recursive", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}, 
+			"value" : "false"
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "permission", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}, 
+			"value" : "509"
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::fs::errors::FsError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: true if the directory exists and is accessible, false otherwise\n  @example: \n  ========================\n  import std::fs;\n  \n  if isDir (Path::new (\"./some/dir\")) {\n     println (\"Directory exists\");\n  } else {\n     println (\"Directory does not exists\");\n  }\n  ========================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs.yr", 
+		"loc_line" : "74", 
+		"name" : "std::fs::isDir", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "bool", 
+			"type" : "bool"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Remove a directory at a given path location\n  @params: \n    - path: the path of the directory to remove\n    - recursive: if true, remove the directory after removing all its content\n  @Warning: recursive deletion must be used very carefully\n  @throws: \n     - FsError: \n           + the directory is not empty, the user\n           + the user lacks the permission\n           + the path does not exists\n           + the path is not a directory\n           + other reasons\n  @example: \n  ========================\n  import std::fs;\n  \n  removeDir (Path::new (\"./some/dir\"))?\n  ========================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs.yr", 
+		"loc_line" : "103", 
+		"name" : "std::fs::removeDir", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "recursive", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}, 
+			"value" : "false"
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::fs::errors::FsError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: an iterator over the entries of a directory\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs.yr", 
+		"loc_line" : "133", 
+		"name" : "std::fs::readDir", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::fs::iteration::DirEntry", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::fs::errors::FsError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Create a new file \n  @params: \n     - name: the absolute path of the file (or relative to the execution)\n  @return: true if the creation succeded, false otherwise\n  @throws: \n    - FsError: \n          + the file already exists\n          + permission denied\n          + path is invalid\n  @example: \n  =================\n  import std::fs;\n  \n  createFile (Path::new (\"./some/dir/file.txt\"));\n  =================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs.yr", 
+		"loc_line" : "161", 
+		"name" : "std::fs::createFile", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::fs::errors::FsError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: the instant of last modification of a file\n  @throws: FsError, if the path does not refer to a file\n  @example: \n  ============\n  import std::fs;\n  import std::time::_;\n \n  let path1 = Path::new (\"./some/dir/file.txt\");\n  let path2 = Path::new (\"./some/dir/file.out\");\n  let date = fileDate (path1);\n  if (date > fileDate (path2) {\n     with dmut f1 = File::open (path1) {\n          with dmut f2 = File::create (path2, write-> true) {\n               f2:.write (f1:.readAll ());\n          }\n     }\n  }\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs.yr", 
+		"loc_line" : "193", 
+		"name" : "std::fs::fileDate", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "std::time::instant::Instant", 
+			"type" : "struct"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::fs::errors::FsError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: true if the file exists and is a file, false otherwise\n  @example: \n  =================\n  import std::fs;\n \n  if (isFile (Path::new (\"./some/dir/file.txt\")) {\n      println (\"File exists\");\n  } \n  =================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs.yr", 
+		"loc_line" : "216", 
+		"name" : "std::fs::isFile", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "bool", 
+			"type" : "bool"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: true if the file exists and is writable\n  @example: \n  =================\n  import std::fs;\n \n  if (isWritable (Path::new (\"./some/dir/file.txt\")) {\n      println (\"File is writable\");\n  } \n  =================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs.yr", 
+		"loc_line" : "232", 
+		"name" : "std::fs::isWritable", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "bool", 
+			"type" : "bool"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: true if the file exists and is readable\n  @example: \n  =================\n  import std::fs;\n \n  if (isReadable (Path::new (\"./some/dir/file.txt\")) {\n      println (\"File is readable\");\n  } \n  =================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs.yr", 
+		"loc_line" : "247", 
+		"name" : "std::fs::isReadable", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "bool", 
+			"type" : "bool"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: true if the file exists and is executable\n  @example: \n  =================\n  import std::fs;\n \n  if (isExecutable (Path::new (\"./some/dir/file.txt\")) {\n      println (\"File is readable\");\n  } \n  =================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs.yr", 
+		"loc_line" : "262", 
+		"name" : "std::fs::isExecutable", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "bool", 
+			"type" : "bool"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Remove a file from the file system\n  @throws: \n    - FsError: \n        + the file does not exists\n        + permission denied\n        + this is not a file\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs.yr", 
+		"loc_line" : "274", 
+		"name" : "std::fs::removeFile", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::fs::errors::FsError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Remove an entry from the file system (this entry can be anything)\n  @throws: \n    - FsError: \n        + the entry does not exists\n        + permission denied\n        + this is a file, or a dir\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs.yr", 
+		"loc_line" : "294", 
+		"name" : "std::fs::removeFsEntry", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::fs::path::Path", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::fs::errors::FsError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}], 
+	"doc" : "\n  Filesystem manipulation operations.\n ", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs.yr", 
+	"loc_line" : "4", 
+	"name" : "std::fs", 
+	"protection" : "prv", 
+	"type" : "module"
+}

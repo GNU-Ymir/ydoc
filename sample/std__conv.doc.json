@@ -1,0 +1,2901 @@
+{
+	"childs" : [{
+		"childs" : [{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "24", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "10", 
+			"name" : "std::conv::Runtime::_yrt_ulong_to_double", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "f64", 
+				"type" : "float"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "24", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "12", 
+			"name" : "std::conv::Runtime::_yrt_long_to_double", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "i64", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "f64", 
+				"type" : "float"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "24", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "14", 
+			"name" : "std::conv::Runtime::_yrt_uint_to_float", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u32", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "f32", 
+				"type" : "float"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "24", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "16", 
+			"name" : "std::conv::Runtime::_yrt_int_to_float", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "i32", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "f32", 
+				"type" : "float"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "24", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "18", 
+			"name" : "std::conv::Runtime::_yrt_double_to_ulong", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "f64", 
+					"type" : "float"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "24", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "20", 
+			"name" : "std::conv::Runtime::_yrt_double_to_long", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "f64", 
+					"type" : "float"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "i64", 
+				"type" : "int"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "24", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "22", 
+			"name" : "std::conv::Runtime::_yrt_float_to_uint", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "f32", 
+					"type" : "float"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "24", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "24", 
+			"name" : "std::conv::Runtime::_yrt_float_to_int", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "f32", 
+					"type" : "float"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "24", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "26", 
+			"name" : "std::conv::Runtime::_yrt_to_utf8_array", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "s", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "24", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "28", 
+			"name" : "std::conv::Runtime::_yrt_to_utf32_array", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "s", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "24", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "30", 
+			"name" : "std::conv::Runtime::_yrt_double_to_s8", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "s", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "f64", 
+					"type" : "float"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "24", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "32", 
+			"name" : "std::conv::Runtime::_yrt_float_to_s8", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "s", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "f32", 
+					"type" : "float"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}], 
+		"doc" : "", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "9", 
+		"name" : "std::conv::Runtime", 
+		"protection" : "prv", 
+		"type" : "module"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "core::exception::Exception", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      @params: \n         - from, the type from which we want a cast\n         - to, the type to which we want a cast\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "79", 
+			"name" : "std::conv::CastFailure::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "from", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "core::typeinfo::TypeInfo", 
+					"type" : "struct"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "to", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "core::typeinfo::TypeInfo", 
+					"type" : "struct"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  This class can be thrown when a dynamic cast was unsuccessful \n  It doen't have a real meaning in the language, as it can't really happen\n  But we can force it\n  @example : \n  ===============\n  class @abstract X { ... }\n  class Y over X { ... }\n  class Z over X { ... }\n  \n  def enforce_Y  (a : &X) throws &std::conv::CastFailure\n  {\n     match (a) {\n         _ : &Y => {\n              println (\"Success\");\n         }\n         _ => {\n           throw CastFailure::new (a::typeinfo, Y::typeinfo);\n         }\n      }\n  } \n  \n  def main () {\n      enforce_Y (Z::new ());\n  } catch {\n      x : _ => println (x);\n  }\n  \n  ===============\n ", 
+		"fields" : [{
+			"doc" : " The type from which we want a cast    ", 
+			"mut" : "false", 
+			"name" : "_fr", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "core::typeinfo::TypeInfo", 
+				"type" : "struct"
+			}
+		}, 
+		{
+			"doc" : " The type to which we want a cast", 
+			"mut" : "false", 
+			"name" : "_to", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "core::typeinfo::TypeInfo", 
+				"type" : "struct"
+			}
+		}], 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "\n          Just print the error to stdout\n         ", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+				"loc_line" : "86", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "81", 
+			"name" : "std::conv::CastFailure", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "66", 
+		"methods" : [], 
+		"name" : "std::conv::CastFailure", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a u32 into a string\n      @example: \n      ==========\n      let x = to![c32] (12u32);\n      assert (x == \"12\");\n      ==========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "104", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a u32 into a string\n      @example: \n      ==========\n      let x = to![c32] (12u32);\n      assert (x == \"12\");\n      ==========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "104", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c32", "F of u64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a i32 into a string\n      @example:\n      ===========\n      let x = to![c32] (-12);\n      assert (x == \"-12\");\n      ===========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "133", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a i32 into a string\n      @example:\n      ===========\n      let x = to![c32] (-12);\n      assert (x == \"-12\");\n      ===========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "133", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c32", "F of i64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform is i32 into a string\n      @example: \n      ============\n      assert (to![c32] (12) == \"12\")\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "179", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform is i32 into a string\n      @example: \n      ============\n      assert (to![c32] (12) == \"12\")\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "179", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c32", "F of i32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform is u32 into a string\n      @example: \n      ============\n      assert (to![c32] (12u32) == \"12\")\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "190", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform is u32 into a string\n      @example: \n      ============\n      assert (to![c32] (12u32) == \"12\")\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "190", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c32", "F of u32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform is i16 into a string\n      @example: \n      ============\n      assert (to![c32] (12i16) == \"12\")\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "201", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform is i16 into a string\n      @example: \n      ============\n      assert (to![c32] (12i16) == \"12\")\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "201", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c32", "F of i16"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform is u16 into a string\n      @example: \n      ============\n      assert (to![c32] (12u16) == \"12\")\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "212", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform is u16 into a string\n      @example: \n      ============\n      assert (to![c32] (12u16) == \"12\")\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "212", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c32", "F of u16"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform is i8 into a string\n      @example: \n      ============\n      assert (to![c32] (12i8) == \"12\")\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "223", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform is i8 into a string\n      @example: \n      ============\n      assert (to![c32] (12i8) == \"12\")\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "223", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c32", "F of i8"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform is u8 into a string\n      @example: \n      ============\n      assert (to![c32] (12u8) == \"12\")\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "234", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform is u8 into a string\n      @example: \n      ============\n      assert (to![c32] (12u8) == \"12\")\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "234", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c32", "F of u8"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a u32 into a string\n      @example: \n      ==========\n      let x = to![c8] (12u32);\n      assert (x == \"12\");\n      ==========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "246", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a u32 into a string\n      @example: \n      ==========\n      let x = to![c8] (12u32);\n      assert (x == \"12\");\n      ==========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "246", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c8", "F of u64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a i32 into a string\n      @example:\n      ===========\n      let x = to![c8] (-12);\n      assert (x == \"-12\");\n      ===========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "275", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a i32 into a string\n      @example:\n      ===========\n      let x = to![c8] (-12);\n      assert (x == \"-12\");\n      ===========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "275", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c8", "F of i64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transfrom a utf32 encoded string into a utf8 string\n      @params :\n        - s: a string in utf32\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "316", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "s", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "dmut [c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transfrom a utf32 encoded string into a utf8 string\n      @params :\n        - s: a string in utf32\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "316", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c8", "F of [c32]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transfrom a utf8 encoded string into a utf32 string\n      @params :\n        - s: a string in utf8\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "325", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "s", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "dmut [c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transfrom a utf8 encoded string into a utf32 string\n      @params :\n        - s: a string in utf8\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "325", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c32", "F of [c8]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Create a zero terminated string from a [c8]\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "332", 
+		"name" : "std::conv::toStringZ", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "a", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "c8", 
+				"type" : "char"
+			}], 
+			"mut" : "false", 
+			"type" : "pointer"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      @returns: a slice of a where the len is correctly set\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "346", 
+			"name" : "fromStringZ", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "U", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      @returns: a slice of a where the len is correctly set\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "346", 
+		"name" : "std::conv::fromStringZ", 
+		"params" : ["U of [c8]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      @returns: a slice of a where the len is correctly set\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "358", 
+			"name" : "fromStringZ", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "U", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(SegFault)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      @returns: a slice of a where the len is correctly set\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "358", 
+		"name" : "std::conv::fromStringZ", 
+		"params" : ["U of &(c8)"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transfrom a utf32 encoded char into a utf8 string\n      @params :\n        - s: a char in utf32\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "383", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "s", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "dmut [c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transfrom a utf32 encoded char into a utf8 string\n      @params :\n        - s: a char in utf32\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "383", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c8", "F of c32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform is i32 into a string\n      @example: \n      ============\n      assert (to![c8] (12) == \"12\"s8)\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "394", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform is i32 into a string\n      @example: \n      ============\n      assert (to![c8] (12) == \"12\"s8)\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "394", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c8", "F of i32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform is u32 into a string\n      @example: \n      ============\n      assert (to![c8] (12u32) == \"12\"s8)\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "405", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "u32", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform is u32 into a string\n      @example: \n      ============\n      assert (to![c8] (12u32) == \"12\"s8)\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "405", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c8"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform is i16 into a string\n      @example: \n      ============\n      assert (to![c8] (12i16) == \"12\"s8)\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "416", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform is i16 into a string\n      @example: \n      ============\n      assert (to![c8] (12i16) == \"12\"s8)\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "416", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c8", "F of i16"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform is u16 into a string\n      @example: \n      ============\n      assert (to![c8] (12u16) == \"12\"s8)\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "427", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform is u16 into a string\n      @example: \n      ============\n      assert (to![c8] (12u16) == \"12\"s8)\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "427", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c8", "F of u16"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform is i8 into a string\n      @example: \n      ============\n      assert (to![c8] (12i8) == \"12\"s8)\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "438", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform is i8 into a string\n      @example: \n      ============\n      assert (to![c8] (12i8) == \"12\"s8)\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "438", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c8", "F of i8"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform is u8 into a string\n      @example: \n      ============\n      assert (to![c8] (12u8) == \"12\"s8)\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "449", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform is u8 into a string\n      @example: \n      ============\n      assert (to![c8] (12u8) == \"12\"s8)\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "449", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c8", "F of u8"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a f32 into a string\n      @example: \n      ===========\n      assert (to![c8] (12.8f) == \"12.8\"s8)\n      ===========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "460", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a f32 into a string\n      @example: \n      ===========\n      assert (to![c8] (12.8f) == \"12.8\"s8)\n      ===========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "460", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c8", "F of f32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a f64 into a string\n      @example: \n      ===========\n      assert (to![c8] (12.8) == \"12.8\"s8)\n      ===========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "471", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a f64 into a string\n      @example: \n      ===========\n      assert (to![c8] (12.8) == \"12.8\"s8)\n      ===========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "471", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c8", "F of f64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a f32 into a string\n      @example: \n      ===========\n      assert (to![c32] (12.8f) == \"12.8\")\n      ===========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "482", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a f32 into a string\n      @example: \n      ===========\n      assert (to![c32] (12.8f) == \"12.8\")\n      ===========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "482", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c32", "F of f32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a f64 into a string\n      @example: \n      ===========\n      assert (to![c32] (12.8) == \"12.8\")\n      ===========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "493", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a f64 into a string\n      @example: \n      ===========\n      assert (to![c32] (12.8) == \"12.8\")\n      ===========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "493", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c32", "F of f64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Convert a bool into a string \n      @example: \n      ===========\n      assert (to![c8] (false) == \"false\"s8)\n      ===========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "504", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Convert a bool into a string \n      @example: \n      ===========\n      assert (to![c8] (false) == \"false\"s8)\n      ===========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "504", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c8", "F of bool"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Convert a bool into a string \n      @example: \n      ===========\n      assert (to![c32] (false) == \"false\")\n      ===========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "518", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Convert a bool into a string \n      @example: \n      ===========\n      assert (to![c32] (false) == \"false\")\n      ===========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "518", 
+		"name" : "std::conv::to", 
+		"params" : ["T of [U]", "U of c32", "F of bool"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a u64 into a f64\n      @example: \n      ==========\n      let x = to!f64 (12u64);\n      assert (x == 12.0);\n      ==========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "533", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "f64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a u64 into a f64\n      @example: \n      ==========\n      let x = to!f64 (12u64);\n      assert (x == 12.0);\n      ==========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "533", 
+		"name" : "std::conv::to", 
+		"params" : ["T of f64", "F of u64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a i64 into a f64\n      @example: \n      ==========\n      let x = to!f64 (12i64);\n      assert (x == 12.0);\n      ==========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "545", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "f64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a i64 into a f64\n      @example: \n      ==========\n      let x = to!f64 (12i64);\n      assert (x == 12.0);\n      ==========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "545", 
+		"name" : "std::conv::to", 
+		"params" : ["T of f64", "F of i64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a i32 into a f64\n      @example: \n      ==========\n      let x = to!f64 (12);\n      assert (x == 12.0);\n      ==========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "558", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "f64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a i32 into a f64\n      @example: \n      ==========\n      let x = to!f64 (12);\n      assert (x == 12.0);\n      ==========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "558", 
+		"name" : "std::conv::to", 
+		"params" : ["T of f64", "F of i32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a u32 into a f64\n      @example: \n      ==========\n      let x = to!f64 (12);\n      assert (x == 12.0);\n      ==========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "570", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "f64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a u32 into a f64\n      @example: \n      ==========\n      let x = to!f64 (12);\n      assert (x == 12.0);\n      ==========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "570", 
+		"name" : "std::conv::to", 
+		"params" : ["T of f64", "F of u32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a i32 into a f32\n      @example: \n      ==========\n      let x = to!f32 (12);\n      assert (x == 12.0f);\n      ==========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "582", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "f32", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a i32 into a f32\n      @example: \n      ==========\n      let x = to!f32 (12);\n      assert (x == 12.0f);\n      ==========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "582", 
+		"name" : "std::conv::to", 
+		"params" : ["T of f32", "F of i32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a u32 into a f32\n      @example: \n      ==========\n      let x = to!f32 (12);\n      assert (x == 12.0f);\n      ==========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "594", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "f32", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a u32 into a f32\n      @example: \n      ==========\n      let x = to!f32 (12);\n      assert (x == 12.0f);\n      ==========\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "594", 
+		"name" : "std::conv::to", 
+		"params" : ["T of f32", "F of u32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a f64 into a i64\n      @example:\n      ============\n      let x = to!i64 (12.0);\n      assert (x == 12i64);\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "606", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "i64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a f64 into a i64\n      @example:\n      ============\n      let x = to!i64 (12.0);\n      assert (x == 12i64);\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "606", 
+		"name" : "std::conv::to", 
+		"params" : ["T of i64", "F of f64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a f64 into a u64\n      @example:\n      ============\n      let x = to!u64 (12.0);\n      assert (x == 12u64);\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "618", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a f64 into a u64\n      @example:\n      ============\n      let x = to!u64 (12.0);\n      assert (x == 12u64);\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "618", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u64", "F of f64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a f32 into a i32\n      @example:\n      ============\n      let x = to!i32 (12.f);\n      assert (x == 12);\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "631", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "i32", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a f32 into a i32\n      @example:\n      ============\n      let x = to!i32 (12.f);\n      assert (x == 12);\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "631", 
+		"name" : "std::conv::to", 
+		"params" : ["T of i32", "F of f32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a f32 into a u32\n      @example:\n      ============\n      let x = to!u32 (12.f);\n      assert (x == 12u32);\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "643", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u32", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a f32 into a u32\n      @example:\n      ============\n      let x = to!u32 (12.f);\n      assert (x == 12u32);\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "643", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u32", "F of f32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a f32 into a i64\n      @example:\n      ============\n      let x = to!i64 (12.f);\n      assert (x == 12i64);\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "655", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "i64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a f32 into a i64\n      @example:\n      ============\n      let x = to!i64 (12.f);\n      assert (x == 12i64);\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "655", 
+		"name" : "std::conv::to", 
+		"params" : ["T of i64", "F of f32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a f32 into a u64\n      @example:\n      ============\n      let x = to!u64 (12.f);\n      assert (x == 12u64);\n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "667", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a f32 into a u64\n      @example:\n      ============\n      let x = to!u64 (12.f);\n      assert (x == 12u64);\n      ============\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "667", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u64", "F of f32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a u64\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\").to!u64 ();\n      assert (x == 12u64);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "683", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a u64\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\").to!u64 ();\n      assert (x == 12u64);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "683", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u64", "F of [c32]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a u32\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!u32 ();\n      assert (x == 12u32);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "716", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a u32\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!u32 ();\n      assert (x == 12u32);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "716", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u32", "F of [c32]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a u16\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!u16 ();\n      assert (x == 12u16);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "740", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a u16\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!u16 ();\n      assert (x == 12u16);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "740", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u16", "F of [c32]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a u8\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!u8 ();\n      assert (x == 12u8);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "764", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a u8\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!u8 ();\n      assert (x == 12u8);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "764", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u8", "F of [c32]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a u64\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!u64 ();\n      assert (x == 12u64);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "789", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a u64\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!u64 ();\n      assert (x == 12u64);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "789", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u64", "F of [c8]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a u32\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!u32 ();\n      assert (x == 12u32);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "822", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a u32\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!u32 ();\n      assert (x == 12u32);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "822", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u32", "F of [c8]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a u16\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!u16 ();\n      assert (x == 12u16);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "846", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a u16\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!u16 ();\n      assert (x == 12u16);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "846", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u16", "F of [c8]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a u8\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!u8 ();\n      assert (x == 12u8);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "870", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a u8\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!u8 ();\n      assert (x == 12u8);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "870", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u8", "F of [c8]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a i64\n      @throws: \n         - &CastFailure: if the string does not contain a valid i64 literal\n      @example:\n      ===============\n      let x = (\"-12\").to!i64 ();\n      assert (x == -12i64);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9] and '-'\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "895", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "i64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a i64\n      @throws: \n         - &CastFailure: if the string does not contain a valid i64 literal\n      @example:\n      ===============\n      let x = (\"-12\").to!i64 ();\n      assert (x == -12i64);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9] and '-'\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "895", 
+		"name" : "std::conv::to", 
+		"params" : ["T of i64", "F of [c32]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a i32, i16 of i8\n      @throws:\n        - &CastFailure: if the string does not contain a valid i32 literal\n      @example:\n      ===============\n      let x = (\"-12\").to!i32 ();\n      assert (x == -12);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9] and '-'    \n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "930", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a i32, i16 of i8\n      @throws:\n        - &CastFailure: if the string does not contain a valid i32 literal\n      @example:\n      ===============\n      let x = (\"-12\").to!i32 ();\n      assert (x == -12);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9] and '-'    \n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "930", 
+		"name" : "std::conv::to", 
+		"params" : ["T of i32", "F of [c32]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a i16\n      @throws:\n        - &CastFailure: if the string does not contain a valid i32 literal\n      @example:\n      ===============\n      let x = (\"-12\").to!i16 ();\n      assert (x == -12i16);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9] and '-'    \n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "954", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a i16\n      @throws:\n        - &CastFailure: if the string does not contain a valid i32 literal\n      @example:\n      ===============\n      let x = (\"-12\").to!i16 ();\n      assert (x == -12i16);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9] and '-'    \n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "954", 
+		"name" : "std::conv::to", 
+		"params" : ["T of i16", "F of [c32]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a i8\n      @throws:\n        - &CastFailure: if the string does not contain a valid i32 literal\n      @example:\n      ===============\n      let x = (\"-12\").to!i8 ();\n      assert (x == -12i8);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9] and '-'    \n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "978", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a i8\n      @throws:\n        - &CastFailure: if the string does not contain a valid i32 literal\n      @example:\n      ===============\n      let x = (\"-12\").to!i8 ();\n      assert (x == -12i8);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9] and '-'    \n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "978", 
+		"name" : "std::conv::to", 
+		"params" : ["T of i8", "F of [c32]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a i64\n      @throws: \n         - &CastFailure: if the string does not contain a valid i64 literal\n      @example:\n      ===============\n      let x = (\"-12\").to!i64 ();\n      assert (x == -12i64);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9] and '-'\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1003", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "i64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a i64\n      @throws: \n         - &CastFailure: if the string does not contain a valid i64 literal\n      @example:\n      ===============\n      let x = (\"-12\").to!i64 ();\n      assert (x == -12i64);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9] and '-'\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1003", 
+		"name" : "std::conv::to", 
+		"params" : ["T of i64", "F of [c8]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a i32\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!i32 ();\n      assert (x == 12i32);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1038", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a i32\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!i32 ();\n      assert (x == 12i32);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1038", 
+		"name" : "std::conv::to", 
+		"params" : ["T of i32", "F of [c8]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a i16\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!i16 ();\n      assert (x == 12i16);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1062", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a i16\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!i16 ();\n      assert (x == 12i16);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1062", 
+		"name" : "std::conv::to", 
+		"params" : ["T of i16", "F of [c8]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a i8\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!i8 ();\n      assert (x == 12i8);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1086", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a i8\n      @throws: \n         - &CastFailure: if the string does not contain a valid u32 literal\n      @example:\n      ===============\n      let x = (\"12\"s8).to!i8 ();\n      assert (x == 12i8);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9]\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1086", 
+		"name" : "std::conv::to", 
+		"params" : ["T of i8", "F of [c8]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string in hexadecimal format into a u32\n      @throws: \n         - &CastFailure: if the string does not contain a valid i32 literal\n      @example:\n      ===============\n      let x = (\"0xff\").(to!(u32, \"x\"));\n      assert (x == 255u32);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9a-f], '0', 'x'\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1111", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string in hexadecimal format into a u32\n      @throws: \n         - &CastFailure: if the string does not contain a valid i32 literal\n      @example:\n      ===============\n      let x = (\"0xff\").(to!(u32, \"x\"));\n      assert (x == 255u32);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9a-f], '0', 'x'\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1111", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u64", "x", "F of [c32]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string in hexadecimal format into a u32\n      @throws: \n         - &CastFailure: if the string does not contain a valid i32 literal\n      @example:\n      ===============\n      let x = (\"0xff\").to!{u32, \"x\"} ();\n      assert (x == 255u32);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9a-f], '0', 'x'\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1153", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string in hexadecimal format into a u32\n      @throws: \n         - &CastFailure: if the string does not contain a valid i32 literal\n      @example:\n      ===============\n      let x = (\"0xff\").to!{u32, \"x\"} ();\n      assert (x == 255u32);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9a-f], '0', 'x'\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1153", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u32", "x", "F of [c32]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string in hexadecimal format into a u16\n      @throws: \n         - &CastFailure: if the string does not contain a valid i32 literal\n      @example:\n      ===============\n      let x = (\"0xff\").to!{u16, \"x\"} ();\n      assert (x == 255u16);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9a-f], '0', 'x'\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1177", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string in hexadecimal format into a u16\n      @throws: \n         - &CastFailure: if the string does not contain a valid i32 literal\n      @example:\n      ===============\n      let x = (\"0xff\").to!{u16, \"x\"} ();\n      assert (x == 255u16);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9a-f], '0', 'x'\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1177", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u16", "x", "F of [c32]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string in hexadecimal format into a u8\n      @throws: \n         - &CastFailure: if the string does not contain a valid i32 literal\n      @example:\n      ===============\n      let x = (\"0xff\").to!{u8, \"x\"} ();\n      assert (x == 255u8);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9a-f], '0', 'x'\n      @known_bug: does not check the overflow capacity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1201", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string in hexadecimal format into a u8\n      @throws: \n         - &CastFailure: if the string does not contain a valid i32 literal\n      @example:\n      ===============\n      let x = (\"0xff\").to!{u8, \"x\"} ();\n      assert (x == 255u8);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9a-f], '0', 'x'\n      @known_bug: does not check the overflow capacity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1201", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u8", "x", "F of [c32]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a string into a f64\n      @throws: \n         - &CastFailure: if the string does not contain a valid f64 literal\n      @example:\n      ===============\n      let x = (\"-12.89\").(to!f64);\n      assert (x == -12.89);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9], '-' and '.'\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1224", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "f64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a string into a f64\n      @throws: \n         - &CastFailure: if the string does not contain a valid f64 literal\n      @example:\n      ===============\n      let x = (\"-12.89\").(to!f64);\n      assert (x == -12.89);\n      ===============\n      @assume: the string is stripped, so the only possible char are [0-9], '-' and '.'\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1224", 
+		"name" : "std::conv::to", 
+		"params" : ["T of f64", "F of [c32]"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Unwrap the content of an option type\n      @example: \n      ==============\n      def foo (i : i32)-> i32\n          throws &AssertError\n      {\n          assert (i != 0);\n          144 / i\n      }\n      \n      let j = foo (12)?\n      let k = foo (0)?\n      {\n          println (j.unwrap ()); // prints \"12\"\n          let x = j.unwrap () \n                  + k.unwrap (); // throw an exception\n          println (x); \n      } catch {\n         err : &CastFailure => {\n               println (err);\n         }\n      }\n      ==============\n      @throws : &CastFailure, if the option is empty\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1298", 
+			"name" : "unwrap", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "(T)?", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Unwrap the content of an option type\n      @example: \n      ==============\n      def foo (i : i32)-> i32\n          throws &AssertError\n      {\n          assert (i != 0);\n          144 / i\n      }\n      \n      let j = foo (12)?\n      let k = foo (0)?\n      {\n          println (j.unwrap ()); // prints \"12\"\n          let x = j.unwrap () \n                  + k.unwrap (); // throw an exception\n          println (x); \n      } catch {\n         err : &CastFailure => {\n               println (err);\n         }\n      }\n      ==============\n      @throws : &CastFailure, if the option is empty\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1298", 
+		"name" : "std::conv::unwrap", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Unwrap the content of an option type containing a class type\n      This function, unlike simple unwrap allows to cast the content of the option into the type of an child class\n      @example: \n      ==================\n      class @abstract A {\n        prot self () {}\n        impl std::io::Printable;\n      }\n      \n      class B over A {\n        pub self () {}\n        impl std::io::Printable;\n      }\n     \n      class C over A {\n        pub self () {}\n        impl std::io::Printable;\n      }\n     \n      def foo (i : i32) -> (&A)? {\n          if (i < 10) { (B::new ()?).to!(&A?} () }\n          else if (i < 20) { (C::new ()?).to!(&A?} () }\n          else (&A?)::__err__\n      }\n      \n      let x = foo (1);\n      let y = foo (14);\n      let z = foo (120);\n      {\n         println (x.unwrap!(&B} ()); // prints \"main::B ()\"\n         println (y.unwrap!(&C} ()); // prints \"main::C ()\"\n         println (y.unwrap!(&A} ()); // prints \"main::C ()\"\n         println (z.unwrap!(&A} ()); // throw an exception\n      } catch {\n          err : &CastFailure => {\n              println (err);\n          }\n     }\n      ==================\n      @throws : &CastFailure, if the option is empty, or the option does not contain a value of type U\n     ", 
+			"loc_col" : "30", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1353", 
+			"name" : "unwrap", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "(T)?", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "U", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(CastFailure)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Unwrap the content of an option type containing a class type\n      This function, unlike simple unwrap allows to cast the content of the option into the type of an child class\n      @example: \n      ==================\n      class @abstract A {\n        prot self () {}\n        impl std::io::Printable;\n      }\n      \n      class B over A {\n        pub self () {}\n        impl std::io::Printable;\n      }\n     \n      class C over A {\n        pub self () {}\n        impl std::io::Printable;\n      }\n     \n      def foo (i : i32) -> (&A)? {\n          if (i < 10) { (B::new ()?).to!(&A?} () }\n          else if (i < 20) { (C::new ()?).to!(&A?} () }\n          else (&A?)::__err__\n      }\n      \n      let x = foo (1);\n      let y = foo (14);\n      let z = foo (120);\n      {\n         println (x.unwrap!(&B} ()); // prints \"main::B ()\"\n         println (y.unwrap!(&C} ()); // prints \"main::C ()\"\n         println (y.unwrap!(&A} ()); // prints \"main::C ()\"\n         println (z.unwrap!(&A} ()); // throw an exception\n      } catch {\n          err : &CastFailure => {\n              println (err);\n          }\n     }\n      ==================\n      @throws : &CastFailure, if the option is empty, or the option does not contain a value of type U\n     ", 
+		"loc_col" : "30", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1353", 
+		"name" : "std::conv::unwrap", 
+		"params" : ["U", "T"], 
+		"protection" : "pub", 
+		"test" : "template!(U)(J over T)", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Transform a U? into a T? if U is over T\n      @example: \n      ================\n      class @abstract A {\n        prot self () {}\n        impl std::io::Printable;\n      }\n      \n      class B over A {\n        pub self () {}\n        impl std::io::Printable;\n      }\n     \n      class C over A {\n        pub self () {}\n        impl std::io::Printable;\n      }\n      \n      def foo (i : i32) -> (&A)? {\n          if (i < 10) { (B::new ()?).to!(&A?} () }\n          else if (i < 20) { (C::new ()?).to!(&A?} () }\n          else (&A?)::__err__\n      }\n      ================\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1395", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "(U)?", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Transform a U? into a T? if U is over T\n      @example: \n      ================\n      class @abstract A {\n        prot self () {}\n        impl std::io::Printable;\n      }\n      \n      class B over A {\n        pub self () {}\n        impl std::io::Printable;\n      }\n     \n      class C over A {\n        pub self () {}\n        impl std::io::Printable;\n      }\n      \n      def foo (i : i32) -> (&A)? {\n          if (i < 10) { (B::new ()?).to!(&A?} () }\n          else if (i < 20) { (C::new ()?).to!(&A?} () }\n          else (&A?)::__err__\n      }\n      ================\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1395", 
+		"name" : "std::conv::to", 
+		"params" : ["T of (I)?", "I", "U over I"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n  @assume: a < 10\n  Transform a u64 into a c8\n ", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1413", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "u64", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "c8", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @assume: a < 10\n  Transform a u64 into a c8\n ", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1413", 
+		"name" : "std::conv::to", 
+		"params" : ["T of c8"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n  @assume: a < 10 and a >= 0\n  Transform a i64 into a c8\n ", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1440", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "i64", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "c8", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @assume: a < 10 and a >= 0\n  Transform a i64 into a c8\n ", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1440", 
+		"name" : "std::conv::to", 
+		"params" : ["T of c8"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n  @assume: a <= 15\n  Transform a u64 into a c32\n ", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1467", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "u64", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "c32", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @assume: a <= 15\n  Transform a u64 into a c32\n ", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1467", 
+		"name" : "std::conv::to", 
+		"params" : ["T of c32"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n  @assume: a <= 15 and a >= 0\n  Transform a u64 into a c32\n ", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1493", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "i64", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "c32", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @assume: a <= 15 and a >= 0\n  Transform a u64 into a c32\n ", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1493", 
+		"name" : "std::conv::to", 
+		"params" : ["T of c32"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n  Transform a c32 into a u64\n  @assume: a >= '0' and a <= '9' or a >= 'a' and a <= 'f'\n ", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1520", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "c32", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a c32 into a u64\n  @assume: a >= '0' and a <= '9' or a >= 'a' and a <= 'f'\n ", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1520", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u64"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n  Transform a c8 into a u64\n  @assume: a >= '0' and a <= '9' or a >= 'a' and a <= 'f'\n ", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+			"loc_line" : "1552", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "c8", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a c8 into a u64\n  @assume: a >= '0' and a <= '9' or a >= 'a' and a <= 'f'\n ", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+		"loc_line" : "1552", 
+		"name" : "std::conv::to", 
+		"params" : ["T of u64"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/conv.yr", 
+	"loc_line" : "1", 
+	"name" : "std::conv", 
+	"protection" : "prv", 
+	"type" : "module"
+}

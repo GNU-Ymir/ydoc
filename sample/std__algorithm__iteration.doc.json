@@ -1,0 +1,299 @@
+{
+	"childs" : [{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+			"loc_line" : "16", 
+			"name" : "each", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Iterates over a slice and call F on each elements\n  @params: \n    - a: a slice to traverse\n  @example: \n  ===========\n  let a = [1, 2, 3];\n  a.each!{|x| println (x)} ();\n  ===========\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+		"loc_line" : "16", 
+		"name" : "std::algorithm::iteration::each", 
+		"params" : ["F : fn (U)-> void", "T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+			"loc_line" : "32", 
+			"name" : "each", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Iterates over a sequence and call F on each elements\n  @params: \n    - a: a sequence to traverse\n  @example: \n  ===========\n  let a = [1, 2, 3];\n  a.each!{|x| println (x)} ();\n  ===========\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+		"loc_line" : "32", 
+		"name" : "std::algorithm::iteration::each", 
+		"params" : ["F : fn (U)-> void", "T impl Seq!(U)", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+			"loc_line" : "49", 
+			"name" : "map", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "mut [mut J]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Generate a new slice of which elements are obtained by applying F (x) on the elements of a\n  @params: \n    - a: a slice to traverse\n  @example: \n  ===========\n  let a = [1, 2, 3];\n  let b = a.map!{|x| => x + 1} ();\n  assert (b == [2, 3, 4]);\n  ===========\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+		"loc_line" : "49", 
+		"name" : "std::algorithm::iteration::map", 
+		"params" : ["F : fn (U)-> J", "T of [U]", "U", "J"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+			"loc_line" : "71", 
+			"name" : "map", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "mut [mut J]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Generate a new slice of which elements are obtained by applying F (x) on the elements of a\n  @params: \n    - a: a slice to traverse\n  @example: \n  ===========\n  let a = [1, 2, 3];\n  let b = a.map!{|x| => x + 1} ();\n  assert (b == [2, 3, 4]);\n  ===========\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+		"loc_line" : "71", 
+		"name" : "std::algorithm::iteration::map", 
+		"params" : ["F : fn (U)-> J", "T impl Seq!(U)", "U", "J"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+			"loc_line" : "95", 
+			"name" : "fold", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "seed", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "U", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "U", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Implement the homonym function fold\n  This function takes a seed as initial value, the seed is set at U::init as default\n  Then it traverse the slice and for each element x of the slice result = F (result, x)\n  @info: the operation of the accumulator F, does not need to be commutative\n  @returns: the accumulation of the slice and the initial seed\n  @example: \n  ===============\n  let i = [1, 2, 3];\n  assert (i.scan!{|x,y| x + y} (0) == 6);\n  assert (i.scan!{|x,y| x + y} (12) == 18);\n  ===============\n  @complexity: O (n), with n = a.len\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+		"loc_line" : "95", 
+		"name" : "std::algorithm::iteration::fold", 
+		"params" : ["F : fn (U, U)-> U", "T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+			"loc_line" : "117", 
+			"name" : "fold", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "U", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Implement the homonym function fold\n  This function takes a seed as initial value, the seed is set at U::init as default\n  Then it traverse the slice and for each element x of the slice result = F (result, x)\n  @info: the operation of the accumulator F, does not need to be commutative\n  @returns: the accumulation of the slice and the initial seed\n  @example: \n  ===============\n  let i = [1, 2, 3];\n  assert (i.scan!{|x,y| x + y} (0) == 6);\n  assert (i.scan!{|x,y| x + y} (12) == 18);\n  ===============\n  @complexity: O (n), with n = a.len\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+		"loc_line" : "117", 
+		"name" : "std::algorithm::iteration::fold", 
+		"params" : ["F : fn (U, U)-> U", "T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+			"loc_line" : "139", 
+			"name" : "fold", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "seed", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "U", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "U", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Implement the homonym function fold\n  This function takes a seed as initial value\n  Then it traverse the slice and for each element x of the slice result = F (result, x)\n  @info: the operation of the accumulator F, does not need to be commutative\n  @returns: the accumulation of the slice and the initial seed\n  @example: \n  ===============\n  let i = [1, 2, 3];\n  assert (i.scan!{|x,y| x + y} (0) == 6);\n  assert (i.scan!{|x,y| x + y} (12) == 18);\n  ===============\n  @complexity: O (n), with n = a.len\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+		"loc_line" : "139", 
+		"name" : "std::algorithm::iteration::fold", 
+		"params" : ["F : fn (U, U)-> U", "T impl Seq!(U)", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+			"loc_line" : "162", 
+			"name" : "fold", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "U", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Implement the homonym function fold\n  This function set a initial result at U::init (or 0.0 if U is a float type) as default\n  Then it traverse the slice and for each element x of the slice result = F (result, x)\n  @info: the operation of the accumulator F, does not need to be commutative\n  @returns: the accumulation of the slice and the initial seed\n  @example: \n  ===============\n  let i = [1, 2, 3];\n  assert (i.scan!{|x,y| x + y} () == 6);\n  let j = [1., 2., 3.0];\n  assert (i.scan!{|x,y| x + y} () == 6.0);\n  ===============\n  @complexity: O (n), with n = a.len\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+		"loc_line" : "162", 
+		"name" : "std::algorithm::iteration::fold", 
+		"params" : ["F : fn (U, U)-> U", "T impl Seq!(U)", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/iteration.yr", 
+	"loc_line" : "1", 
+	"name" : "std::algorithm::iteration", 
+	"protection" : "prv", 
+	"type" : "module"
+}

@@ -1,0 +1,673 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "sin_family", 
+			"type" : {
+				"mut" : "true", 
+				"name" : "u16", 
+				"type" : "int"
+			}, 
+			"value" : "0"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "sin_port", 
+			"type" : {
+				"mut" : "true", 
+				"name" : "u16", 
+				"type" : "int"
+			}, 
+			"value" : "0"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "sin_addr", 
+			"type" : {
+				"mut" : "true", 
+				"name" : "etc::c::socket::in_addr", 
+				"type" : "struct"
+			}, 
+			"value" : "etc::c::socket::in_addr (let mut s_addr : mut u32 = 0) (0)"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "aux", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "u8", 
+					"type" : "int"
+				}], 
+				"mut" : "true", 
+				"size" : "8", 
+				"type" : "array"
+			}, 
+			"value" : "[0 ; 8]"
+		}], 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "9", 
+		"name" : "etc::c::socket::sockaddr_in", 
+		"protection" : "pub", 
+		"type" : "struct"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "s_addr", 
+			"type" : {
+				"mut" : "true", 
+				"name" : "u32", 
+				"type" : "int"
+			}, 
+			"value" : "0"
+		}], 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "13", 
+		"name" : "etc::c::socket::in_addr", 
+		"protection" : "pub", 
+		"type" : "struct"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "15", 
+		"name" : "etc::c::socket::htons", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u16", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u16", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "16", 
+		"name" : "etc::c::socket::htonl", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "18", 
+		"name" : "etc::c::socket::ntohs", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u16", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u16", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "19", 
+		"name" : "etc::c::socket::ntohl", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "21", 
+		"name" : "etc::c::socket::socket", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "fam", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "etc::c::socket::AddressFamily", 
+				"type" : "enum"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "sock", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "etc::c::socket::SocketType", 
+				"type" : "enum"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "22", 
+		"name" : "etc::c::socket::bind", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "servaddr", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "etc::c::socket::sockaddr_in", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "size", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "23", 
+		"name" : "etc::c::socket::listen", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "sock", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "nb", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "24", 
+		"name" : "etc::c::socket::connect", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "sock", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "servaddr", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "etc::c::socket::sockaddr_in", 
+					"type" : "struct"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "size", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "25", 
+		"name" : "etc::c::socket::accept", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "sock", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "clientaddr", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "etc::c::socket::sockaddr_in", 
+					"type" : "struct"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "size", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "usize", 
+					"type" : "int"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "27", 
+		"name" : "etc::c::socket::write", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "sock", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "ptr", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "size", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "28", 
+		"name" : "etc::c::socket::read", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "sock", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "ptr", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "size", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "29", 
+		"name" : "etc::c::socket::close", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "sock", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"doc" : "", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "etc::c::socket::SocketType", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "SOCK_STREAM", 
+			"value" : "1"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "SOCK_DGRAM", 
+			"value" : "2"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "SOCK_RAW", 
+			"value" : "3"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "SOCK_RDM", 
+			"value" : "4"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "SOCK_SEQPACKET", 
+			"value" : "5"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "SOCK_PACKET", 
+			"value" : "10"
+		}], 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "38", 
+		"name" : "etc::c::socket::SocketType", 
+		"protection" : "pub", 
+		"type" : "enum"
+	}, 
+	{
+		"doc" : "", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "etc::c::socket::AddressFamily", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "AF_UNSPEC", 
+			"value" : "0"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "AF_UNIX", 
+			"value" : "1"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "AF_INET", 
+			"value" : "2"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "AF_AX25", 
+			"value" : "3"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "AF_IPX", 
+			"value" : "4"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "AF_APPLETALK", 
+			"value" : "5"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "AF_NETROM", 
+			"value" : "6"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "AF_BRIDGE", 
+			"value" : "7"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "AF_AAL5", 
+			"value" : "8"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "AF_X25", 
+			"value" : "9"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "AF_INET6", 
+			"value" : "10"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "AF_MAX", 
+			"value" : "12"
+		}], 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+		"loc_line" : "53", 
+		"name" : "etc::c::socket::AddressFamily", 
+		"protection" : "pub", 
+		"type" : "enum"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/socket.yr", 
+	"loc_line" : "1", 
+	"name" : "etc::c::socket", 
+	"protection" : "prv", 
+	"type" : "module"
+}

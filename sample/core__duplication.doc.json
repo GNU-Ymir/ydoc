@@ -1,0 +1,503 @@
+{
+	"childs" : [{
+		"child" : {
+			"childs" : [{
+				"childs" : [{
+					"childs" : [{
+						"childs" : [{
+							"attributes" : [], 
+							"doc" : "", 
+							"loc_col" : "24", 
+							"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+							"loc_line" : "5", 
+							"name" : "_yrt_new_array", 
+							"params" : [{
+								"mut" : "false", 
+								"name" : "_", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "usize", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "_", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "usize", 
+									"type" : "unknown"
+								}
+							}], 
+							"protection" : "pub", 
+							"ret_type" : {
+								"name" : "dmut [T]", 
+								"type" : "unknown"
+							}, 
+							"throwers" : [], 
+							"type" : "function"
+						}], 
+						"doc" : "", 
+						"loc_col" : "18", 
+						"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+						"loc_line" : "5", 
+						"name" : ")", 
+						"protection" : "pub", 
+						"type" : "block"
+					}], 
+					"doc" : "", 
+					"from" : "C", 
+					"loc_col" : "9", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+					"loc_line" : "5", 
+					"name" : "extern", 
+					"protection" : "pub", 
+					"space" : "", 
+					"type" : "extern"
+				}], 
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+				"loc_line" : "5", 
+				"name" : "pub", 
+				"protection" : "prv", 
+				"type" : "block"
+			}, 
+			{
+				"childs" : [{
+					"childs" : [{
+						"childs" : [{
+							"attributes" : [], 
+							"doc" : "", 
+							"loc_col" : "24", 
+							"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+							"loc_line" : "6", 
+							"name" : "_yrt_new_block", 
+							"params" : [{
+								"mut" : "false", 
+								"name" : "_", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "usize", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "_", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "usize", 
+									"type" : "unknown"
+								}
+							}], 
+							"protection" : "pub", 
+							"ret_type" : {
+								"name" : "dmut &(T)", 
+								"type" : "unknown"
+							}, 
+							"throwers" : [], 
+							"type" : "function"
+						}], 
+						"doc" : "", 
+						"loc_col" : "18", 
+						"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+						"loc_line" : "6", 
+						"name" : ")", 
+						"protection" : "pub", 
+						"type" : "block"
+					}], 
+					"doc" : "", 
+					"from" : "C", 
+					"loc_col" : "9", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+					"loc_line" : "6", 
+					"name" : "extern", 
+					"protection" : "pub", 
+					"space" : "", 
+					"type" : "extern"
+				}], 
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+				"loc_line" : "6", 
+				"name" : "pub", 
+				"protection" : "prv", 
+				"type" : "block"
+			}, 
+			{
+				"childs" : [{
+					"childs" : [{
+						"childs" : [{
+							"attributes" : [], 
+							"doc" : "", 
+							"loc_col" : "24", 
+							"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+							"loc_line" : "7", 
+							"name" : "memcpy", 
+							"params" : [{
+								"mut" : "false", 
+								"name" : "_", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "&(T)", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "_", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "&(T)", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "_", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "usize", 
+									"type" : "unknown"
+								}
+							}], 
+							"protection" : "pub", 
+							"ret_type" : {
+								"name" : "void", 
+								"type" : "unknown"
+							}, 
+							"throwers" : [], 
+							"type" : "function"
+						}], 
+						"doc" : "", 
+						"loc_col" : "18", 
+						"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+						"loc_line" : "7", 
+						"name" : ")", 
+						"protection" : "pub", 
+						"type" : "block"
+					}], 
+					"doc" : "", 
+					"from" : "C", 
+					"loc_col" : "9", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+					"loc_line" : "7", 
+					"name" : "extern", 
+					"protection" : "pub", 
+					"space" : "", 
+					"type" : "extern"
+				}], 
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+				"loc_line" : "7", 
+				"name" : "pub", 
+				"protection" : "prv", 
+				"type" : "block"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+			"loc_line" : "4", 
+			"name" : "allocMod", 
+			"protection" : "prv", 
+			"type" : "module"
+		}, 
+		"doc" : "", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+		"loc_line" : "4", 
+		"name" : "core::duplication::allocMod", 
+		"params" : ["T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+			"loc_line" : "10", 
+			"name" : "alloc", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "mut &(mut T)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+		"loc_line" : "10", 
+		"name" : "core::duplication::alloc", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+			"loc_line" : "16", 
+			"name" : "allocBlock", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "len", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "dmut &(T)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+		"loc_line" : "16", 
+		"name" : "core::duplication::allocBlock", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+			"loc_line" : "20", 
+			"name" : "allocArray", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "len", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "dmut [T]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+		"loc_line" : "20", 
+		"name" : "core::duplication::allocArray", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+			"loc_line" : "28", 
+			"name" : "memCopy", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "fr", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[T]", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "true", 
+				"name" : "to", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[mut T]", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Copy the second array inside the first one, without reallocation\n  Copy only what can be copied (max (to.len, fr.len))\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+		"loc_line" : "28", 
+		"name" : "core::duplication::memCopy", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"childs" : [{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "17", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+			"loc_line" : "36", 
+			"name" : "deepCopy", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "self", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"name" : "dmut typeof (self)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}], 
+		"doc" : "", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+		"loc_line" : "35", 
+		"name" : "core::duplication::Copiable", 
+		"protection" : "pub", 
+		"type" : "trait"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+			"loc_line" : "39", 
+			"name" : "deepCopy", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "mut T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+		"loc_line" : "39", 
+		"name" : "core::duplication::deepCopy", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+			"loc_line" : "43", 
+			"name" : "deepCopy", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "mut T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+		"loc_line" : "43", 
+		"name" : "core::duplication::deepCopy", 
+		"params" : ["struct T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+			"loc_line" : "62", 
+			"name" : "deepCopy", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "dmut [dmut U]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+		"loc_line" : "62", 
+		"name" : "core::duplication::deepCopy", 
+		"params" : ["T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/core/duplication.yr", 
+	"loc_line" : "1", 
+	"name" : "core::duplication", 
+	"protection" : "prv", 
+	"type" : "module"
+}

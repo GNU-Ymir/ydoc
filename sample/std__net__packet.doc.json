@@ -1,0 +1,905 @@
+{
+	"childs" : [{
+		"childs" : [{
+			"attributes" : [], 
+			"doc" : "\n      Create a packet from the values contained in the object\n      This will create a full copy of the data, even if the object does not exits anymore the content of the packet is still valid     \n      Basically this function create a flattened version of the class that can be send over a socket\n      This packet contains all the necessary information to recreate a perfect copy of the object \n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "51", 
+			"name" : "pack", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "self", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"name" : "[u8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Create a packet from the values contained in the class\n      This will create a full copy of the data, even if the object does not exits anymore the content of the packet is still valid     \n      All the packet data are append at the end of the vector\n      @params: \n          - packet: the vector to fill with object data\n      @returns: \n          - packet\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "78", 
+			"name" : "pack", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "self", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "packet", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Vec!(u8))", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"name" : "", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Initiates the content of the class from a packet\n      Internal function for packet, that is called when we try to unpack an object\n      @params: \n         - packet: the content of the packet\n      @info: the type of the packet is assumed already read\n      @returns: \n         - the number of bytes read inside the packet\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "100", 
+			"name" : "__stdnetwork__unpackContent", 
+			"params" : [{
+				"mut" : "true", 
+				"name" : "self", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "packet", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[u8]", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"name" : "usize", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(UnpackError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Pack the content of the class inside the packet vector\n      Internal function used by the packing system \n      @params: \n         - packet: the vector to fill with the content of the object\n     ", 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "152", 
+			"name" : "__stdnetwork__packContent", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "self", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "packet", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Vec!(u8))", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}], 
+		"doc" : "\n  A packable class is class that can create a packet of raw data from its content\n  Such class can also instantiate an object from a packet without calling a constructor\n  This is very useful to send a class through network socket\n  @example: \n  =============\n  class X {\n     let i : [i32];\n  \n     pub self (i : [i32]) with i = i {}\n  \n     impl Printable;\n     impl Packable;\n  }\n  \n  def foo () -> [u8] {\n      let x = X::new ([1, 2, 3]);\n      x.pack ()   \n  }\n  \n  def main () {\n      let packet : [u8] = foo ();\n      match packet.unpack () {\n         dmut x : &X => {\n              println (x);\n         }\n      }\n  }\n  =============\n ", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+		"loc_line" : "43", 
+		"name" : "std::net::packet::Packable", 
+		"protection" : "pub", 
+		"type" : "trait"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Unpack a packet and allocates the class it containes\n  @params: \n     - packet: the packet to read\n  @returns: \n     - packet: the content read by the function is removed from the packet \n     - The instantiated object\n  @throws: \n     - UnpackError: if an error occured when unpacking\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+		"loc_line" : "174", 
+		"name" : "std::net::packet::unpack", 
+		"params" : [{
+			"mut" : "true", 
+			"name" : "packet", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "u8", 
+					"type" : "int"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "true", 
+				"name" : "core::object::Object", 
+				"type" : "class"
+			}], 
+			"mut" : "true", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::net::packet::UnpackError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "core::exception::Exception", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "196", 
+			"name" : "std::net::packet::UnpackError::self", 
+			"params" : [], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [], 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "198", 
+			"name" : "std::net::packet::UnpackError", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+		"loc_line" : "194", 
+		"methods" : [], 
+		"name" : "std::net::packet::UnpackError", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"childs" : [{
+			"child" : {
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+				"loc_line" : "204", 
+				"name" : "pack", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "packet", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(Vec!(u8))", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "data", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "204", 
+			"name" : "std::net::packet::internal_pack::pack", 
+			"params" : ["T of [U]", "U"], 
+			"protection" : "pub", 
+			"type" : "template"
+		}, 
+		{
+			"child" : {
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+				"loc_line" : "211", 
+				"name" : "pack", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "packet", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(Vec!(u8))", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "data", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "211", 
+			"name" : "std::net::packet::internal_pack::pack", 
+			"params" : ["T impl Packable"], 
+			"protection" : "pub", 
+			"type" : "template"
+		}, 
+		{
+			"child" : {
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+				"loc_line" : "215", 
+				"name" : "pack", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "pack", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(Vec!(u8))", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "data", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "215", 
+			"name" : "std::net::packet::internal_pack::pack", 
+			"params" : ["struct T"], 
+			"protection" : "pub", 
+			"type" : "template"
+		}, 
+		{
+			"child" : {
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+				"loc_line" : "221", 
+				"name" : "pack", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "pack", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(Vec!(u8))", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "data", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "221", 
+			"name" : "std::net::packet::internal_pack::pack", 
+			"params" : ["T of (U)", "U..."], 
+			"protection" : "pub", 
+			"type" : "template"
+		}, 
+		{
+			"child" : {
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+				"loc_line" : "227", 
+				"name" : "pack", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "packet", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(Vec!(u8))", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "data", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "227", 
+			"name" : "std::net::packet::internal_pack::pack", 
+			"params" : ["T"], 
+			"protection" : "pub", 
+			"type" : "template"
+		}], 
+		"doc" : "", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+		"loc_line" : "202", 
+		"name" : "std::net::packet::internal_pack", 
+		"protection" : "prv", 
+		"type" : "module"
+	}, 
+	{
+		"childs" : [{
+			"child" : {
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+				"loc_line" : "243", 
+				"name" : "unpack", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "u8_ptr", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(u8)", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "packet", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "[u8]", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "(usize, usize)", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(UnpackError)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "243", 
+			"name" : "std::net::packet::internal_unpack::unpack", 
+			"params" : ["T"], 
+			"protection" : "pub", 
+			"type" : "template"
+		}, 
+		{
+			"child" : {
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+				"loc_line" : "255", 
+				"name" : "unpack", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "c_ptr", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(u8)", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "packet", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "[u8]", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "(usize, usize)", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(UnpackError)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "255", 
+			"name" : "std::net::packet::internal_unpack::unpack", 
+			"params" : ["T of [U]", "U"], 
+			"protection" : "pub", 
+			"type" : "template"
+		}, 
+		{
+			"child" : {
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+				"loc_line" : "282", 
+				"name" : "unpack", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "c_ptr", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(u8)", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "packet", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "[u8]", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "(usize, usize)", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(UnpackError)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "282", 
+			"name" : "std::net::packet::internal_unpack::unpack", 
+			"params" : ["T impl Packable"], 
+			"protection" : "pub", 
+			"type" : "template"
+		}, 
+		{
+			"child" : {
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+				"loc_line" : "308", 
+				"name" : "unpack", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "c_ptr", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(u8)", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "packet", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "[u8]", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "(usize, usize)", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(UnpackError)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "308", 
+			"name" : "std::net::packet::internal_unpack::unpack", 
+			"params" : ["struct T"], 
+			"protection" : "pub", 
+			"type" : "template"
+		}, 
+		{
+			"child" : {
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+				"loc_line" : "328", 
+				"name" : "unpack", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "c_ptr", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(u8)", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "packet", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "[u8]", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "(usize, usize)", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(UnpackError)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "328", 
+			"name" : "std::net::packet::internal_unpack::unpack", 
+			"params" : ["T of (U)", "U..."], 
+			"protection" : "pub", 
+			"type" : "template"
+		}], 
+		"doc" : "", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+		"loc_line" : "241", 
+		"name" : "std::net::packet::internal_unpack", 
+		"protection" : "prv", 
+		"type" : "module"
+	}, 
+	{
+		"childs" : [{
+			"attributes" : [], 
+			"doc" : "\n      Additional reflection function for easying packaging\n      This function is totally unsafe to use outside package, because it will create a class without calling its constructor\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "356", 
+			"name" : "std::net::packet::internal_reflect::totallyUnsafeFactoryDontDoThat", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "name", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "core::object::Object", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "core::exception::RuntimeError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Additional reflection function for easying packaging\n      This function is totally unsafe to use outside package, because it will create a class without calling its constructor\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "367", 
+			"name" : "std::net::packet::internal_reflect::totallyUnsafeFactoryDontDoThat", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "name", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "core::object::Object", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "core::exception::RuntimeError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}], 
+		"doc" : "", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+		"loc_line" : "351", 
+		"name" : "std::net::packet::internal_reflect", 
+		"protection" : "prv", 
+		"type" : "module"
+	}, 
+	{
+		"child" : {
+			"childs" : [{
+				"childs" : [{
+					"childs" : [{
+						"childs" : [{
+							"attributes" : [], 
+							"doc" : "", 
+							"loc_col" : "24", 
+							"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+							"loc_line" : "383", 
+							"name" : "_yrt_unsafe_cast", 
+							"params" : [{
+								"mut" : "false", 
+								"name" : "x", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "F", 
+									"type" : "unknown"
+								}
+							}], 
+							"protection" : "pub", 
+							"ret_type" : {
+								"name" : "dmut T", 
+								"type" : "unknown"
+							}, 
+							"throwers" : [], 
+							"type" : "function"
+						}], 
+						"doc" : "", 
+						"loc_col" : "18", 
+						"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+						"loc_line" : "383", 
+						"name" : ")", 
+						"protection" : "pub", 
+						"type" : "block"
+					}], 
+					"doc" : "", 
+					"from" : "C", 
+					"loc_col" : "9", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+					"loc_line" : "383", 
+					"name" : "extern", 
+					"protection" : "pub", 
+					"space" : "", 
+					"type" : "extern"
+				}], 
+				"doc" : "\n      Runtime unsafe cast of a pointer to another \n      This is used to initialized the fields even when they are not mutable \n      This is unsafe but we can argue that if a class has successfuly produced a packet \n      Then the packet contains a valid class that can be copied as it is\n     ", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+				"loc_line" : "383", 
+				"name" : "pub", 
+				"protection" : "prv", 
+				"type" : "block"
+			}, 
+			{
+				"childs" : [{
+					"childs" : [{
+						"childs" : [{
+							"attributes" : [], 
+							"doc" : "", 
+							"loc_col" : "24", 
+							"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+							"loc_line" : "391", 
+							"name" : "_yrt_unsafe_cast", 
+							"params" : [{
+								"mut" : "false", 
+								"name" : "x", 
+								"ref" : "true", 
+								"type" : {
+									"name" : "F", 
+									"type" : "unknown"
+								}
+							}], 
+							"protection" : "pub", 
+							"ret_type" : {
+								"name" : "dmut T", 
+								"type" : "unknown"
+							}, 
+							"throwers" : [], 
+							"type" : "function"
+						}], 
+						"doc" : "", 
+						"loc_col" : "18", 
+						"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+						"loc_line" : "391", 
+						"name" : ")", 
+						"protection" : "pub", 
+						"type" : "block"
+					}], 
+					"doc" : "", 
+					"from" : "C", 
+					"loc_col" : "9", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+					"loc_line" : "391", 
+					"name" : "extern", 
+					"protection" : "pub", 
+					"space" : "", 
+					"type" : "extern"
+				}], 
+				"doc" : "\n      Runtime unsafe cast of a pointer to another \n      This is used to initialized the fields even when they are not mutable \n      This is unsafe but we can argue that if a class has successfuly produced a packet \n      Then the packet contains a valid class that can be copied as it is\n     ", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+				"loc_line" : "391", 
+				"name" : "pub", 
+				"protection" : "prv", 
+				"type" : "block"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+			"loc_line" : "375", 
+			"name" : "Runtime", 
+			"protection" : "prv", 
+			"type" : "module"
+		}, 
+		"doc" : "", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+		"loc_line" : "375", 
+		"name" : "std::net::packet::Runtime", 
+		"params" : ["F", "T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/packet.yr", 
+	"loc_line" : "1", 
+	"name" : "std::net::packet", 
+	"protection" : "prv", 
+	"type" : "module"
+}

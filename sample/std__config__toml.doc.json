@@ -1,0 +1,748 @@
+{
+	"childs" : [{
+		"doc" : " \n  The list of tokens that can be found inside a Toml file\n  \n ", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "std::config::toml::TomlTokens", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "LCRO", 
+			"value" : "["
+		}, 
+		{
+			"doc" : "", 
+			"name" : "RCRO", 
+			"value" : "]"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "LACC", 
+			"value" : "{"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "RACC", 
+			"value" : "}"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EQUALS", 
+			"value" : "="
+		}, 
+		{
+			"doc" : "", 
+			"name" : "COMA", 
+			"value" : ","
+		}, 
+		{
+			"doc" : "", 
+			"name" : "QUOTE", 
+			"value" : "'"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "DQUOTE", 
+			"value" : "\""
+		}, 
+		{
+			"doc" : "", 
+			"name" : "DOT", 
+			"value" : "."
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ESCAPE", 
+			"value" : "\\"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+		"loc_line" : "22", 
+		"name" : "std::config::toml::TomlTokens", 
+		"protection" : "prv", 
+		"type" : "enum"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Parse a string containing a toml formated content \n  @example: \n  ================\n  let str = \"[foo]\nbar=1\nbaz=2\n\"s8\n  let config : &Dict = parse (str);\n  ================\n  @throws: \n     - &SyntaxError: if the format is not respected in the content\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+		"loc_line" : "35", 
+		"name" : "std::config::toml::parse", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "content", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::config::Dict", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::lexer::SyntaxError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Parse a string containing a toml formated content \n  @example: \n  ================\n  let str = \"[foo]\nbar=1\nbaz=2\n\"\n  let config : &Dict = parse (str);\n  ================\n  @throws: \n     - &SyntaxError: if the format is not respected in the content\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+		"loc_line" : "54", 
+		"name" : "std::config::toml::parse", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "content", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::config::Dict", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::lexer::SyntaxError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Transform a configuration into a toml formatted string\n  \n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+		"loc_line" : "86", 
+		"name" : "std::config::toml::dump", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "cfg", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Config", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "c32", 
+				"type" : "char"
+			}], 
+			"mut" : "false", 
+			"type" : "slice"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"childs" : [{
+			"attributes" : [], 
+			"doc" : "\n      Inner function for parsing a dictionnary inside a toml str \n      @params: \n         - lex: the lexer that is currently reading the content of the file\n         - glob: true if the dictionnary is a global dictionnary in the toml str (non global dictionnaries, are surrounded by '{' '}', and separates the items with ',')\n      @example: \n      =============\n      let glob = \"foo=9\n bar=7\";\n      let loc = \"{foo=9, bar=7}\";\n     \n      let dmut glex = Lexer::new (glob, tokens-> TomlTokens::members);\n      let gDict : &Dict = parseDict (alias glex, true);\n      \n      let dmut llex = Lexer::new (loc, tokens-> TomlTokens::members);\n      let lDict : &Dict = parseDict (alias llex, false);\n      =============\n      @throws: \n         - &SyntaxError: if the format is not respected \n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+			"loc_line" : "117", 
+			"name" : "std::config::toml::Parser::parseDict", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::lexer::Lexer", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "glob", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Dict", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::lexer::SyntaxError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Internal function used for parsing arrays\n      @params: \n         - lex: the lexer containing the array\n      @example: \n      =============\n      let str = \"[1, 2, 3]\";\n      let dmut lex = Lexer::new (str, tokens-> TomlTokens);\n      let arr : &Array = parseArray (alias lex);\n      =============\n      @throws: \n         - &SyntaxError: if the format is not respected\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+			"loc_line" : "164", 
+			"name" : "std::config::toml::Parser::parseArray", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::lexer::Lexer", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Array", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::lexer::SyntaxError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Internal function used for parsing a int content inside a lexer using the toml format\n      @params: \n         - lex: the lexer containing the int\n      @example: \n      =============\n      let str = \"334\";\n      let dmut lex = Lexer::new (str, tokens-> TomlTokens);\n      let i : &Int = parseInt (alias lex);\n      =============\n      @throws: \n         - &SyntaxError: if the format is not respected\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+			"loc_line" : "204", 
+			"name" : "std::config::toml::Parser::parseInt", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::lexer::Lexer", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Config", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::lexer::SyntaxError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Internal function used for parsing a string content inside a lexer using the toml format\n      @info: the string can be surrounded by ' or by \"\n      @params: \n         - lex: the lexer containing the string\n      @example: \n      =============\n      let str = \"'test'\";\n      let dmut lex = Lexer::new (str, tokens-> TomlTokens);\n      let i : &Str = parseString (alias lex);\n      =============\n      @throws: \n         - &SyntaxError: if the format is not respected\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+			"loc_line" : "262", 
+			"name" : "std::config::toml::Parser::parseString", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::lexer::Lexer", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Str", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::lexer::SyntaxError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Parse an unicode value into a toml content\n      @example: \n      ============\n      let str = \"{0x1F3B5}\";\n      let dmut lex = Lexer::new (str, tokens-> TomlTokens);\n      let i : c32 = parseUnicode (alias lex);\n      ============\n      @assume: the \\u is already read in the lexer\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+			"loc_line" : "314", 
+			"name" : "std::config::toml::Parser::parseUnicode", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::lexer::Lexer", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "c32", 
+				"type" : "char"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::lexer::SyntaxError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Internal function used to parse a value inside a lexer using the toml format\n      @example: \n      ===============\n      let str = \"'test'\";\n      let dmut lex = Lexer::new (str, tokens-> TomlTokens);\n      let i : &Config = parseValue (alias lex);\n      match i {\n           Str (str:_)=> assert (str == \"test\");\n      }\n      ===============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+			"loc_line" : "352", 
+			"name" : "std::config::toml::Parser::parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::lexer::Lexer", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Config", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::lexer::SyntaxError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}], 
+		"doc" : "", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+		"loc_line" : "96", 
+		"name" : "std::config::toml::Parser", 
+		"protection" : "prv", 
+		"type" : "module"
+	}, 
+	{
+		"childs" : [{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+			"loc_line" : "375", 
+			"name" : "std::config::toml::Dumper::dump", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "cfg", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::config::Config", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "global", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "false"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "indent", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "i32", 
+					"type" : "int"
+				}, 
+				"value" : "0"
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+			"loc_line" : "402", 
+			"name" : "std::config::toml::Dumper::dumpArray", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "x", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::config::Array", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "indent", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "i32", 
+					"type" : "int"
+				}, 
+				"value" : "0"
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+			"loc_line" : "441", 
+			"name" : "std::config::toml::Dumper::dumpDict", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "x", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::config::Dict", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "global", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "false"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "indent", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "i32", 
+					"type" : "int"
+				}, 
+				"value" : "0"
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+			"loc_line" : "448", 
+			"name" : "std::config::toml::Dumper::dumpSuperDict", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "x", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::config::Dict", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+			"loc_line" : "463", 
+			"name" : "std::config::toml::Dumper::dumpLocalDict", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "x", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::config::Dict", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "indent", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "i32", 
+					"type" : "int"
+				}, 
+				"value" : "0"
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+			"loc_line" : "491", 
+			"name" : "std::config::toml::Dumper::dumpGlobalDict", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "x", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::config::Dict", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "indent", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "i32", 
+					"type" : "int"
+				}, 
+				"value" : "0"
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}], 
+		"doc" : "", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+		"loc_line" : "373", 
+		"name" : "std::config::toml::Dumper", 
+		"protection" : "prv", 
+		"type" : "module"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/toml.yr", 
+	"loc_line" : "1", 
+	"name" : "std::config::toml", 
+	"protection" : "prv", 
+	"type" : "module"
+}

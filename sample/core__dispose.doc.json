@@ -1,0 +1,42 @@
+{
+	"childs" : [{
+		"childs" : [{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/dispose.yr", 
+			"loc_line" : "4", 
+			"name" : "dispose", 
+			"params" : [{
+				"mut" : "true", 
+				"name" : "self", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"name" : "void", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}], 
+		"doc" : "", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/dispose.yr", 
+		"loc_line" : "3", 
+		"name" : "core::dispose::Disposable", 
+		"protection" : "pub", 
+		"type" : "trait"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/core/dispose.yr", 
+	"loc_line" : "1", 
+	"name" : "core::dispose", 
+	"protection" : "prv", 
+	"type" : "module"
+}

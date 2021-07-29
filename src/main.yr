@@ -1,6 +1,40 @@
 mod main;
 import std::io;
+import ydoc::dom::_;
+import ydoc::load::conv;
+import ydoc::dump::markdown::_;
+import std::fs::path, std::fs::_;
+import std::config::json;
+import std::args;
+
+struct
+| dir : [c32]
+| output : [c32] = "./output"
+ -> Args;
+
+
+def main (args : [[c8]]) {
+    let parser = ArgumentParser!(Args)::new ()
+        :.positional!"dir" (comments-> "the path of the directory containing the json files")
+        :.info!"output" (short-> "o", comments-> "the output directory (./output by default)");
+        ;
+
     
-def main () {
-    println ("Hello World !!");
+    {
+        let myargs = parser.parse (args);
+        
+        Path::new (myargs.dir)
+            .to!{&Chapter} ()
+            .to!(&Book) ()
+            .write (Path::new (myargs.output));
+
+    } catch {
+        x : &ArgumentError => {
+            println (parser.simpleUsage ());
+            println (parser.diagnosis (x));
+        }
+        _ => {
+            println (parser.usage ());
+        }
+    }
 }

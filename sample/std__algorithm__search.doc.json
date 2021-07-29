@@ -1,0 +1,657 @@
+{
+	"childs" : [{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "16", 
+			"name" : "all", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "bool", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Verify if all elements of a verify the predicate\n  @params: \n     - a: an array of elements\n  @templates: \n     - F: a predicate to verify \n  @example: \n  ===========\n  let a = [1, 2, 3];\n  assert (a.all!{|x| => x <= 3}());\n  ===========\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "16", 
+		"name" : "std::algorithm::search::all", 
+		"params" : ["F : fn (U)-> bool", "T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "36", 
+			"name" : "all", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "bool", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Verify if all elements of a verify the predicate\n  @params: \n     - a: a sequence of elements, iterable on the value to test\n  @assume: the iteration give an option type\n  @templates: \n     - F: a predicate to verify \n  @example: \n  ===========\n  let a = vec #[1, 2, 3];\n  assert (a.all!{|x| => x <= 3}());\n  ===========\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "36", 
+		"name" : "std::algorithm::search::all", 
+		"params" : ["F : fn (U)-> bool", "T impl Seq!(U)", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "58", 
+			"name" : "any", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "bool", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Verify that at least one element verifies the predicate\n  @params: \n     - a: an array of elements\n  @templates: \n     - F: a predicate to verify\n  @example: \n  ============\n  let a = [1, 2, 3];\n  assert (a.any!{|x| => x == 1} ());\n  assert (!a.any!{|x| => x == 4} ());\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "58", 
+		"name" : "std::algorithm::search::any", 
+		"params" : ["F : fn (U)-> bool", "T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "80", 
+			"name" : "any", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "bool", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Verify that at least one element verifies the predicate\n  @params: \n     - a: a sequence of elements, iteration on the value to test\n  @assume: the iteration give an option type\n  @templates: \n     - F: a predicate to verify\n  @complexity: O (n), with n = a.len\n  @example: \n  ============\n  let a = vec #[1, 2, 3];\n  assert (a.any!{|x| => x == 1} ());\n  assert (!a.any!{|x| => x == 4} ());\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "80", 
+		"name" : "std::algorithm::search::any", 
+		"params" : ["F : fn (U)-> bool", "T impl Seq!(U)", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "109", 
+			"name" : "find", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "elem", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "U", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "(u64)?", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Search an element in a slice with an equality predicate\n  @returns: the index of the first element that is equal to elem according to the predicate\n  @templates: \n    - F: a equality function\n  @params: \n    - a: the slice to traverse\n    - elem: the element to find\n  @complexity: O (n), with n = a.len\n  @example: \n  ============\n  let a = [1, 2, 3];\n  let i = a.find!{|x,y|=> x == y} (1);\n  let res = match i {\n      Ok (0u64) => true\n      _ => false\n  }\n  assert (res);\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "109", 
+		"name" : "std::algorithm::search::find", 
+		"params" : ["F : fn (U, U)-> bool", "T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "136", 
+			"name" : "find", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "elem", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "U", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "(u64)?", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Search for an element in a slice\n  @returns: the index of the first element in a that is equal to elem\n  @params: \n     - a: a slice to traverse\n     - elem: the element to search\n  @complexity: O (n), with n = a.len\n  @example: \n  ============\n  let a = [1, 2, 3];\n  let i = a.find (1);\n  let res = match i {\n      Ok (0u64) => true\n      _ => false\n  }\n  assert (res);\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "136", 
+		"name" : "std::algorithm::search::find", 
+		"params" : ["T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "166", 
+			"name" : "find", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "elem", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "U", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "(u64)?", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Search an element in a Seq of with an equality predicate\n  @returns: the index of the first element that is equal to elem according to the predicate\n  @templates: \n    - F: a equality function\n  @params: \n    - a: the Seq to traverse\n    - elem: the element to find\n  @complexity: O (n), with n = a.len\n  @assume: the iteration over the sequence is the in the same order as opIndex\n  @example: \n  ============\n  let a = vec #[1, 2, 3];\n  let i = a.find!{|x,y|=> x == y} (1);\n  let res = match i {\n      Ok (0u64) => true\n      _ => false\n  }\n  assert (res);\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "166", 
+		"name" : "std::algorithm::search::find", 
+		"params" : ["F : fn (U, U)-> bool", "T impl Seq!(U)", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "198", 
+			"name" : "find", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "elem", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "U", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "(u64)?", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Search for an element in a slice\n  @returns: the index of the first element in a that is equal to elem\n  @params: \n     - a: a slice to traverse\n     - elem: the element to search\n  @complexity: O (n), with n = a.len\n  @assume: the iteration over the sequence is the in the same order as opIndex\n  @example: \n  ============\n  let a = vec #[1, 2, 3];\n  let i = a.find (1);\n  let res = match i {\n      Ok (0u64) => true\n      _ => false\n  }\n  assert (res);\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "198", 
+		"name" : "std::algorithm::search::find", 
+		"params" : ["T impl Seq!(U)", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "222", 
+			"name" : "count", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Count the number of element in a slice that verifies the predicates\n  @params: \n     - a: the slice to traverse\n  @complexity: O (n), with n = a.len\n  @example: \n  ============\n  let a = [1, 2, 3];\n  assert (a.count!{|x| => x <= 2} () == 2u64);\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "222", 
+		"name" : "std::algorithm::search::count", 
+		"params" : ["F : fn (U)-> bool", "T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "241", 
+			"name" : "count", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Count the number of element in a sequence that verifies the predicates\n  @params: \n     - a: the sequence to traverse\n  @complexity: O (n), with n = a.len\n  @example: \n  ============\n  let a = vec #[1, 2, 3];\n  assert (a.count!{|x| => x <= 2} () == 2u64);\n  ============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "241", 
+		"name" : "std::algorithm::search::count", 
+		"params" : ["F : fn (U)-> bool", "T impl Seq!(U)", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "267", 
+			"name" : "minElement", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: the index of the minimum element in a slice\n  @templates: \n    - F: a function that compare two element and return true if _0 < _1\n  @params: \n    - a: the slice to traverse\n  @example: \n  ===========\n  let a = [2, 1, 9, 2, 3];\n  assert (a.minElement!{|x,y| => x < y} () == 1u64);\n  ===========\n  @info: if the slice is empty, the function will return 0\n  @complexity: O (n), with n = a.len\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "267", 
+		"name" : "std::algorithm::search::minElement", 
+		"params" : ["F : fn (U, U)-> bool", "T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "296", 
+			"name" : "maxElement", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: the index of the maximum element in a slice\n  @templates: \n    - F: a function that compare two element and return true if _0 > _1\n  @params: \n    - a: the slice to traverse\n  @example: \n  ===========\n  let a = [2, 1, 9, 2, 3];\n  assert (a.maxElement!{|x,y| => x < y} () == 1u64); // does the same as minElement\n  assert (a.maxElement!{|x,y| => x > y} () == 2u64);\n  ===========\n  @info: \n    - if the slice is empty, the function will return 0\n    - this function does exactly the same operation as minElement!{F} (a), it is just weird to have a minElement function that actually find the maximum element\n  @complexity: O (n), with n = a.len\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "296", 
+		"name" : "std::algorithm::search::maxElement", 
+		"params" : ["F : fn (U, U)-> bool", "T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "321", 
+			"name" : "minElement", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: the index of the minimum element in a slice\n  @params: \n    - a: the slice to traverse\n  @example: \n  ===========\n  let a = [2, 1, 9, 2, 3];\n  assert (a.minElement () == 1u64);\n  ===========\n  @info: if the slice is empty, the function will return 0\n  @complexity: O (n), with n = a.len\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "321", 
+		"name" : "std::algorithm::search::minElement", 
+		"params" : ["T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "346", 
+			"name" : "maxElement", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: the index of the maximum element in a slice\n  @params: \n    - a: the slice to traverse\n  @example: \n  ===========\n  let a = [2, 1, 9, 2, 3];\n  assert (a.maxElement () == 2u64); // does the same as minElement\n  ===========\n  @info: \n    - if the slice is empty, the function will return 0\n  @complexity: O (n), with n = a.len\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "346", 
+		"name" : "std::algorithm::search::maxElement", 
+		"params" : ["T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "373", 
+			"name" : "minElement", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: the index of the minimum element in a sequence\n  @templates: \n    - F: a function that compare two element and return true if _0 < _1\n  @params: \n    - a: the sequence to traverse\n  @example: \n  ===========\n  let a = vec #[2, 1, 9, 2, 3];\n  assert (a.minElement!{|x,y| => x < y} () == 1u64);\n  ===========\n  @info: if the sequence is empty, the function will return 0\n  @complexity: O (n), with n = a.len()\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "373", 
+		"name" : "std::algorithm::search::minElement", 
+		"params" : ["F : fn (U, U)-> bool", "T impl Seq!(U)", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "415", 
+			"name" : "maxElement", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: the index of the minimum element in a sequence\n  @templates: \n    - F: a function that compare two element and return true if _0 < _1\n  @params: \n    - a: the sequence to traverse\n  @example: \n  ===========\n  let a = vec #[2, 1, 9, 2, 3];\n  assert (a.minElement!{|x,y| => x < y} () == 1u64);\n  ===========\n  @complexity: O (n), with n = a.len()\n  @info: \n    - if the sequence is empty, the function will return 0\n    - this function does exactly the same operation as minElement!(F) (a), it is just weird to have a minElement function that actually find the maximum element\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "415", 
+		"name" : "std::algorithm::search::maxElement", 
+		"params" : ["F : fn (U, U)-> bool", "T impl Seq!(U)", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "453", 
+			"name" : "minElement", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: the index of the minimum element in a sequence\n  @params: \n    - a: the sequence to traverse\n  @example: \n  ===========\n  let a = vec #[2, 1, 9, 2, 3];\n  assert (a.minElement!{|x,y| => x < y} () == 1u64);\n  ===========\n  @info: if the sequence is empty, the function will return 0\n  @complexity: O (n), with n = a.len()\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "453", 
+		"name" : "std::algorithm::search::minElement", 
+		"params" : ["T impl Seq!(U)", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+			"loc_line" : "492", 
+			"name" : "maxElement", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: the index of the minimum element in a sequence\n  @params: \n    - a: the sequence to traverse\n  @example: \n  ===========\n  let a = vec #[2, 1, 9, 2, 3];\n  assert (a.minElement!{|x,y| => x < y} () == 1u64);\n  ===========\n  @complexity: O (n), with n = a.len()\n  @info: \n    - if the sequence is empty, the function will return 0\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+		"loc_line" : "492", 
+		"name" : "std::algorithm::search::maxElement", 
+		"params" : ["T impl Seq!(U)", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/search.yr", 
+	"loc_line" : "1", 
+	"name" : "std::algorithm::search", 
+	"protection" : "prv", 
+	"type" : "module"
+}

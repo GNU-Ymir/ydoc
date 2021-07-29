@@ -1,0 +1,1188 @@
+{
+	"childs" : [{
+		"abstract" : "true", 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "10", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "21", 
+			"name" : "std::config::Config::self", 
+			"params" : [], 
+			"protection" : "prot", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  A configuration file is composed of nodes\n  Each node contains a different type of information\n ", 
+		"fields" : [], 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "61", 
+			"name" : "std::config::Config", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "21", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+		"loc_line" : "19", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "23", 
+			"name" : "opIndex", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "i", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "i32", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Config", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "33", 
+			"name" : "opIndex", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "_", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "usize", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Config", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "39", 
+			"name" : "opIndex", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "_", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Config", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "45", 
+			"name" : "opIndexAssign", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "_", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "usize", 
+					"type" : "int"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "_", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::config::Config", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "51", 
+			"name" : "opIndexAssign", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "_", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "_", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::config::Config", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "57", 
+			"name" : "opContains", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "_", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::config::Config", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::config::Config", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Creates a new Array of nodes, containing a pre constructed list of Configs\n      @params: \n         - nodes: some nodes to put in the array     \n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "84", 
+			"name" : "std::config::Array::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "nodes", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "std::config::Config", 
+							"type" : "class"
+						}], 
+						"mut" : "false", 
+						"type" : "class_pointer"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}, 
+		{
+			"doc" : "\n      Creates a new empty Array\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "92", 
+			"name" : "std::config::Array::self", 
+			"params" : [], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  An array is a list of nodes\n  It has the same properties as a Vec!(&Config)\n  @example: \n  ===============\n  let dmut array = Array::new ();\n  array:.push (Str::new (\"foo\"));\n  array:.push (Int::new (42));\n  ===============\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_content", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::collection::vec::Vec(&(std::config::Config))::Vec", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::collection::vec::Vec(&(std::config::Config))::Vec) ()"
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "\n          Arrays are printable\n         ", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+				"loc_line" : "233", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "228", 
+			"name" : "std::config::Array", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+		"loc_line" : "75", 
+		"methods" : [{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Add a node at the end of the Array\n      @example: \n      ==============\n      let dmut array = Array::new ();\n      array:.push (Int::new (1));\n      array:.push (Int::new (2));\n      match array [$ - 1u64] {// access the last element of the array\n         Int(x:_) => assert (x == 2);\n      }\n      ==============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "107", 
+			"name" : "push", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "node", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::config::Config", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Access an element at a given Index in the array\n      @throws: \n        - &OutOfArray: if the index is not in the array\n      @example: \n      =================\n      let i : &Config = Int::new (12);\n      let j : &Config = Int::new (42);\n      let dmut array = Array::new ([i, j]);\n      {\n          match array [0] {\n              Int (x:_)  => println (\"index 0 contains : \", x);\n          }\n      } catch {\n         _: &OutOfArray => println (\"Array does not contain elements\");\n      }\n      =================\n     ", 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "129", 
+			"name" : "opIndex", 
+			"over" : "true", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "i", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "usize", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Config", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: a slice of the elements contained in the array\n      @example: \n      ====================\n      let i : &Config = Int::new (12);\n      let j : &Config = Int::new (42);\n      let dmut array = Array::new ([i, j]);\n      \n      let slc : [&Config] = array [];\n      ====================\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "146", 
+			"name" : "opIndex", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::config::Config", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Change the element at index i\n      throws: \n        - &OutOfArray: if i is not a valid index of the array\n      @example: \n      ===========\n      let i : &Config = Int::new (12);\n      let j : &Config = Int::new (42);\n      let dmut array = Array::new ([i]);\n      {\n         (alias array) [0] = j;\n      } catch {\n         _: &OutOfArray => println (\"Array does not contain elements\");\n      }\n     ", 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "165", 
+			"name" : "opIndexAssign", 
+			"over" : "true", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "i", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "usize", 
+					"type" : "int"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "node", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::config::Config", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      An alias to get the length of the array\n      @example: \n      ===========\n      let i : &Config = Int::new (12);\n      let j : &Config = Int::new (42);\n      let dmut array = Array::new ([i, j]);\n      {\n         // print the last element of the array\n         println (array [$ - 1u64]);\n      } catch {\n         _: &OutOfArray => println (\"Array does not contain elements\");\n      }\n      ===========\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "186", 
+			"name" : "opDollar", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the number of element contained in the array\n      @example: \n      ==================\n      let i : &Config = Int::new (12);\n      let j : &Config = Int::new (42);\n      let dmut array = Array::new ([i, j]);\n      assert (array.len () == 2us);\n      ==================\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "200", 
+			"name" : "len", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Used to iterate over the array, (similar iteration as Vec!(&Config)).\n      @example: \n      =============\n      let a : &Config = Int::new (12);\n      let b : &Config = Int::new (42);\n      let dmut array = Array::new ([a, b]);\n      for i, j in array {\n          println (\"At \", j, \" => \", i); // At 0 => Ok (Int (12)), At 1 => Ok (Int (42))\n      }\n      =============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "216", 
+			"name" : "begin", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::collection::vec::VecIterator(&(std::config::Config))::VecIterator", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Used to iterate over the array, (similar iteration as Vec!(&Config))\n      @cf: begin\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "224", 
+			"name" : "end", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::collection::vec::VecIterator(&(std::config::Config))::VecIterator", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::config::Array", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::config::Config", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Creates a new empty dictionnary\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "262", 
+			"name" : "std::config::Dict::self", 
+			"params" : [], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  A dictionnary associates to values to string keys\n  It has the same properties as HashMap!([c32], &Config)\n  @example: \n  ============\n  let dmut dict = Dict::new ();\n  dict:.insert (\"foo\", Str::new (\"foo\"));\n  dict:.insert (\"bar\", Int::new (42));\n  dict:.insert (\"baz\", Array::new ());\n  ============\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_content", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::collection::map::HashMap([c32],&(std::config::Config))::HashMap", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::collection::map::HashMap([c32],&(std::config::Config))::HashMap) ()"
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "\n          Dictionnary are printable \n         ", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+				"loc_line" : "377", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "372", 
+			"name" : "std::config::Dict", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+		"loc_line" : "255", 
+		"methods" : [{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Insert a new value in the dict\n      @info: if the key was already in the dict, its old value is replaced by the new one\n      @params: \n         - k: the index key \n         - value: the value to insert\n      @example: \n      =============\n      let dmut dict = Dict::new ();\n      dict:.insert (\"foo\", Str::new (\"foo\"));\n      dict:.insert (\"foo\", Int::new (42));\n      println (dict); // Dict (foo=> Int (42))\n      =============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "278", 
+			"name" : "insert", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "k", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "value", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::config::Config", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Access the element at index k\n      @throws: \n         - &OutOfArray: if the index is not found in the dictionnary\n      @params: \n         - k: a key index\n      @example: \n      ================\n      let dmut dict = Dict::new ();\n      dict:.insert (\"foo\", Str::new (\"foo\"););\n      dict:.insert (\"bar\", Int::new (42));\n      {\n          println (dict[\"foo\"]);\n      } catch {\n          _ : &OutOfArray => {\n              println (\"foo not found in \", dict);\n          }\n      }\n      \n      println (dict[\"bar\"]?); // put it in an option type\n      ================\n     ", 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "304", 
+			"name" : "opIndex", 
+			"over" : "true", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "k", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Config", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Change the value at index k \n      @info: if the value was not in the dictionnary it is inserted\n      @params: \n         - k: a index key\n         - value: the value to insert\n      @example: \n      ==============\n      let dmut dict = Dict::new ();\n      (alias dict) [\"foo\"] = Str::new (\"foo\");    \n      (alias dict) [\"bar\"] = Int::new (42);\n      \n      // replace the value at foo index\n      (alias dict) [\"foo\"] = Int::new (12);\n      ==============\n     ", 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "326", 
+			"name" : "opIndexAssign", 
+			"over" : "true", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "k", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "value", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::config::Config", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Check if a key can be found in the dictionnary \n      @params: \n        - k: the key to find\n      @example: \n      =================\n      let dmut dict = Dict::new ();\n      (alias dict) [\"foo\"] = Str::new (\"foo\");    \n      (alias dict) [\"bar\"] = Int::new (42);\n      \n      assert (\"foo\" in dict);     \n      =================    \n     ", 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "343", 
+			"name" : "opContains", 
+			"over" : "true", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "k", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Used to iterate over the dictionnary\n      @example: \n      ==============\n      let dmut dict = Dict::new ();\n      (alias dict) [\"foo\"] = Str::new (\"foo\");    \n      (alias dict) [\"bar\"] = Int::new (42);\n      for i, j in dict {\n          println (\"At \", i \" => \", j); // At Ok(foo) => Ok (Str (foo)), At Ok (bar) => Ok (Int (42))\n      }\n      ==============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "359", 
+			"name" : "begin", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::collection::map::MapIterator([c32],&(std::config::Config))::MapIterator", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Used to iterate over the dictionnary\n      @cf: begin\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "367", 
+			"name" : "end", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::collection::map::MapIterator([c32],&(std::config::Config))::MapIterator", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::config::Dict", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::config::Config", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "404", 
+			"name" : "std::config::Int::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "i", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "i64", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}, 
+		{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "406", 
+			"name" : "std::config::Int::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "i", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "i32", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  Configuration encoding of an int \n  @example: \n  ============\n  let node : &Config = Int::new (12);\n  match node {\n     Int (i-> i:_) => assert (i == 42);\n  }\n  ============\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "i", 
+			"protection" : "pub", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i64", 
+				"type" : "int"
+			}
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+				"loc_line" : "409", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "408", 
+			"name" : "std::config::Int", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+		"loc_line" : "400", 
+		"methods" : [], 
+		"name" : "std::config::Int", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::config::Config", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "431", 
+			"name" : "std::config::Str::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  Configuration encoding of a String\n  It contains a [c32] \n  @example: \n  ============\n  let node : &Config = Str::new (\"foo\");\n  match node {\n     Int (str-> str:_) => assert (str == \"foo\");\n  }\n  ============\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "str", 
+			"protection" : "pub", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+				"loc_line" : "434", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "433", 
+			"name" : "std::config::Str", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+		"loc_line" : "427", 
+		"methods" : [], 
+		"name" : "std::config::Str", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::config::Config", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "453", 
+			"name" : "std::config::Bool::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "b", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  Configuration encoding of a bool\n  @example: \n  ===========\n  let node : &Config = Bool::new (true);\n  match node {\n     Bool (b-> b:_) => assert (b == true);\n  }\n  ===========\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "b", 
+			"protection" : "pub", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+				"loc_line" : "456", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "455", 
+			"name" : "std::config::Bool", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+		"loc_line" : "450", 
+		"methods" : [], 
+		"name" : "std::config::Bool", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::config::Config", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "476", 
+			"name" : "std::config::Float::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "f", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "f64", 
+					"type" : "float"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  Configuration encoding of a float\n  @example: \n  ============\n  let node : &Config = Float::new (12.48)\n  match node {\n     Float (f-> f:_) => assert (f == 12.48);\n  }\n  ============\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "f", 
+			"protection" : "pub", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "f64", 
+				"type" : "float"
+			}
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+				"loc_line" : "479", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "478", 
+			"name" : "std::config::Float", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+		"loc_line" : "473", 
+		"methods" : [], 
+		"name" : "std::config::Float", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::config::Config", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "496", 
+			"name" : "std::config::None::self", 
+			"params" : [], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  Configuration encoding of nothing\n  @example:\n  ===========\n  let node : &Config = None::new ();\n  match node {\n     None () => {}\n  }\n  ===========\n ", 
+		"fields" : [], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+				"loc_line" : "499", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+			"loc_line" : "498", 
+			"name" : "std::config::None", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+		"loc_line" : "495", 
+		"methods" : [], 
+		"name" : "std::config::None", 
+		"protection" : "pub", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config.yr", 
+	"loc_line" : "1", 
+	"name" : "std::config", 
+	"protection" : "prv", 
+	"type" : "module"
+}

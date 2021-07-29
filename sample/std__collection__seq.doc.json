@@ -1,0 +1,148 @@
+{
+	"childs" : [{
+		"child" : {
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "\n      @returns: the number of elements contained in the sequence\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/seq.yr", 
+				"loc_line" : "18", 
+				"name" : "len", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      @returns: the number of elements contained in the sequence\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/seq.yr", 
+				"loc_line" : "18", 
+				"name" : "len", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Access a value in the sequence by index\n      @params: \n        - i: the index\n      @throws: \n        - &OutOfArray: if the index is not in the sequence\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/seq.yr", 
+				"loc_line" : "27", 
+				"name" : "opIndex", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "i", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(OutOfArray)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Access a value in the sequence by index\n      @params: \n        - i: the index\n      @throws: \n        - &OutOfArray: if the index is not in the sequence\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/seq.yr", 
+				"loc_line" : "27", 
+				"name" : "opIndex", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "i", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(OutOfArray)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}], 
+			"doc" : "", 
+			"loc_col" : "11", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/seq.yr", 
+			"loc_line" : "13", 
+			"name" : "Seq", 
+			"protection" : "prv", 
+			"type" : "trait"
+		}, 
+		"doc" : "\n  A sequence is a trait that indexable collections implements (eg: vec, list)\n  It allows function to create template specialization for sequences\n  @templates: \n      - T: the type of element contained in the sequence\n ", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/seq.yr", 
+		"loc_line" : "13", 
+		"name" : "std::collection::seq::Seq", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/seq.yr", 
+	"loc_line" : "1", 
+	"name" : "std::collection::seq", 
+	"protection" : "prv", 
+	"type" : "module"
+}

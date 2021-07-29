@@ -1,0 +1,495 @@
+{
+	"childs" : [{
+		"doc" : "\n  The type errors that can occur when listening, or connecting to a TCP socket\n ", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "std::net::tcp::TcpErrorCode", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "ADDR_TYPE", 
+			"value" : "0"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "SOCKET_CREATION", 
+			"value" : "1"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "BIND", 
+			"value" : "2"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "LISTEN", 
+			"value" : "3"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "CONNECT", 
+			"value" : "4"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ACCEPT", 
+			"value" : "5"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+		"loc_line" : "21", 
+		"name" : "std::net::tcp::TcpErrorCode", 
+		"protection" : "pub", 
+		"type" : "enum"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "core::exception::Exception", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+			"loc_line" : "32", 
+			"name" : "std::net::tcp::TcpError::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "code", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "std::net::tcp::TcpErrorCode", 
+					"type" : "enum"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "msg", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  Exception that can occur when trying to create a TcpListener, or a TcpStream\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "msg", 
+			"protection" : "pub", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "code", 
+			"protection" : "pub", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "std::net::tcp::TcpErrorCode", 
+				"type" : "enum"
+			}
+		}], 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+				"loc_line" : "38", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+			"loc_line" : "37", 
+			"name" : "std::net::tcp::TcpError", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+		"loc_line" : "27", 
+		"methods" : [], 
+		"name" : "std::net::tcp::TcpError", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Create a new TcpListener and bind it to the specific address\n      The create listener is ready for accepting connection\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+			"loc_line" : "63", 
+			"name" : "std::net::tcp::TcpListener::self::listen", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "addr", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::net::address::SockAddress", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  A tcp socket server that is listening for incoming connection\n ", 
+		"fields" : [{
+			"doc" : " The listening socket ", 
+			"mut" : "true", 
+			"name" : "_sockfd", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "true", 
+				"name" : "i32", 
+				"type" : "int"
+			}, 
+			"value" : "0"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "_addr", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::net::address::SockAddress", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+			"loc_line" : "167", 
+			"name" : "std::net::tcp::TcpListener", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+		"loc_line" : "53", 
+		"methods" : [{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Accept a new client connection \n      @example: \n      =============\n      pub def greets_client (dmut client : &TcpStream) {\n         // Communicate with the client\n         client:.rawSend (\"Hello !!\"s8);\n      }\n     \n      let dmut server = TcpListener::listen (SockAddrV4::new (Ipv4::LOCALHOST, 4000u16));\n      loop {\n         let dmut client = server:.accept ();\n         println (\"New client connected : \", client);\n         greets_client (alias client);\n      }\n      =============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+			"loc_line" : "94", 
+			"name" : "accept", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::net::tcp::TcpStream", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Close the listener\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+			"loc_line" : "111", 
+			"name" : "close", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Bind the tcp listener to an ipv4 address\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+			"loc_line" : "119", 
+			"name" : "bindV4", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "ip", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::net::address::SockAddrV4", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Read a sockaddr_in structure and create the associated SockAddress\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+			"loc_line" : "144", 
+			"name" : "createAddr", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "s_addr", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "etc::c::socket::sockaddr_in", 
+					"type" : "struct"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::net::address::SockAddress", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::net::tcp::TcpListener", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Create a TcpStream on a already opened socket\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+			"loc_line" : "198", 
+			"name" : "std::net::tcp::TcpStream::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "socket", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "i32", 
+					"type" : "int"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "addr", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::net::address::SockAddress", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}, 
+		{
+			"doc" : "\n      Create a client to address addr\n      The client is not connected \n      @example: \n      ==========     \n      let addr = SockAddrV4 (Ipv4Address::new (127u8, 0u8, 0u8, 1u8), 8080u16);\n      let dmut client = TcpStream::connect (addr);\n      ==========\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+			"loc_line" : "212", 
+			"name" : "std::net::tcp::TcpStream::self::connect", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "addr", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::net::address::SockAddress", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  A tcp stream is a tcp connection from a client to a server, or a server to a client\n  It can be acquired directly by construction, or using a TcpListener\n  @example: \n  ===============\n  pub def greets_client (client : &TcpStream) {\n     // Communicate with the client\n     client:.rawSend (\"Hello !!\"s8);\n  }\n \n  let dmut server = TcpListener::new (\"127.0.0.1:8080\");\n  loop {\n     let dmut client = server:.accept ();\n     println (\"New client connected : \", client);\n     greets_client (client);\n  }\n  ===============\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "_sockfd", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "true", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_addr", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::net::address::SockAddress", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+			"loc_line" : "307", 
+			"name" : "std::net::tcp::TcpStream", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+		"loc_line" : "190", 
+		"methods" : [{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Receive a packet from the stream, and unpack it into an object\n      @return: an object if the packet stored an object known by the current program, std::any::None otherwise\n      @cf: std::network::packet\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+			"loc_line" : "270", 
+			"name" : "receive", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "core::object::Object", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Close the connection with the remote\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+			"loc_line" : "282", 
+			"name" : "close", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+			"loc_line" : "287", 
+			"name" : "connectV4", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "addr", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::net::address::SockAddrV4", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::net::tcp::TcpStream", 
+		"protection" : "pub", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/net/tcp.yr", 
+	"loc_line" : "1", 
+	"name" : "std::net::tcp", 
+	"protection" : "prv", 
+	"type" : "module"
+}

@@ -1,0 +1,83 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/time.yr", 
+		"loc_line" : "3", 
+		"name" : "etc::c::time::gettimeofday", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "tv", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "etc::c::time::timeval", 
+					"type" : "struct"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "tz", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "tv_sec", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "tv_usec", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/time.yr", 
+		"loc_line" : "8", 
+		"name" : "etc::c::time::timeval", 
+		"protection" : "pub", 
+		"type" : "struct"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/time.yr", 
+	"loc_line" : "1", 
+	"name" : "etc::c::time", 
+	"protection" : "prv", 
+	"type" : "module"
+}

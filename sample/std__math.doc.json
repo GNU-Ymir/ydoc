@@ -1,0 +1,59 @@
+{
+	"childs" : [{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/math.yr", 
+		"loc_line" : "4", 
+		"name" : "std::math::PI", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "3.14159265358979323846"
+	}, 
+	{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/math.yr", 
+		"loc_line" : "5", 
+		"name" : "std::math::PI_2", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "1.57079632679489661923"
+	}, 
+	{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/math.yr", 
+		"loc_line" : "6", 
+		"name" : "std::math::PI_4", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "0.785398163397448309616"
+	}, 
+	{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/math.yr", 
+		"loc_line" : "7", 
+		"name" : "std::math::M_1_PI", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "0.318309886183790671538"
+	}, 
+	{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/math.yr", 
+		"loc_line" : "8", 
+		"name" : "std::math::M_2_PI", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "(2.0 * 0.318309886183790671538)"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/math.yr", 
+	"loc_line" : "1", 
+	"name" : "std::math", 
+	"protection" : "prv", 
+	"type" : "module"
+}

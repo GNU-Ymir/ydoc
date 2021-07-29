@@ -1,0 +1,261 @@
+{
+	"childs" : [{
+		"doc" : "\n      FILE STDIN Number\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+		"loc_line" : "7", 
+		"name" : "etc::c::stdio::STDIN_FILENO", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "0"
+	}, 
+	{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+		"loc_line" : "9", 
+		"name" : "etc::c::stdio::STDOUT_FILENO", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "1"
+	}, 
+	{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+		"loc_line" : "11", 
+		"name" : "etc::c::stdio::STDERR_FILENO", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "2"
+	}, 
+	{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+		"loc_line" : "13", 
+		"name" : "etc::c::stdio::F_GETFL", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "3"
+	}, 
+	{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+		"loc_line" : "15", 
+		"name" : "etc::c::stdio::F_SETFL", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "4"
+	}, 
+	{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+		"loc_line" : "17", 
+		"name" : "etc::c::stdio::O_NONBLOCK", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "2048"
+	}, 
+	{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+		"loc_line" : "19", 
+		"name" : "etc::c::stdio::EOF", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "0"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+		"loc_line" : "21", 
+		"name" : "etc::c::stdio::read", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "stream", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "size", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "isize", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+		"loc_line" : "23", 
+		"name" : "etc::c::stdio::write", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "stream", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "size", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "isize", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+		"loc_line" : "25", 
+		"name" : "etc::c::stdio::close", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "stream", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+		"loc_line" : "27", 
+		"name" : "etc::c::stdio::fflush", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "stream", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+		"loc_line" : "29", 
+		"name" : "etc::c::stdio::stdin", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "0"
+	}, 
+	{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+		"loc_line" : "30", 
+		"name" : "etc::c::stdio::stdout", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "1"
+	}, 
+	{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+		"loc_line" : "31", 
+		"name" : "etc::c::stdio::stderr", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "2"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/stdio.yr", 
+	"loc_line" : "1", 
+	"name" : "etc::c::stdio", 
+	"protection" : "prv", 
+	"type" : "module"
+}

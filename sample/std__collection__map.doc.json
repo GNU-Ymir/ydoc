@@ -1,0 +1,1311 @@
+{
+	"childs" : [{
+		"doc" : "\n  The number or allocated node at initialization\n ", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "std::collection::map::MapConst", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "DEFAULT_ALLOC_SIZE", 
+			"value" : "10"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+		"loc_line" : "18", 
+		"name" : "std::collection::map::MapConst", 
+		"protection" : "prv", 
+		"type" : "enum"
+	}, 
+	{
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+			"loc_line" : "32", 
+			"name" : "std::collection::map::hmap::self", 
+			"protection" : "pub", 
+			"rule" : "(fst=(key=__expr '=>' val=__expr) rest=(',' key=__expr '=>' val=__expr)*)", 
+			"skips" : ["' '", "'\n'", "'\t'", "'\r'"]
+		}], 
+		"doc" : "\n  Macro used to construct a HashMap with literals\n  @example: \n  ============\n  let dmut x = hmap#{\"foo\" => 12, \"bar\" => 45, \"baz\" => 89};\n  cte assert (is!(typeof (x)) (T of &HashMap!([c32], i32)));\n  assert (x[\"foo\"] == 12);\n  ============\n ", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+		"loc_line" : "30", 
+		"name" : "std::collection::map::hmap", 
+		"protection" : "pub", 
+		"rules" : [], 
+		"type" : "macro"
+	}, 
+	{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "\n      Create a new empty hash map, with a default loaded factor of 0.75 , and a minimum load factor or 0.5\n      Does not allocate memory until first insertion\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "85", 
+				"name" : "self", 
+				"param" : [], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}, 
+			{
+				"doc" : "\n      Create a new empty hash map, with a default allocated table of size len\n      @params:\n         - len: the size of the table reserved to avoid growing\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "92", 
+				"name" : "self", 
+				"param" : [{
+					"mut" : "false", 
+					"name" : "len", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "", 
+			"fields" : [{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_data", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "[dmut &(MapNode!(K, V))]", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_loaded", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_size", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_load_factor", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_min_load_factor", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "/ Allocated only once, to optimize memory usage", 
+				"mut" : "false", 
+				"name" : "_empty", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "dmut &(MapNode!(K, V))", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "18", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+			"loc_line" : "61", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Insert a new element inside the map\n      If the key is already found (hash (key)), then the value is updated\n      @params: \n         - key: the key \n         - val: the value\n      @complexity: O (1 + n/k + z) with n the number of possible collision, and k the number of keys, and z the time taken by resizing if the load is higher than the load factor, in average n/k and z are negligeable\n      @example: \n      ==========\n      let dmut x = HashMap!([c32], i32)::new ();\n      x:.insert (\"foo\", 12);\n      x:.insert (\"bar\", 32);\n      assert (x [\"foo\"] == 12 && x [\"bar\"] == 32);\n      x:.insert (\"test\", 24);\n      assert (x [\"test\"] == 24);\n      ==========\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "122", 
+				"name" : "insert", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "key", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "K", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "V", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "129", 
+				"name" : "fit", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "len", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "163", 
+				"name" : "find", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "key", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "K", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "(V)?", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Search the key in the map, \n      @returns: true if found, false otherwise\n      @example: \n      =============\n      let dmut x = HashMap!([c32], i32)::new ();\n      x:.insert (\"foo\", 32);\n      assert (\"foo\" in x);\n      =============\n      @complexity: O (1 + n/k), with n the number of possible collision and k the number of keys, in average n/k are negligeable\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "190", 
+				"name" : "opContains", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "key", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "K", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Remove the key in the map\n      If the key was not present, do nothing\n      @params: \n         - key: the key to remove\n      @example: \n      ===========\n      let dmut x = HashMap!([c32], i32)::new ();\n      x:.insert (\"foo\", 12);\n      x:.remove (\"foo\");\n      assert (x [\"foo\"] == None!(i32)::new ());\n      x:.remove (\"bar\"); // does nothing\n      ===========\n      @complexity: O (1 + n/k + z) with n the number of possible collision, and k the number of keys, and z the time taken by resizing if the load is lower than the min load factor, in average n/k and z are negligeable\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "220", 
+				"name" : "remove", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "key", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "K", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Simply do a find, this is just for syntax enhancing\n      @example: \n      =============\n      let dmut x = HashMap!([c32], i32)::new ();\n      x:.insert (\"foo\", 12);\n      assert (x [\"foo\"] == 12);\n      assert (x [\"bar\"] == None!(i32)::new ());\n      =============\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "256", 
+				"name" : "opIndex", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "k", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "K", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "V", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(OutOfArray)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Simply do an insert, this is just for syntax enhancing\n      @example: \n      =============\n      let dmut x = HashMap!([c32], i32)::new ();\n      (alias x)[\"foo\"] = 12;\n      (alias x)[\"foo\"] = 24;\n      assert (x [\"foo\"] == 24);\n      =============\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "275", 
+				"name" : "opIndexAssign", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "k", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "K", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "v", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "V", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Remove all the entries contained in the map\n      @example: \n      =============\n      let dmut x = HashMap!([c32], i32)::new ();\n      x:.insert (\"foo\", 34);\n      x:.insert (\"bar\", 45);\n      x:.clear ();\n      assert (x.isEmpty ());\n      =============\n      @complexity: O (1)\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "291", 
+				"name" : "clear", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      The number of element contained in the map\n      @example: \n      ==========\n      let dmut x = HashMap!([c32], i32)::new ()\n      x:.insert (\"foo\", 34);\n      x:.insert (\"bar\", 45);\n      assert (x.len () == 2us);\n      ==========\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "307", 
+				"name" : "len", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Iteration over the map can be done with map iterators\n      This iterators implement the ymir interface for iteration with one or two variable (next, get!0, get!1)\n      @example: \n      ============\n      let dmut x = HashMap!([c32], i32)::new ();\n      x:.insert (\"foo\", 12);\n      x:.insert (\"bar\", 12);\n      for k, v in x {\n          println (k, \" \", v);\n      }\n      \n      for k in x {\n          println (k);\n      }\n      ============\n      @return: an iterator on the beginning of the map\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "329", 
+				"name" : "begin", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "dmut &(MapIterator!(K, V))", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      @returns: the iterator pointing to the end of the map\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "346", 
+				"name" : "end", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "&(MapIterator!(K, V))", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Insert an element in the hash map, without making the table grow\n      @assume: the table is able to contain the value to insert\n      @params:\n         - h: the hash value of the key (== hash (key))\n         - key: the key \n         - val: the value\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "359", 
+				"name" : "insertFast", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "h", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "key", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "K", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "V", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Make the table containing the values shrink\n      @complexity: O (n + m), with n the new size, and m the number of element contained in the old table that are reinserted\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "383", 
+				"name" : "shrink", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Make the table containing the values grow\n      This function is called when the _load_factor is reached\n      If the table was empty it is allocated with a size of MapConst::DEFAULT_ALLOC_SIZE,\n      otherwise the size is mutliplied by 2\n      @complexity: O (n + m), with n the new size, and m the number of element contained in the old table that are reinserted\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "425", 
+				"name" : "grow", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "HashMap", 
+			"others" : [{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "465", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}, 
+			{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "491", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((core :: duplication) :: Copiable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  A hash map implementation that associated a key to a value\n  The data in the map are unordered\n  @drawbacks: \n  ==============\n  The keys in the hash map are considered equivalent if their hash is equivalent\n  Depending on the hash function, there may be collisions\n  ==============\n \n  @example: \n  ==========\n  let dmut x = HashMap!([c32], i32)::new ();\n  x:.insert (\"foo\", 12);\n  x:.insert (\"bar\", 32);\n  assert (x [\"foo\"] == 12 && x [\"bar\"] == 32);\n  ==========\n ", 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+		"loc_line" : "61", 
+		"name" : "std::collection::map::HashMap", 
+		"params" : ["K", "V"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "", 
+				"loc_col" : "10", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "545", 
+				"name" : "self", 
+				"param" : [], 
+				"protection" : "prot", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "\n  The structure of the content of a hashmap is an array of simple linked list\n  The following class is the ancestor of the class that are used in the map to encode this linked list\n ", 
+			"fields" : [], 
+			"loc_col" : "17", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+			"loc_line" : "544", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "547", 
+				"name" : "opEquals", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "_", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(MapNode!(K, V))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "MapNode", 
+			"others" : [{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "549", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  The structure of the content of a hashmap is an array of simple linked list\n  The following class is the ancestor of the class that are used in the map to encode this linked list\n ", 
+		"loc_col" : "17", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+		"loc_line" : "544", 
+		"name" : "std::collection::map::MapNode", 
+		"params" : ["K", "V"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"ancestor" : "MapNode!(K, V)", 
+			"cstrs" : [{
+				"doc" : "\n      @params:\n         - h: the result of hash (key), to avoid recomputation\n         - key: the key stored in the node\n         - val: the value stored in the node\n         - next: the reference to the next node in the list (empty or value)\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "586", 
+				"name" : "self", 
+				"param" : [{
+					"mut" : "false", 
+					"name" : "h", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "key", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "K", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "V", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "next", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(MapNode!(K, V))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "\n  The map value encode a node in the linked list that contains a value\n  It has a successor, and thus cannot be the final node of a linked list\n  @example: \n  ==========\n  let list = MapValue!(i32, i32)::new (hash (12), 12, 42, \n                                       MapValue!(i32, i32)::new (hash (23), 23, 89, \n                                                                 Empty!(i32, i32)::new ()\n                                       )\n             );\n  \n  ==========\n ", 
+			"fields" : [{
+				"doc" : "/ The following node in the list", 
+				"mut" : "false", 
+				"name" : "next", 
+				"protection" : "pub", 
+				"type" : {
+					"name" : "&(MapNode!(K, V))", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "/ The result of hash (key), used to compare two MapValues (and avoid recomputing the value each time)", 
+				"mut" : "false", 
+				"name" : "h", 
+				"protection" : "pub", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "/ The actual key stored in the node", 
+				"mut" : "false", 
+				"name" : "key", 
+				"protection" : "pub", 
+				"type" : {
+					"name" : "K", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "/ The value associated with the key (it is mutable, because we can update it when inserting)", 
+				"mut" : "true", 
+				"name" : "val", 
+				"protection" : "pub", 
+				"type" : {
+					"name" : "V", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+			"loc_line" : "565", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Insert a new element in the list, or replace an element if there is already a node whose hash value is equals to h\n      @params:\n         - h: the hash of the key to insert\n         - key: the key to insert\n         - val: the value associated to the key\n      @returns: true if a new node has been allocated, false otherwise\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "628", 
+				"name" : "insert", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "h", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "key", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "K", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "V", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Find the value associated with the key whose hash is h\n      @params: \n         - h: the hash of the key\n      @returns: the value in an option type, or None if there is no node containing a hash equal to h\n      @complexity: O (n), with n the length of the list\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "652", 
+				"name" : "find", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "h", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "(V)?", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Remove the key inside the list, if there is no node containing the value, just return the list as it was\n      @info: the returned list is not a copy, no allocation are made\n      @complexity: O (n), with n the length of the list\n      @returns: \n         - rm: true if a node has been removed, false otherwise\n         - the list, with no node containing the hash h,\n      ===========\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "676", 
+				"name" : "remove", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "h", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "true", 
+					"name" : "rm", 
+					"ref" : "true", 
+					"type" : {
+						"name" : "bool", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "dmut &(MapNode!(K, V))", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Search the linked list for a node whose contained hash is h\n      @returns: true, if such a node was found, false otherwise\n      @complexity: O (n), with n the length of the list\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "695", 
+				"name" : "opContains", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "h", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Compare two nodes\n      They are equals, if their h is equals\n     ", 
+				"loc_col" : "14", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "712", 
+				"name" : "opEquals", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "o", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(MapNode!(K, V))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "MapValue", 
+			"others" : [{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "593", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  The map value encode a node in the linked list that contains a value\n  It has a successor, and thus cannot be the final node of a linked list\n  @example: \n  ==========\n  let list = MapValue!(i32, i32)::new (hash (12), 12, 42, \n                                       MapValue!(i32, i32)::new (hash (23), 23, 89, \n                                                                 Empty!(i32, i32)::new ()\n                                       )\n             );\n  \n  ==========\n ", 
+		"loc_col" : "14", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+		"loc_line" : "565", 
+		"name" : "std::collection::map::MapValue", 
+		"params" : ["K", "V"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"ancestor" : "MapNode!(K, V)", 
+			"cstrs" : [{
+				"doc" : "", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "727", 
+				"name" : "self", 
+				"param" : [], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "\n  An empty node encode the end of a list in a hash map\n  They store no values\n ", 
+			"fields" : [], 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+			"loc_line" : "726", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Compare two nodes\n      Empty is equals to other empty nodes\n     ", 
+				"loc_col" : "14", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "740", 
+				"name" : "opEquals", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "o", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(MapNode!(K, V))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "Empty", 
+			"others" : [{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "729", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  An empty node encode the end of a list in a hash map\n  They store no values\n ", 
+		"loc_col" : "14", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+		"loc_line" : "726", 
+		"name" : "std::collection::map::Empty", 
+		"params" : ["K", "V"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "\n      An iterator is always constructed to point somewhere, or must point to (0, 0, [], empty)\n      @params: \n         - i: the index in the table of this iterator\n         - branch: the index in the branch at iterator i\n         - data: the table of data\n         - current: the current traversed node in the branch (data [i][branch])\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "786", 
+				"name" : "self", 
+				"param" : [{
+					"mut" : "false", 
+					"name" : "i", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "branch", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "data", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "[&(MapNode!(K, V))]", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "current", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(MapNode!(K, V))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "", 
+			"fields" : [{
+				"doc" : "/ A reference on the table contained in the map we are traversing", 
+				"mut" : "true", 
+				"name" : "_data", 
+				"protection" : "prv", 
+				"type" : {
+					"name" : "[&(MapNode!(K, V))]", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "/ The current index of the iterator, in the table", 
+				"mut" : "true", 
+				"name" : "_index", 
+				"protection" : "prv", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "/ The current index in the current branch (linked list of MapValues)", 
+				"mut" : "true", 
+				"name" : "_branch", 
+				"protection" : "prv", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "/ The reference on node containing the value we are pointing at", 
+				"mut" : "true", 
+				"name" : "_currentNode", 
+				"protection" : "prv", 
+				"type" : {
+					"name" : "&(MapNode!(K, V))", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "18", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+			"loc_line" : "764", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Two iterators are equals, if the current nodes are equals\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "796", 
+				"name" : "opEquals", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "o", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(MapIterator!(K, V))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Create a new iterator that point to the next value contained in the map\n      If there is no more value, the returned iterator is equals to map.end ()\n      @example: \n      ===========\n      let dmut x = HashMap!([c32], i32)::new ();\n      x:.insert (\"foo\", 12);\n      x:.insert (\"bar\", 12);\n      let dmut it = alias x.begin ();\n      let end = x.end (); // put in a var to avoid multiple useless calls and allocations\n      while (it != end) {\n         println (it.get!0, \" \", it.get!1);\n         it:.next ();\n      }\n      ===========\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "848", 
+				"name" : "next", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "MapIterator", 
+			"others" : [{
+				"child" : {
+					"attributes" : [], 
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+					"loc_line" : "807", 
+					"name" : "get", 
+					"params" : [{
+						"mut" : "false", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "K", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				"doc" : "\n      @returns: \n      =======\n      the key of the current node, in an option type\n      None, it the current node is empty\n      =======     \n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "807", 
+				"name" : "get", 
+				"params" : ["0"], 
+				"protection" : "pub", 
+				"type" : "template"
+			}, 
+			{
+				"child" : {
+					"attributes" : [], 
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+					"loc_line" : "823", 
+					"name" : "get", 
+					"params" : [{
+						"mut" : "false", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "V", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				"doc" : "\n      @returns: \n      =======\n      the value of the current node, in an option type\n      None, it the current node is empty\n      =======     \n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+				"loc_line" : "823", 
+				"name" : "get", 
+				"params" : ["1"], 
+				"protection" : "pub", 
+				"type" : "template"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  The map iterator class is used to traverse a map\n  It can be acquired in a hash map with the methods begin (), and end ()\n  @example: \n  =============\n  let dmut x = HashMap!([c32], i32)::new ();\n  x:.insert (\"foo\", 12);\n  let dmut beg_it = alias x.begin (); \n  assert (beg_it.get!0 == \"foo\");\n  assert (beg_it.get!1 == 12);\n  \n  beg_it:.next (); // next iteration\n  assert (beg_it == x.end ()); \n  =============\n ", 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+		"loc_line" : "764", 
+		"name" : "std::collection::map::MapIterator", 
+		"params" : ["K", "V"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/map.yr", 
+	"loc_line" : "1", 
+	"name" : "std::collection::map", 
+	"protection" : "prv", 
+	"type" : "module"
+}

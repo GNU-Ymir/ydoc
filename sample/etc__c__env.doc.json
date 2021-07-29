@@ -1,0 +1,43 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/env.yr", 
+		"loc_line" : "3", 
+		"name" : "etc::c::env::getenv", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "name", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "c8", 
+				"type" : "char"
+			}], 
+			"mut" : "false", 
+			"type" : "pointer"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/env.yr", 
+	"loc_line" : "1", 
+	"name" : "etc::c::env", 
+	"protection" : "prv", 
+	"type" : "module"
+}

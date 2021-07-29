@@ -1,0 +1,233 @@
+{
+	"childs" : [{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/comparison.yr", 
+			"loc_line" : "11", 
+			"name" : "max", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "b", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "U", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: the maximal value between a and b\n  @example: \n  =============\n  assert (max (1, 2) == 2);\n  assert (max (9, 3, 1, 4, 8) == 9);\n  =============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/comparison.yr", 
+		"loc_line" : "11", 
+		"name" : "std::algorithm::comparison::max", 
+		"params" : ["T", "U..."], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/comparison.yr", 
+			"loc_line" : "34", 
+			"name" : "min", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "b", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "U", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: the maximal value between a and b\n  @example: \n  =============\n  assert (min (1, 2) == 1);\n  assert (min (9, 3, 1, 4, 8) == 1);\n  =============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/comparison.yr", 
+		"loc_line" : "34", 
+		"name" : "std::algorithm::comparison::min", 
+		"params" : ["T", "U..."], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/comparison.yr", 
+			"loc_line" : "53", 
+			"name" : "clamp", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "val", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "low", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "up", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: min (max (val, low), up)\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/comparison.yr", 
+		"loc_line" : "53", 
+		"name" : "std::algorithm::comparison::clamp", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/comparison.yr", 
+			"loc_line" : "67", 
+			"name" : "among", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "val", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "x", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "U", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "bool", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: true if val is in the tuple x\n  @info: this function ignore the comparison that cannot be made (static typing verification)\n  @complexity: O (n), with n = |U| + 1\n  @example: \n  ==============\n  let v = 1;\n  assert (v.among ('r', 2, \"test\", 1));\n  ==============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/comparison.yr", 
+		"loc_line" : "67", 
+		"name" : "std::algorithm::comparison::among", 
+		"params" : ["T", "U..."], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/comparison.yr", 
+			"loc_line" : "94", 
+			"name" : "either", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "U", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "alternatives", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "(U)?", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Get the first argument that passes the predicates\n  @returns: the first argument for which F (x) == true, or (U?)::err otherwise\n  @params: \n    - a: an argument to test\n    - alternatives: the alternatives to test if F(a) is false\n  @complexity: O (n), with n = |T| + 1\n  @example: \n  ===============\n  let x = either!(|x| => x > 2) (1, 2, 3);\n  match x {\n     Ok (z : i32) => \n         assert (z == 3);\n  }\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/comparison.yr", 
+		"loc_line" : "94", 
+		"name" : "std::algorithm::comparison::either", 
+		"params" : ["F : fn (U)-> bool", "U", "T..."], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/algorithm/comparison.yr", 
+	"loc_line" : "1", 
+	"name" : "std::algorithm::comparison", 
+	"protection" : "prv", 
+	"type" : "module"
+}

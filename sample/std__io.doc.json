@@ -1,0 +1,1308 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "9", 
+		"name" : "std::io::putchar", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "c8", 
+				"type" : "char"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "14", 
+		"name" : "std::io::_yrt_putwchar", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "c32", 
+				"type" : "char"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "19", 
+		"name" : "std::io::_yrt_getwchar", 
+		"params" : [], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "c32", 
+			"type" : "char"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "24", 
+		"name" : "std::io::printf", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "29", 
+		"name" : "std::io::scanf", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "34", 
+		"name" : "std::io::_yrt_printf32", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "f", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "f32", 
+				"type" : "float"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "39", 
+		"name" : "std::io::_yrt_printf64", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "f", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "f64", 
+				"type" : "float"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "44", 
+		"name" : "std::io::_yrt_fflush_stdout", 
+		"params" : [], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"childs" : [{
+			"attributes" : [], 
+			"doc" : "\n      Print the content of the class on stdout\n      @returns: true if something has been printed, false otherwise    \n     ", 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "96", 
+			"name" : "__stdio__printContent", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "self", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "bool", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Print the class name and content to stdout\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "122", 
+			"name" : "print", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "self", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"name" : "void", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}], 
+		"doc" : "\n  This trait is to be implemented by class\n  When a class implement it, we can call the function print on it\n  @example: \n  ====================\n  class X {\n  // ...\n  impl std::io::Printable;\n  }\n \n  let a = X::new ();\n  println (\"Test on : \", a); \n  ====================\n  @warning: \n  ===========\n  Printable print function prints static typeinfo\n  Which means that for the following example: \n  @example: \n  ===========\n  mod main;\n  \n  class Foo {\n      pub self () {}\n      \n      impl std::io::Printable;\n  }\n  \n  class Bar over Foo {\n     pub self () {}\n  }\n  \n  def main () {\n      let x = Bar::new ();\n      println (x);\n  }\n  ===========\n  The result will be : \n  @example: \n  ============\n  main::Foo ()\n  ============\n  Because, main::Bar does not reimplement Printable, so the definition of main::Foo is used\n  ===========\n ", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "90", 
+		"name" : "std::io::Printable", 
+		"protection" : "pub", 
+		"type" : "trait"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print a char of size 8 in stdout\n      @params : \n      - c: the char to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "135", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "c8", 
+				"type" : "char"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print a char of size 32 in stdout\n      @params : \n      - c: the char to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "143", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "c32", 
+				"type" : "char"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print an array of c32 in stdout\n      @params : \n      - s: the string to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "151", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "s", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print an array of c8 in stdout\n      @params : \n      - s: the string to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "165", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "s", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print a isize to stdout\n      @params:\n         - i: the int to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "178", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "isize", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print a usize to stdout\n      @params:\n         - i: the int to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "186", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print a i64 to stdout\n      @params:\n         - i: the int to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "194", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i64", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print a i32 to stdout\n      @params:\n         - i: the int to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "202", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print a i16 to stdout\n      @params:\n         - i: the int to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "210", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i16", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print a i8 to stdout\n      @params:\n         - i: the int to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "218", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i8", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print a u64 to stdout\n      @params:\n         - i: the int to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "226", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print a u32 to stdout\n      @params:\n         - i: the int to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "234", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print a u16 to stdout\n      @params:\n         - i: the int to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "242", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u16", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : " \n      Print a u8 to stdout \n      @params:\n         - i: the int to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "250", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u8", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print an address to stdout\n      @params: \n         - i: the address to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "259", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print a float value of size 64 to stdout\n      @params:\n         - f: the float to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "267", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "f", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "f64", 
+				"type" : "float"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print a float value of size 32 to stdout\n      @params:\n         - f: the float to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "276", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "f", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "f32", 
+				"type" : "float"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print a bool value to stdout\n      @params:\n         - b: the bool to print\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "285", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "b", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Print an array of type U to stdout\n      @params:\n         - a: an array to print\n      @templates : \n         - T: a slice type\n         - U: any \n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "300", 
+			"name" : "print", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "void", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Print an array of type U to stdout\n      @params:\n         - a: an array to print\n      @templates : \n         - T: a slice type\n         - U: any \n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "300", 
+		"name" : "std::io::print", 
+		"params" : ["T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Print a static array of type U to stdout\n      @params : \n         - a: an array to print\n      @templates : \n         - T: an static array type \n         - U: any\n         - N: the static size \n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "322", 
+			"name" : "print", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "void", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Print a static array of type U to stdout\n      @params : \n         - a: an array to print\n      @templates : \n         - T: an static array type \n         - U: any\n         - N: the static size \n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "322", 
+		"name" : "std::io::print", 
+		"params" : ["T of [U; N]", "U", "N : usize"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Print an option type to stdout\n      @params: \n        - a: a value of type option \n      @templates: \n        - T: any type\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "343", 
+			"name" : "print", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "(T)?", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "void", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Print an option type to stdout\n      @params: \n        - a: a value of type option \n      @templates: \n        - T: any type\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "343", 
+		"name" : "std::io::print", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Print multiple elements to stdout\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "362", 
+			"name" : "print", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "b", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Print multiple elements to stdout\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "362", 
+		"name" : "std::io::print", 
+		"params" : ["F", "T..."], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Print an element of type tuple to stdout\n      @params: \n         - a: a tuple of arbitrary arity\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "377", 
+			"name" : "print", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Print an element of type tuple to stdout\n      @params: \n         - a: a tuple of arbitrary arity\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "377", 
+		"name" : "std::io::print", 
+		"params" : ["T of (U)", "U..."], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "391", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "_", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [], 
+				"mut" : "false", 
+				"type" : "tuple"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "395", 
+		"name" : "std::io::print", 
+		"params" : [], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Print a struct to stdout\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "400", 
+			"name" : "print", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "void", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Print a struct to stdout\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "400", 
+		"name" : "std::io::print", 
+		"params" : ["struct T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Print a class that implement the trait Printable to stdout\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "416", 
+			"name" : "print", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "void", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Print a class that implement the trait Printable to stdout\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "416", 
+		"name" : "std::io::print", 
+		"params" : ["T impl Printable"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n      Print the typeid of a object\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "423", 
+		"name" : "std::io::print", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "a", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "core::object::Object", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Print an arbitrary number of element on stdout, and add a return line afterwards\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "430", 
+			"name" : "println", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Print an arbitrary number of element on stdout, and add a return line afterwards\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "430", 
+		"name" : "std::io::println", 
+		"params" : ["T..."], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Read a i32 from the stdin\n      @returns : a i32\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "445", 
+			"name" : "read", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "ask", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}, 
+				"value" : ""
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "i32", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Read a i32 from the stdin\n      @returns : a i32\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "445", 
+		"name" : "std::io::read", 
+		"params" : ["T of i32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Read a u64 from the stdin\n      @returns : a u64\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "458", 
+			"name" : "read", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "ask", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}, 
+				"value" : ""
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "u64", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Read a u64 from the stdin\n      @returns : a u64\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "458", 
+		"name" : "std::io::read", 
+		"params" : ["T of u64"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Read a c8 from the stdin\n      @returns : a c8\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "471", 
+			"name" : "read", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "ask", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}, 
+				"value" : ""
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "c8", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Read a c8 from the stdin\n      @returns : a c8\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "471", 
+		"name" : "std::io::read", 
+		"params" : ["T of c8"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Read a c8 from the stdin, and return it as a c32\n      @returns : a c32\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "486", 
+			"name" : "read", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "ask", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}, 
+				"value" : ""
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "c32", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Read a c8 from the stdin, and return it as a c32\n      @returns : a c32\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "486", 
+		"name" : "std::io::read", 
+		"params" : ["T of c32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Read a [c8] from the stdin\n      @info: \n      =============\n      this function waits for the enter to be pressed (if the stdin is from a terminal)\n      To avoid this waiting, you should use the std::term::Terminal class, that manage advance io\n      =============\n      @returns: a [c8]\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "502", 
+			"name" : "read", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "ask", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}, 
+				"value" : ""
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Read a [c8] from the stdin\n      @info: \n      =============\n      this function waits for the enter to be pressed (if the stdin is from a terminal)\n      To avoid this waiting, you should use the std::term::Terminal class, that manage advance io\n      =============\n      @returns: a [c8]\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "502", 
+		"name" : "std::io::read", 
+		"params" : ["T of [U]", "U of c8"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "\n      Read a [c32] from the stdin\n      @info: \n      =============\n      this function waits for the enter to be pressed (if the stdin is from a terminal)\n      To avoid this waiting, you should use the std::term::Terminal class, that manage advance io\n      =============\n      @returns: a [c32]\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+			"loc_line" : "530", 
+			"name" : "read", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "ask", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}, 
+				"value" : ""
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n      Read a [c32] from the stdin\n      @info: \n      =============\n      this function waits for the enter to be pressed (if the stdin is from a terminal)\n      To avoid this waiting, you should use the std::term::Terminal class, that manage advance io\n      =============\n      @returns: a [c32]\n     ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+		"loc_line" : "530", 
+		"name" : "std::io::read", 
+		"params" : ["T of [U]", "U of c32"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/io.yr", 
+	"loc_line" : "1", 
+	"name" : "std::io", 
+	"protection" : "prv", 
+	"type" : "module"
+}

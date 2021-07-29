@@ -1,0 +1,24 @@
+{
+	"childs" : [{
+		"asserts" : [], 
+		"cstrs" : [], 
+		"doc" : "", 
+		"fields" : [], 
+		"final" : "true", 
+		"impls" : [], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/object.yr", 
+		"loc_line" : "4", 
+		"methods" : [], 
+		"name" : "core::object::Object", 
+		"protection" : "pub", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/core/object.yr", 
+	"loc_line" : "1", 
+	"name" : "core::object", 
+	"protection" : "prv", 
+	"type" : "module"
+}

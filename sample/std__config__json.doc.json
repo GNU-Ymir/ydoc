@@ -1,0 +1,446 @@
+{
+	"childs" : [{
+		"doc" : " \n  The list of tokens that can be found inside a json file\n  \n ", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "std::config::json::JsonTokens", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "LCRO", 
+			"value" : "["
+		}, 
+		{
+			"doc" : "", 
+			"name" : "RCRO", 
+			"value" : "]"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "LACC", 
+			"value" : "{"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "RACC", 
+			"value" : "}"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EQUALS", 
+			"value" : ":"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "COMA", 
+			"value" : ","
+		}, 
+		{
+			"doc" : "", 
+			"name" : "DQUOTE", 
+			"value" : "\""
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ESCAPE", 
+			"value" : "\\"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/json.yr", 
+		"loc_line" : "20", 
+		"name" : "std::config::json::JsonTokens", 
+		"protection" : "prv", 
+		"type" : "enum"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Parse a string containing a json formeted content\n  @example: \n  ==============\n  let str = \"{\"foo\"={\"bar\"=\"value\", \"baz\"=[1, 2]}}\"s8;\n  let config = parse (str);\n  ==============\n  @throws: \n     - SyntaxError: if the format is not respected in the content\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/json.yr", 
+		"loc_line" : "33", 
+		"name" : "std::config::json::parse", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "content", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::config::Dict", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::lexer::SyntaxError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Parse a string containing a json formated content\n  @example: \n  =============\n  let str = \"{\"foo\"={\"bar\"=\"value\", \"baz\"=[1, 2]}}\";\n  let config = parse (str);\n  ==============\n  @throws: \n     - SyntaxError: if the format is not respected in the content\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/json.yr", 
+		"loc_line" : "51", 
+		"name" : "std::config::json::parse", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "content", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::config::Dict", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::lexer::SyntaxError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"childs" : [{
+			"attributes" : [], 
+			"doc" : "\n      Parse a dict value inside a json formatted lexer\n      @example: \n      =============\n      let d = \"{\"foo\"=9, \"bar\"=\"\baz\"}\";\n     \n      \n      let dmut llex = Lexer::new (d, tokens-> JsonTokens::members);\n      let lDict : &Dict = parseDict (alias llex);\n      =============\n      @throws: \n         - &SyntaxError: if the format is not respected \n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/json.yr", 
+			"loc_line" : "74", 
+			"name" : "std::config::json::Parser::parseDict", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::lexer::Lexer", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Dict", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::lexer::SyntaxError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Parse an identifier\n      @info: identifier and string are the same, but this function does not return a &Str\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/json.yr", 
+			"loc_line" : "108", 
+			"name" : "std::config::json::Parser::parseIdentifier", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::lexer::Lexer", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::lexer::SyntaxError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Internal function used for parsing a string content inside a lexer using the json format\n      @info: the string can be surrounded by ' or by \"\n      @params: \n         - lex: the lexer containing the string\n      @example: \n      =============\n      let str = \"'test'\";\n      let dmut lex = Lexer::new (str, tokens-> JsonTokens);\n      let i : &Str = parseString (alias lex);\n      =============\n      @throws: \n         - &SyntaxError: if the format is not respected\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/json.yr", 
+			"loc_line" : "165", 
+			"name" : "std::config::json::Parser::parseString", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::lexer::Lexer", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Str", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::lexer::SyntaxError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Parse an unicode value into a json content\n      @example: \n      ============\n      let str = \"{0x1F3B5}\";\n      let dmut lex = Lexer::new (str, tokens-> JsonTokens);\n      let i : c32 = parseUnicode (alias lex);\n      ============\n      @assume: the \\u is already read in the lexer\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/json.yr", 
+			"loc_line" : "181", 
+			"name" : "std::config::json::Parser::parseUnicode", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::lexer::Lexer", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "c32", 
+				"type" : "char"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::lexer::SyntaxError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Internal function used to parse a value inside a lexer using the json format\n      @example: \n      ===============\n      let str = \"'test'\";\n      let dmut lex = Lexer::new (str, tokens-> JsonTokens);\n      let i : &Config = parseValue (alias lex);\n      match i {\n           Str (str:_)=> assert (str == \"test\");\n      }\n      ===============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/json.yr", 
+			"loc_line" : "218", 
+			"name" : "std::config::json::Parser::parseValue", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::lexer::Lexer", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Config", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::lexer::SyntaxError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Internal function used for parsing a int content inside a lexer using the json format\n      @params: \n         - lex: the lexer containing the int\n      @example: \n      =============\n      let str = \"334\";\n      let dmut lex = Lexer::new (str, tokens-> JsonTokens);\n      let i : &Int = parseInt (alias lex);\n      =============\n      @throws: \n         - &SyntaxError: if the format is not respected\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/json.yr", 
+			"loc_line" : "251", 
+			"name" : "std::config::json::Parser::parseInt", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::lexer::Lexer", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Config", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::lexer::SyntaxError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Internal function used for parsing arrays\n      @params: \n         - lex: the lexer containing the array\n      @example: \n      =============\n      let str = \"[1, 2, 3]\";\n      let dmut lex = Lexer::new (str, tokens-> JsonTokens);\n      let arr : &Array = parseArray (alias lex);\n      =============\n      @throws: \n         - &SyntaxError: if the format is not respected\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/json.yr", 
+			"loc_line" : "284", 
+			"name" : "std::config::json::Parser::parseArray", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "lex", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::lexer::Lexer", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::config::Array", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}, 
+			"throwers" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "std::lexer::SyntaxError", 
+					"type" : "class"
+				}], 
+				"mut" : "false", 
+				"type" : "class_pointer"
+			}], 
+			"type" : "function"
+		}], 
+		"doc" : "", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/json.yr", 
+		"loc_line" : "59", 
+		"name" : "std::config::json::Parser", 
+		"protection" : "prv", 
+		"type" : "module"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/json.yr", 
+	"loc_line" : "1", 
+	"name" : "std::config::json", 
+	"protection" : "prv", 
+	"type" : "module"
+}

@@ -1,0 +1,248 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "\n  Structure representing a nondecreasing clock\n  This structure can be used to compute durations, between instant\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "sec", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "usec", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/instant.yr", 
+		"loc_line" : "13", 
+		"name" : "std::time::instant::Instant", 
+		"protection" : "pub", 
+		"type" : "struct"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: the current instant of the system clock\n  @example: \n  ===================\n  let now = instant::now ();\n  sleep ((2u64).dur::seconds ());\n  println (instant::now () - now);\n  ===================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/instant.yr", 
+		"loc_line" : "24", 
+		"name" : "std::time::instant::now", 
+		"params" : [], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "std::time::instant::Instant", 
+			"type" : "struct"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: the instant 0\n  @example: \n  ==================\n  let system_duration = instant::now () - instant::zero ();\n  println (system_duration);\n  ==================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/instant.yr", 
+		"loc_line" : "38", 
+		"name" : "std::time::instant::zero", 
+		"params" : [], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "std::time::instant::Instant", 
+			"type" : "struct"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/instant.yr", 
+			"loc_line" : "52", 
+			"name" : "opBinary", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "left", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "Instant", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "right", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "Instant", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "negative", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"value" : "false"
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Duration)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  @returns: the duration between the two time instants\n  @example: \n  =================\n  let start = instant::now ();\n  sleep ((2u64).dur::seconds ());\n  println ((instant::now () - start).to![c8] ());\n  =================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/instant.yr", 
+		"loc_line" : "52", 
+		"name" : "std::time::instant::opBinary", 
+		"params" : ["-"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/instant.yr", 
+			"loc_line" : "83", 
+			"name" : "opBinary", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "left", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "Instant", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "right", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Duration)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "Instant", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Move the instant in the time\n  @warning: an instant cannot be negative, if the duration is negative and lower than the instant, the function will return the zero instant\n  @example: \n  ====================\n  import std::time::_;\n  \n  println (instant::now () + (5u64).seconds ());\n  ====================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/instant.yr", 
+		"loc_line" : "83", 
+		"name" : "std::time::instant::opBinary", 
+		"params" : ["+"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/instant.yr", 
+			"loc_line" : "106", 
+			"name" : "opBinary", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "left", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "Instant", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "right", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(Duration)", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "Instant", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Move the instant in the time\n  @warning: an instant cannot be negative, if the duration is higher than the instant, the function will return the zero instant\n  @example: \n  ====================\n  import std::time::_;\n  \n  println (instant::now () - (5u64).seconds ());\n  ====================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/instant.yr", 
+		"loc_line" : "106", 
+		"name" : "std::time::instant::opBinary", 
+		"params" : ["-"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Compare two instant\n  @example: \n  ===============\n  let start = instant::now ();\n  let end = instant::now ();\n  assert (start < end);\n  assert (start == start);\n  ===============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/instant.yr", 
+		"loc_line" : "139", 
+		"name" : "std::time::instant::opCmp", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "left", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "std::time::instant::Instant", 
+				"type" : "struct"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "right", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "std::time::instant::Instant", 
+				"type" : "struct"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/instant.yr", 
+	"loc_line" : "1", 
+	"name" : "std::time::instant", 
+	"protection" : "prv", 
+	"type" : "module"
+}

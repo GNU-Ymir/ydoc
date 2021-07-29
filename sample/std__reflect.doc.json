@@ -1,0 +1,359 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "\n  Instantiate an object from the typeid of a class\n  @info: The class must have a constructor with no parameters for the function to work properly\n  @example: \n  ===========\n  mod main;\n  import std::reflect;\n  import std::any;\n  \n  class X {\n     pub let i = 42;\n  \n     pub self () {}\n     impl std::io::Printable;\n  }\n  \n  let dmut o = factory (\"main::X\"); \n  match o {\n    X (i -> i : i32) => println (\"Created an X (\", i, \")\");\n    None () => println (\"Failed to create X\");\n  }\n  ===========\n  @params: \n     - name: the typeid of the class (full typeid)\n  @returns: the instantiated object, or a std::any::None object if the operation failed\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/reflect.yr", 
+		"loc_line" : "36", 
+		"name" : "std::reflect::factory", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "name", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "true", 
+				"name" : "core::object::Object", 
+				"type" : "class"
+			}], 
+			"mut" : "true", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "core::exception::RuntimeError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Instantiate an object from the typeid of a class\n  @info: The class must have a constructor with no parameters for the function to work properly\n  @example: \n  ===========\n  mod main;\n  import std::reflect;\n  import std::any;\n  \n  class X {\n     pub let i = 42;\n  \n     pub self () {}\n     impl std::io::Printable;\n  }\n  \n  let dmut o = factory (\"main::X\"); \n  match o {\n    X (i -> i : i32) => println (\"Created an X (\", i, \")\");\n    None () => println (\"Failed to create X\");\n  }\n  ===========\n  @params: \n     - name: the typeid of the class (full typeid)\n  @returns: the instantiated object, or a std::any::None object if the operation failed\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/reflect.yr", 
+		"loc_line" : "69", 
+		"name" : "std::reflect::factory", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "name", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "true", 
+				"name" : "core::object::Object", 
+				"type" : "class"
+			}], 
+			"mut" : "true", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "core::exception::RuntimeError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/reflect.yr", 
+			"loc_line" : "98", 
+			"name" : "call", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "name", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "params", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(RuntimeError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Call a function from its name \n  The name of the function must be the full path of the function (module::name)\n  @example: \n  ==========\n  mod main;\n  import std::reflect;\n  import std::option;\n \n  def foo (x : i32)-> i32 {\n      x + 12\n  }\n \n  let z = (\"main::foo\").call!(i32) (30);\n  assert (z == 42);\n  ==========\n  @warning: function call does not work if any function parameter is mutable\n  @throws: \n     - &RuntimeError: if the function does not exists\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/reflect.yr", 
+		"loc_line" : "98", 
+		"name" : "std::reflect::call", 
+		"params" : ["T", "F..."], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/reflect.yr", 
+			"loc_line" : "138", 
+			"name" : "callMethod", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "s", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "S", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "name", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "params", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(RuntimeError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Call a method from its name \n  The name of the function must be the full path of the function (module::name)\n  @example: \n  ==========\n  mod main;\n  import std::reflect;\n  import std::option;\n \n  class X {\n     let i : i32;\n     pub self (i : i32) with i = i {}\n  \n     pub def foo (self, i : i32) -> i32 {\n         self.i + i\n     }\n  }\n  \n  let x = X::new (12);\n  let z = x.callMethod!(i32) (\"foo\", 30);\n  assert (z == 42);\n  ==========\n  @warning: function call does not work if any function parameter is mutable\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/reflect.yr", 
+		"loc_line" : "138", 
+		"name" : "std::reflect::callMethod", 
+		"params" : ["T", "class S", "F..."], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/reflect.yr", 
+			"loc_line" : "180", 
+			"name" : "callMethodMutable", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "s", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "S", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "name", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "params", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(RuntimeError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Call a method from its name \n  The name of the function must be the full path of the function (module::name)\n  @example: \n  ==========\n  mod main;\n  import std::reflect;\n  import std::option;\n \n  class X {\n     let i = 0;\n     pub self () {}\n  \n     pub def foo (mut self, i : i32) -> i32 {\n         self._i = 12;\n         self._i + i\n     }\n  }\n  \n  let z = X::new ();\n  let z = z:.callMethodMutable!(i32) (\"foo\", 30);\n  assert (z == 42);\n  ==========\n  @warning: function call does not work if any function parameter is mutable\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/reflect.yr", 
+		"loc_line" : "180", 
+		"name" : "std::reflect::callMethodMutable", 
+		"params" : ["T", "class S", "F..."], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/reflect.yr", 
+			"loc_line" : "222", 
+			"name" : "callMethodMutable", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "s", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "S", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "name", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "params", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(RuntimeError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Call a method from its name \n  The name of the function must be the full path of the function (module::name)\n  @example: \n  ==========\n  mod main;\n  import std::reflect;\n  import std::io;\n \n  class X {\n     let i = 0;\n     pub self () {}\n  \n     pub def foo (mut self, i : i32) -> void {\n         println (self._i + i);\n     }\n  }\n  \n  let z = factory (\"main::X\");\n  z:.callMethodMutable!(void) (\"foo\", 30);\n  ==========\n  @warning: function call does not work if any function parameter is mutable\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/reflect.yr", 
+		"loc_line" : "222", 
+		"name" : "std::reflect::callMethodMutable", 
+		"params" : ["T of void", "class S", "F..."], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/reflect.yr", 
+			"loc_line" : "239", 
+			"name" : "callImplMutable", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "s", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "S", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "name", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "[c32]", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "params", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "F", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "T", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [{
+				"name" : "&(RuntimeError)", 
+				"type" : "unknown"
+			}], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/reflect.yr", 
+		"loc_line" : "239", 
+		"name" : "std::reflect::callImplMutable", 
+		"params" : ["T", "class S", "F..."], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/reflect.yr", 
+	"loc_line" : "1", 
+	"name" : "std::reflect", 
+	"protection" : "prv", 
+	"type" : "module"
+}

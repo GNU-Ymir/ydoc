@@ -1,0 +1,805 @@
+{
+	"childs" : [{
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+			"loc_line" : "23", 
+			"name" : "std::collection::list::list::self", 
+			"protection" : "pub", 
+			"rule" : "(fst=__expr rest=(',' val=__expr)*)", 
+			"skips" : ["' '", "'\n'", "'\t'", "'\r'"]
+		}, 
+		{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+			"loc_line" : "32", 
+			"name" : "std::collection::list::list::self", 
+			"protection" : "pub", 
+			"rule" : "('(' fst=__expr ')' rest=('::' '(' val=__expr ')')*)", 
+			"skips" : ["' '", "'\n'", "'\t'", "'\r'"]
+		}], 
+		"doc" : "\n  Macro that can be used to declare a list easily\n  @example: \n  =============\n  let x = list#{(1)::(2)::(3)};\n  let y = list#[1, 2, 3];\n  =============\n ", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+		"loc_line" : "21", 
+		"name" : "std::collection::list::list", 
+		"protection" : "pub", 
+		"rules" : [], 
+		"type" : "macro"
+	}, 
+	{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "\n      Create an empty list\n      @example: \n      ===========\n      let x = List!(i32)::new ();\n      \n      assert (x.isEmpty ());\n      ===========\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "66", 
+				"name" : "self", 
+				"param" : [], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}, 
+			{
+				"doc" : "", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "69", 
+				"name" : "self", 
+				"param" : [{
+					"mut" : "false", 
+					"name" : "head", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(ListNode!(T))", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "tail", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(ListNode!(T))", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "len", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prv", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "", 
+			"fields" : [{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_head", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "&(ListNode!(T))", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_tail", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "&(ListNode!(T))", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_len", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "18", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+			"loc_line" : "49", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Push an element at the end of the list\n      @params:\n         - val: the element to append\n      @example: \n      ============\n      let dmut x = List!(i32)::new ();\n      x:.push (1);\n      x:.push (1);\n      assert (x.len () == 2);\n      ============\n      @complexity: O (1)\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "86", 
+				"name" : "push", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Pop the last element of the list and return it\n      @throws: \n         - &OutOfArray: if the list is empty\n      @example: \n      =============\n      let dmut x = List!(i32)::new ();\n      x:.push (1);\n      {\n         assert (x:.pop () == 1);\n      } catch (\n         _: &OutOfArray => \n             println (\"List was empty\");\n      } \n      =============\n      @complexity: O (1)\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "118", 
+				"name" : "pop", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(OutOfArray)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Push an element at the beginning of the list\n      @params: \n         - val: the value to push\n      @example: \n      ==============\n      let dmut x = List!(i32)::new ();\n      x:.pushFront (1);\n      assert (x.len () == 1);\n      ==============\n      @complexity: O (1)\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "155", 
+				"name" : "pushFront", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Remove the first element of the list and return it\n      @throws: \n         - &OutOfArray: if the list was empty\n      @example: \n      ============\n      let dmut x = List!(i32)::new ();\n      x:.push (12);\n      assert (x:.popFront () == 12);\n      ============\n      @complexity: O(1)\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "182", 
+				"name" : "popFront", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [{
+					"name" : "&(OutOfArray)", 
+					"type" : "unknown"
+				}], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      @returns: true if the list is empty\n      @complexity: O (1)\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "211", 
+				"name" : "isEmpty", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Remove all the elements from the list\n      @complexity: O (1)\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "219", 
+				"name" : "clear", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      @returns: the value of the first element contained in the list, None if the list is empty\n      @complexity: O(1)\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "233", 
+				"name" : "front", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "(T)?", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      @returns: the value of the last element contained in the list, None if the list is empty\n      @complexity: O(1)\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "244", 
+				"name" : "back", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "(T)?", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      This method is used to traverse the list with an iterator\n      @example: \n      ==========\n      let list = list#{1, 2, 3};\n      for v, index in list {\n          println (v, \" \", index);\n      }\n      \n      for v in list {\n          println (v);\n      }\n      ==========\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "265", 
+				"name" : "begin", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "dmut &(ListIterator!(T))", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      @returns: an iterator to the end of the list, used to stop the loop\n      @example: \n      ============\n      let x = list#{1, 2, 3};\n      let dmut beg_it = alias x.begin ();\n      while (beg_it != x.end ()) {\n           println (beg_it.get!0);\n           beg_it:.next ();\n      }\n      ============\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "281", 
+				"name" : "end", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "&(ListIterator!(T))", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "List", 
+			"others" : [{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "293", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "(((std :: collection) :: seq) :: Seq)!(T)", 
+				"type" : "impl"
+			}, 
+			{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "340", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}, 
+			{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "350", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((core :: duplication) :: Copiable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  A doubly linked list\n  This class allows to push and pop elements from either end in constant time \n  It stores immutable values but is itself mutable \n ", 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+		"loc_line" : "49", 
+		"name" : "std::collection::list::List", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "", 
+				"loc_col" : "10", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "398", 
+				"name" : "self", 
+				"param" : [], 
+				"protection" : "prot", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "\n  The content of a linked list\n  Those nodes are only used in List, and there is no way to access them from outside\n ", 
+			"fields" : [], 
+			"loc_col" : "17", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+			"loc_line" : "397", 
+			"methods" : [], 
+			"name" : "ListNode", 
+			"others" : [{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "400", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  The content of a linked list\n  Those nodes are only used in List, and there is no way to access them from outside\n ", 
+		"loc_col" : "17", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+		"loc_line" : "397", 
+		"name" : "std::collection::list::ListNode", 
+		"params" : ["T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"ancestor" : "ListNode!(T)", 
+			"cstrs" : [{
+				"doc" : "\n      Create a new node of the list\n      @params: \n         - val: the value to store\n         - prev: the reference to the previous node in the list\n         - next: the reference to the next node in the list\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "425", 
+				"name" : "self", 
+				"param" : [{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "prev", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(ListNode!(T))", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "next", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(ListNode!(T))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "\n  Encode a node of the linked list, containing a value\n ", 
+			"fields" : [{
+				"doc" : "/ The reference to the previous node", 
+				"mut" : "false", 
+				"name" : "prev", 
+				"protection" : "pub", 
+				"type" : {
+					"name" : "&(ListNode!(T))", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "/ The reference to the next node ", 
+				"mut" : "false", 
+				"name" : "next", 
+				"protection" : "pub", 
+				"type" : {
+					"name" : "&(ListNode!(T))", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "/ The value contained in the node", 
+				"mut" : "false", 
+				"name" : "value", 
+				"protection" : "pub", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+			"loc_line" : "407", 
+			"methods" : [], 
+			"name" : "ListValue", 
+			"others" : [{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "431", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  Encode a node of the linked list, containing a value\n ", 
+		"loc_col" : "14", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+		"loc_line" : "407", 
+		"name" : "std::collection::list::ListValue", 
+		"params" : ["T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"ancestor" : "ListNode!(T)", 
+			"cstrs" : [{
+				"doc" : "", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "455", 
+				"name" : "self", 
+				"param" : [], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "\n  This class encode the end of a list (in both ways previous, or next)\n ", 
+			"fields" : [], 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+			"loc_line" : "454", 
+			"methods" : [], 
+			"name" : "Empty", 
+			"others" : [{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "457", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  This class encode the end of a list (in both ways previous, or next)\n ", 
+		"loc_col" : "14", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+		"loc_line" : "454", 
+		"name" : "std::collection::list::Empty", 
+		"params" : ["T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "469", 
+				"name" : "self", 
+				"param" : [{
+					"mut" : "false", 
+					"name" : "i", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "node", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(ListNode!(T))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "", 
+			"fields" : [{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_current", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "&(ListNode!(T))", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_index", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "usize", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+			"loc_line" : "463", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "473", 
+				"name" : "next", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "495", 
+				"name" : "opEquals", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "o", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "&(ListIterator!(T))", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "ListIterator", 
+			"others" : [{
+				"child" : {
+					"attributes" : [], 
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+					"loc_line" : "482", 
+					"name" : "get", 
+					"params" : [{
+						"mut" : "false", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "482", 
+				"name" : "get", 
+				"params" : ["0"], 
+				"protection" : "pub", 
+				"type" : "template"
+			}, 
+			{
+				"child" : {
+					"attributes" : [], 
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+					"loc_line" : "491", 
+					"name" : "get", 
+					"params" : [{
+						"mut" : "false", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "usize", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				"doc" : "", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+				"loc_line" : "491", 
+				"name" : "get", 
+				"params" : ["1"], 
+				"protection" : "pub", 
+				"type" : "template"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "", 
+		"loc_col" : "14", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+		"loc_line" : "463", 
+		"name" : "std::collection::list::ListIterator", 
+		"params" : ["T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/collection/list.yr", 
+	"loc_line" : "1", 
+	"name" : "std::collection::list", 
+	"protection" : "prv", 
+	"type" : "module"
+}

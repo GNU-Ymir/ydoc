@@ -1,0 +1,610 @@
+{
+	"childs" : [{
+		"child" : {
+			"cstrs" : [], 
+			"doc" : "", 
+			"fields" : [{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_mutex", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_cond", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_finalized", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "21", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+			"loc_line" : "31", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Execute the future in the current thread\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+				"loc_line" : "52", 
+				"name" : "execute", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : ["final"], 
+				"doc" : "\n      Tell if the computation of the value is finished\n      @example: \n      ============\n      let f = future (|| => {\n              // heavy computation stuff \n              42\n      });\n      while !f.isFinished { // active waiting\n           println (\"Waiting for the value of the future\");\n           println (\"Maybe we should use this time to do real computation ?\");\n      }\n      assert (f.wait () == 42); // this will not really waits the future is already finished\n      ============\n     ", 
+				"loc_col" : "20", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+				"loc_line" : "93", 
+				"name" : "isFinished", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "bool", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : ["final"], 
+				"doc" : "\n      Emit the signal (thread condition), to inform that the future value is computed \n     ", 
+				"loc_col" : "21", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+				"loc_line" : "100", 
+				"name" : "signal", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "prot", 
+				"ret_type" : {
+					"name" : "", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "Future", 
+			"others" : [{
+				"condition" : "!(template!(T)(U of void))", 
+				"cstrs" : [], 
+				"doc" : "", 
+				"else" : {
+				
+				}, 
+				"fields" : [{
+					"doc" : "", 
+					"mut" : "true", 
+					"name" : "_value", 
+					"protection" : "prot", 
+					"type" : {
+						"name" : "(T)?", 
+						"type" : "unknown"
+					}
+				}], 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+				"loc_line" : "37", 
+				"methods" : [], 
+				"name" : "if", 
+				"others" : [], 
+				"protection" : "prot", 
+				"type" : "template_condition"
+			}, 
+			{
+				"condition" : "!(template!(T)(U of void))", 
+				"cstrs" : [{
+					"doc" : "", 
+					"loc_col" : "14", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+					"loc_line" : "44", 
+					"name" : "self", 
+					"param" : [], 
+					"protection" : "prot", 
+					"throwers" : [], 
+					"type" : "cstrs"
+				}], 
+				"doc" : "", 
+				"else" : {
+				
+				}, 
+				"fields" : [], 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+				"loc_line" : "43", 
+				"methods" : [], 
+				"name" : "if", 
+				"others" : [], 
+				"protection" : "prot", 
+				"type" : "template_condition"
+			}, 
+			{
+				"condition" : "!(template!(T)(U of void))", 
+				"cstrs" : [], 
+				"doc" : "", 
+				"else" : {
+				
+				}, 
+				"fields" : [], 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+				"loc_line" : "61", 
+				"methods" : [{
+					"attributes" : ["final"], 
+					"doc" : "", 
+					"loc_col" : "24", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+					"loc_line" : "62", 
+					"name" : "wait", 
+					"params" : [{
+						"mut" : "false", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "(T)?", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}], 
+				"name" : "if", 
+				"others" : [], 
+				"protection" : "prot", 
+				"type" : "template_condition"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  Future is a placeholder for a value that may not exists yet\n  Its value is computed asynchronusely using a TaskPool\n  The task pool is a global task pool initialized when asking for the first future of the program\n  The number of thread in this task pool is the number of cores available in the system - 1, or 1 if there is only one\n  It can be initialized by hand before, see std::concurrency::future::setFutureTaskPool;\n  @example: \n  =============\n  def foo ()-> Future!i32 {\n     future (|| {\n          heavy_computation ();\n          42\n     })\n  }\n  \n  let x = foo ();\n  heavy_computation_2 ();\n  assert (x.wait () == 42);\n  =============\n ", 
+		"loc_col" : "21", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+		"loc_line" : "31", 
+		"name" : "std::concurrency::future::Future", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Set the task pool that will be used to compute the futures\n  @example: \n  =============\n  import std::concurrency::task; \n  \n  let dmut pool = TaskPool::new ();\n  setFutureTaskPool (alias pool);\n  let f = future (|| => {\n      // ...\n  });\n  \n  pool.join ();\n  assert (f.isFinished ());\n  =============\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+		"loc_line" : "125", 
+		"name" : "std::concurrency::future::setFutureTaskPool", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "pool", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::concurrency::task::TaskPool", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+			"loc_line" : "141", 
+			"name" : "future", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "func", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "fn ()-> T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Future!(T))", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Create a future value, and submit it to the task pool for future execution\n  @example: \n  ===========\n  let f = future (|| => {\n        heavy_computation_stuff ();\n        42\n  }); \n  // future execution is made asynchronusely\n  assert (f.wait () == 42);\n  ===========\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+		"loc_line" : "141", 
+		"name" : "std::concurrency::future::future", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+			"loc_line" : "161", 
+			"name" : "future", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "func", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "dg ()-> T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Future!(T))", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Create a future value, and submit it to the task pool for future execution\n  @example: \n  ===========\n  let i = 42;\n  let f = future (move || => {\n        heavy_computation_stuff ();\n        i\n  }); \n  // future execution is made asynchronusely\n  assert (f.wait () == 42);\n  ===========\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+		"loc_line" : "161", 
+		"name" : "std::concurrency::future::future", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+			"loc_line" : "181", 
+			"name" : "future", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "pool", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(TaskPool)", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "func", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "fn ()-> T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Future!(T))", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Create a future value, and submit it to the task pool for future execution\n  @example: \n  ===========\n  let dmut pool = TaskPool::new (1u64);\n  let f = future (alias pool, || => {\n        heavy_computation_stuff ();\n        42\n  }); \n  // future execution is made asynchronusely\n  assert (f.wait () == 42);\n  ===========\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+		"loc_line" : "181", 
+		"name" : "std::concurrency::future::future", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+			"loc_line" : "200", 
+			"name" : "future", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "pool", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "&(TaskPool)", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "func", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "dg ()-> T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "&(Future!(T))", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Create a future value, and submit it to the task pool for future execution\n  @example: \n  ===========\n  let i = 42;\n  let f = future (move || => {\n        heavy_computation_stuff ();\n        i\n  }); \n  // future execution is made asynchronusely\n  assert (f.wait () == 42);\n  ===========\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+		"loc_line" : "200", 
+		"name" : "std::concurrency::future::future", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"childs" : [{
+			"doc" : " The task pool ", 
+			"loc_col" : "20", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+			"loc_line" : "210", 
+			"mut" : "true", 
+			"name" : "std::concurrency::future::internal::__pool__", 
+			"protection" : "pub", 
+			"type" : "var", 
+			"value" : "[]", 
+			"var_type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "true", 
+						"name" : "std::concurrency::task::TaskPool", 
+						"type" : "class"
+					}], 
+					"mut" : "true", 
+					"type" : "class_pointer"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Get the global task pool for processing futures\n      The number of thread in the task pool is set to the number of cores available on the system - 1, or 1 if there is only 1\n      @example: \n      ==============\n      import etc::c::sysinfo;\n      import std::algorithm::comparison;\n      \n      let dmut pool = internal::getTaskPool ();\n      assert (pool.getNbThreads () == max (get_nprocs () - 1, 1));\n      ==============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+			"loc_line" : "224", 
+			"name" : "std::concurrency::future::internal::getTaskPool", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::concurrency::task::TaskPool", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		{
+			"child" : {
+				"ancestor" : "Future!(T)", 
+				"cstrs" : [{
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+					"loc_line" : "242", 
+					"name" : "self", 
+					"param" : [{
+						"mut" : "false", 
+						"name" : "func", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "fn ()-> T", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"throwers" : [], 
+					"type" : "cstrs"
+				}], 
+				"doc" : "", 
+				"fields" : [{
+					"doc" : "", 
+					"mut" : "false", 
+					"name" : "_func", 
+					"protection" : "prot", 
+					"type" : {
+						"name" : "fn ()-> T", 
+						"type" : "unknown"
+					}
+				}], 
+				"loc_col" : "22", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+				"loc_line" : "238", 
+				"methods" : [{
+					"attributes" : [], 
+					"doc" : "\n          Put the value inside the result value of the future, and emit the signal (cf Future::signal)\n         ", 
+					"loc_col" : "18", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+					"loc_line" : "247", 
+					"name" : "execute", 
+					"params" : [{
+						"mut" : "true", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}], 
+				"name" : "FnFuture", 
+				"others" : [], 
+				"protection" : "prv", 
+				"type" : "template_class"
+			}, 
+			"doc" : "\n      A future value that creates the value from a function\n     ", 
+			"loc_col" : "22", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+			"loc_line" : "238", 
+			"name" : "std::concurrency::future::internal::FnFuture", 
+			"params" : ["T"], 
+			"protection" : "pub", 
+			"type" : "template"
+		}, 
+		{
+			"child" : {
+				"ancestor" : "Future!(T)", 
+				"cstrs" : [{
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+					"loc_line" : "265", 
+					"name" : "self", 
+					"param" : [{
+						"mut" : "false", 
+						"name" : "func", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "dg ()-> T", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"throwers" : [], 
+					"type" : "cstrs"
+				}], 
+				"doc" : "", 
+				"fields" : [{
+					"doc" : "", 
+					"mut" : "false", 
+					"name" : "_func", 
+					"protection" : "prot", 
+					"type" : {
+						"name" : "dg ()-> T", 
+						"type" : "unknown"
+					}
+				}], 
+				"loc_col" : "22", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+				"loc_line" : "261", 
+				"methods" : [{
+					"attributes" : [], 
+					"doc" : "\n          Put the value inside the result value of the future, and emit the signal (cf Future::signal)\n         ", 
+					"loc_col" : "18", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+					"loc_line" : "270", 
+					"name" : "execute", 
+					"params" : [{
+						"mut" : "true", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}], 
+				"name" : "DgFuture", 
+				"others" : [], 
+				"protection" : "prv", 
+				"type" : "template_class"
+			}, 
+			"doc" : "\n      A future value that creates the value from a closure\n     ", 
+			"loc_col" : "22", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+			"loc_line" : "261", 
+			"name" : "std::concurrency::future::internal::DgFuture", 
+			"params" : ["T"], 
+			"protection" : "pub", 
+			"type" : "template"
+		}], 
+		"doc" : " Internal module ", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+		"loc_line" : "207", 
+		"name" : "std::concurrency::future::internal", 
+		"protection" : "prv", 
+		"type" : "module"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/future.yr", 
+	"loc_line" : "1", 
+	"name" : "std::concurrency::future", 
+	"protection" : "prv", 
+	"type" : "module"
+}

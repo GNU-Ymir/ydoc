@@ -1,0 +1,658 @@
+{
+	"childs" : [{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "core::exception::Exception", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+			"loc_line" : "15", 
+			"name" : "std::lexer::SyntaxError::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "msg", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "line", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "col", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "msg", 
+			"protection" : "pub", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "line", 
+			"protection" : "pub", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "col", 
+			"protection" : "pub", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+				"loc_line" : "20", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+			"loc_line" : "19", 
+			"name" : "std::lexer::SyntaxError", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+		"loc_line" : "9", 
+		"methods" : [], 
+		"name" : "std::lexer::SyntaxError", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Create a new lexer, ready to split content\n      @params: \n         - content: the content to split\n         - tokens: the list of tokens that split the string, (cf. Tokenizer)\n         - comments: the list of tokens that start a comment line (by default [\"#'])\n         - skips: the list of tokens that will be omitted by the lexer when reading (by default [\" \", \"\n\", \"\t\", \"\r\"])\n      @warning: if the skips and comments token are not in tokens, they are added, so they split the content \n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+			"loc_line" : "73", 
+			"name" : "std::lexer::Lexer::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "content", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "tokens", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "c32", 
+							"type" : "char"
+						}], 
+						"mut" : "false", 
+						"type" : "slice"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}, 
+				"value" : "copy [ ]"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "comments", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "c32", 
+							"type" : "char"
+						}], 
+						"mut" : "false", 
+						"type" : "slice"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}, 
+				"value" : "copy [#]"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "skips", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "c32", 
+							"type" : "char"
+						}], 
+						"mut" : "false", 
+						"type" : "slice"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}, 
+				"value" : "copy [ , 
+			, 	, ]"
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  This class use a tokenizer to split a string into tokens\n  Unlike a simple tokenizer, this class is able to skip undesirable tokens, such as white space or comments\n  It also follow the locations of the tokens inside the string, thus enabling error pointing \n  @example: \n  =============\n  let dmut lexer = Lexer::new (\"test + foo * u\", tokens-> [\"+\", \"*\"]);\n  loop {\n     let (word, line, col) = lexer:.next ();\n     println (word, \" (\", line, \", \", col, \")\"); // test (1, 1), + (1, 6), foo (1, 8), * (1, 12), u (1, 14), (0,0)\n     if line == 0 { \n         break {}  // eof\n     } \n  }\n  =============\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_tzer", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::tokenizer::Tokenizer", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "_content", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_comments", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::collection::set::HashSet([c32])::HashSet", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::collection::set::HashSet([c32])::HashSet) ()"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_skips", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::collection::set::HashSet([c32])::HashSet", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::collection::set::HashSet([c32])::HashSet) ()"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "_doSkip", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "true", 
+				"name" : "bool", 
+				"type" : "bool"
+			}, 
+			"value" : "true"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "_doComments", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "true", 
+				"name" : "bool", 
+				"type" : "bool"
+			}, 
+			"value" : "true"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "_line", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "true", 
+				"name" : "u64", 
+				"type" : "int"
+			}, 
+			"value" : "1"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "_col", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "true", 
+				"name" : "u64", 
+				"type" : "int"
+			}, 
+			"value" : "1"
+		}], 
+		"final" : "true", 
+		"impls" : [], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+		"loc_line" : "46", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the current content of the lexer\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+			"loc_line" : "93", 
+			"name" : "getContent", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Change the current content of the lexer\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+			"loc_line" : "100", 
+			"name" : "restoreContent", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "content", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Move the cursor of the lexer forward and return the word that has been read\n      @returns: \n         - ._0: the content of the word (\"\" if no word) \n         - ._1: the line of the beginning of the word (0 if no word)\n         - ._2: the col of the beginning of the word (0 if no word)\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+			"loc_line" : "111", 
+			"name" : "next", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}], 
+				"mut" : "false", 
+				"type" : "tuple"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Move the cursor of the lexer forward and return the next char \n      @info: do not consider tokens, comments and skips\n      @returns: \n         - ._0: the content of the word (\"\" if no word) \n         - ._1: the line of the beginning of the word (0 if no word)\n         - ._2: the col of the beginning of the word (0 if no word)\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+			"loc_line" : "147", 
+			"name" : "nextChar", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}], 
+				"mut" : "false", 
+				"type" : "tuple"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Read the next word inside the content of the lexer, but does not advance the cursor of the lexer\n      This function is used to the next, and decide afterward to treat it or not\n      @returns: \n         - ._0: the content of the word (\"\" if no word) \n         - ._1: the line of the beginning of the word (0 if no word)\n         - ._2: the col of the beginning of the word (0 if no word)\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+			"loc_line" : "174", 
+			"name" : "nextNoConsume", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}], 
+				"mut" : "false", 
+				"type" : "tuple"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Tell to the lexer if it must skip the 'skips' or not\n      @info: \n        - by default the lexer skips them\n        - This function is used to disable token skipping when reading string content for example\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+			"loc_line" : "210", 
+			"name" : "doSkip", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "d", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Tell to the lexer if it must skip the 'comments' or not\n      @info: \n        - by default the lexer skips them\n        - This function is used to disable token skipping when reading string content for example\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+			"loc_line" : "220", 
+			"name" : "doComments", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "d", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Move the cursor of buf to the next line, in order to skip the comments\n      @params: \n        - buf: the content \n      @returns: a slice of content, where the first line has been removed\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+			"loc_line" : "230", 
+			"name" : "skipComments", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "buf", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "true", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Increment the number of line if the content of the word is a line return\n      @returns: \n        - ._0: the new line number\n        - ._1: the new column number\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+			"loc_line" : "254", 
+			"name" : "countNbLine", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "word", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "line", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "col", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}], 
+				"mut" : "false", 
+				"type" : "tuple"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Clear the lexer, and return the rest of the text that was not read yet\n      @example: \n      ======================\n      let dmut lex = Lexer::new (\"text to read\");\n      \n      assert (lex:.next ()._0 == \"next\");\n      assert (lex:.clear () == \" to read\");\n      assert (lex:.next ()._0 == \"\")\n      ======================\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+			"loc_line" : "273", 
+			"name" : "clear", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::lexer::Lexer", 
+		"protection" : "pub", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/lexer.yr", 
+	"loc_line" : "1", 
+	"name" : "std::lexer", 
+	"protection" : "prv", 
+	"type" : "module"
+}

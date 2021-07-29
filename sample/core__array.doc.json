@@ -1,0 +1,252 @@
+{
+	"childs" : [{
+		"child" : {
+			"childs" : [{
+				"childs" : [{
+					"childs" : [{
+						"childs" : [{
+							"attributes" : [], 
+							"doc" : "", 
+							"loc_col" : "24", 
+							"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+							"loc_line" : "6", 
+							"name" : "_yrt_new_array", 
+							"params" : [{
+								"mut" : "false", 
+								"name" : "_", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "usize", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "_", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "u64", 
+									"type" : "unknown"
+								}
+							}], 
+							"protection" : "pub", 
+							"ret_type" : {
+								"name" : "mut [mut T]", 
+								"type" : "unknown"
+							}, 
+							"throwers" : [], 
+							"type" : "function"
+						}], 
+						"doc" : "", 
+						"loc_col" : "18", 
+						"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+						"loc_line" : "6", 
+						"name" : ")", 
+						"protection" : "pub", 
+						"type" : "block"
+					}], 
+					"doc" : "", 
+					"from" : "C", 
+					"loc_col" : "9", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+					"loc_line" : "6", 
+					"name" : "extern", 
+					"protection" : "pub", 
+					"space" : "", 
+					"type" : "extern"
+				}], 
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+				"loc_line" : "6", 
+				"name" : "pub", 
+				"protection" : "prv", 
+				"type" : "block"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+			"loc_line" : "5", 
+			"name" : "allocMod", 
+			"protection" : "prv", 
+			"type" : "module"
+		}, 
+		"doc" : "", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+		"loc_line" : "5", 
+		"name" : "core::array::allocMod", 
+		"params" : ["T"], 
+		"protection" : "prv", 
+		"type" : "template"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "core::exception::Exception", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+			"loc_line" : "10", 
+			"name" : "core::array::OutOfArray::self", 
+			"params" : [], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [], 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+				"loc_line" : "13", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+			"loc_line" : "12", 
+			"name" : "core::array::OutOfArray", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+		"loc_line" : "9", 
+		"methods" : [], 
+		"name" : "core::array::OutOfArray", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+		"loc_line" : "19", 
+		"name" : "core::array::outOfArray", 
+		"params" : [], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "core::array::OutOfArray", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+			"loc_line" : "26", 
+			"name" : "opCmp", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "a", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "b", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "i32", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+		"loc_line" : "26", 
+		"name" : "core::array::opCmp", 
+		"params" : ["T of [U]", "U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+			"loc_line" : "40", 
+			"name" : "core::array::str::self", 
+			"protection" : "pub", 
+			"rule" : "(fst=(__char)*)", 
+			"skips" : []
+		}], 
+		"doc" : "", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+		"loc_line" : "39", 
+		"name" : "core::array::str", 
+		"protection" : "pub", 
+		"rules" : [], 
+		"type" : "macro"
+	}, 
+	{
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+			"loc_line" : "46", 
+			"name" : "core::array::str8::self", 
+			"protection" : "pub", 
+			"rule" : "(fst=(__char)*)", 
+			"skips" : []
+		}], 
+		"doc" : "", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+		"loc_line" : "45", 
+		"name" : "core::array::str8", 
+		"protection" : "pub", 
+		"rules" : [], 
+		"type" : "macro"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/core/array.yr", 
+	"loc_line" : "1", 
+	"name" : "core::array", 
+	"protection" : "prv", 
+	"type" : "module"
+}

@@ -1,0 +1,436 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+		"loc_line" : "9", 
+		"name" : "etc::runtime::reflect::_yrt_create_class_from_name_utf32", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "true", 
+				"name" : "core::object::Object", 
+				"type" : "class"
+			}], 
+			"mut" : "true", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "core::exception::RuntimeError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+		"loc_line" : "20", 
+		"name" : "etc::runtime::reflect::_yrt_create_class_from_name_no_construct_utf32", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "true", 
+				"name" : "core::object::Object", 
+				"type" : "class"
+			}], 
+			"mut" : "true", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "core::exception::RuntimeError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+		"loc_line" : "31", 
+		"name" : "etc::runtime::reflect::_yrt_create_class_from_name_no_construct", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "true", 
+				"name" : "core::object::Object", 
+				"type" : "class"
+			}], 
+			"mut" : "true", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "core::exception::RuntimeError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+		"loc_line" : "38", 
+		"name" : "etc::runtime::reflect::_yrt_create_class_from_name", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "true", 
+				"name" : "core::object::Object", 
+				"type" : "class"
+			}], 
+			"mut" : "true", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "core::exception::RuntimeError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"child" : {
+			"childs" : [{
+				"childs" : [{
+					"childs" : [{
+						"childs" : [{
+							"attributes" : [], 
+							"doc" : "", 
+							"loc_col" : "24", 
+							"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+							"loc_line" : "46", 
+							"name" : "_yrt_reflect_get_function_utf32", 
+							"params" : [{
+								"mut" : "false", 
+								"name" : "func_name", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "[c32]", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "retType", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "[c32]", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "paramTypes", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "[[c32]]", 
+									"type" : "unknown"
+								}
+							}], 
+							"protection" : "pub", 
+							"ret_type" : {
+								"name" : "T", 
+								"type" : "unknown"
+							}, 
+							"throwers" : [{
+								"name" : "&(RuntimeError)", 
+								"type" : "unknown"
+							}], 
+							"type" : "function"
+						}], 
+						"doc" : "", 
+						"loc_col" : "18", 
+						"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+						"loc_line" : "46", 
+						"name" : ")", 
+						"protection" : "pub", 
+						"type" : "block"
+					}], 
+					"doc" : "", 
+					"from" : "C", 
+					"loc_col" : "9", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+					"loc_line" : "46", 
+					"name" : "extern", 
+					"protection" : "pub", 
+					"space" : "", 
+					"type" : "extern"
+				}], 
+				"doc" : "\n      Get a function pointer from a name and the name of the return types and parameters\n     ", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+				"loc_line" : "46", 
+				"name" : "pub", 
+				"protection" : "prv", 
+				"type" : "block"
+			}, 
+			{
+				"childs" : [{
+					"childs" : [{
+						"childs" : [{
+							"attributes" : [], 
+							"doc" : "", 
+							"loc_col" : "24", 
+							"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+							"loc_line" : "52", 
+							"name" : "_yrt_reflect_get_method_utf32", 
+							"params" : [{
+								"mut" : "false", 
+								"name" : "class_name", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "[c32]", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "func_name", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "[c32]", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "retType", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "[c32]", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "paramTypes", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "[[c32]]", 
+									"type" : "unknown"
+								}
+							}], 
+							"protection" : "pub", 
+							"ret_type" : {
+								"name" : "T", 
+								"type" : "unknown"
+							}, 
+							"throwers" : [{
+								"name" : "&(RuntimeError)", 
+								"type" : "unknown"
+							}], 
+							"type" : "function"
+						}], 
+						"doc" : "", 
+						"loc_col" : "18", 
+						"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+						"loc_line" : "52", 
+						"name" : ")", 
+						"protection" : "pub", 
+						"type" : "block"
+					}], 
+					"doc" : "", 
+					"from" : "C", 
+					"loc_col" : "9", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+					"loc_line" : "52", 
+					"name" : "extern", 
+					"protection" : "pub", 
+					"space" : "", 
+					"type" : "extern"
+				}], 
+				"doc" : "\n      Get a function pointer from a name and the name of the return types and parameters\n     ", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+				"loc_line" : "52", 
+				"name" : "pub", 
+				"protection" : "prv", 
+				"type" : "block"
+			}, 
+			{
+				"childs" : [{
+					"childs" : [{
+						"childs" : [{
+							"attributes" : [], 
+							"doc" : "", 
+							"loc_col" : "24", 
+							"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+							"loc_line" : "58", 
+							"name" : "_yrt_reflect_get_method_mutable_utf32", 
+							"params" : [{
+								"mut" : "false", 
+								"name" : "class_name", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "[c32]", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "func_name", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "[c32]", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "retType", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "[c32]", 
+									"type" : "unknown"
+								}
+							}, 
+							{
+								"mut" : "false", 
+								"name" : "paramTypes", 
+								"ref" : "false", 
+								"type" : {
+									"name" : "[[c32]]", 
+									"type" : "unknown"
+								}
+							}], 
+							"protection" : "pub", 
+							"ret_type" : {
+								"name" : "T", 
+								"type" : "unknown"
+							}, 
+							"throwers" : [{
+								"name" : "&(RuntimeError)", 
+								"type" : "unknown"
+							}], 
+							"type" : "function"
+						}], 
+						"doc" : "", 
+						"loc_col" : "18", 
+						"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+						"loc_line" : "58", 
+						"name" : ")", 
+						"protection" : "pub", 
+						"type" : "block"
+					}], 
+					"doc" : "", 
+					"from" : "C", 
+					"loc_col" : "9", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+					"loc_line" : "58", 
+					"name" : "extern", 
+					"protection" : "pub", 
+					"space" : "", 
+					"type" : "extern"
+				}], 
+				"doc" : "\n      Get a function pointer from a name and the name of the return types and parameters\n     ", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+				"loc_line" : "58", 
+				"name" : "pub", 
+				"protection" : "prv", 
+				"type" : "block"
+			}], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+			"loc_line" : "42", 
+			"name" : "Reflect", 
+			"protection" : "prv", 
+			"type" : "module"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+		"loc_line" : "42", 
+		"name" : "etc::runtime::reflect::Reflect", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/reflect.yr", 
+	"loc_line" : "1", 
+	"name" : "etc::runtime::reflect", 
+	"protection" : "prv", 
+	"type" : "module"
+}

@@ -1,0 +1,95 @@
+{
+	"childs" : [{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/range.yr", 
+			"loc_line" : "3", 
+			"name" : "step_by", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "x", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "r!(T)", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "s", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "r!(T)", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/range.yr", 
+		"loc_line" : "3", 
+		"name" : "core::range::step_by", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/range.yr", 
+			"loc_line" : "9", 
+			"name" : "opContains", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "range", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "r!(T)", 
+					"type" : "unknown"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "x", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "bool", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/range.yr", 
+		"loc_line" : "9", 
+		"name" : "core::range::opContains", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/core/range.yr", 
+	"loc_line" : "1", 
+	"name" : "core::range", 
+	"protection" : "prv", 
+	"type" : "module"
+}

@@ -1,0 +1,55 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/env.yr", 
+		"loc_line" : "3", 
+		"name" : "etc::runtime::env::_yrt_get_main_args", 
+		"params" : [], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}], 
+			"mut" : "false", 
+			"type" : "slice"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/env.yr", 
+		"loc_line" : "5", 
+		"name" : "etc::runtime::env::_yrt_get_current_dir", 
+		"params" : [], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "c8", 
+				"type" : "char"
+			}], 
+			"mut" : "false", 
+			"type" : "slice"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/env.yr", 
+	"loc_line" : "1", 
+	"name" : "etc::runtime::env", 
+	"protection" : "prv", 
+	"type" : "module"
+}

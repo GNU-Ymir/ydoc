@@ -1,0 +1,172 @@
+{
+	"childs" : [{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "core::exception::Exception", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      @params: \n         - from, the type from which we want a cast\n         - to, the type to which we want a cast\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/error.yr", 
+			"loc_line" : "25", 
+			"name" : "std::config::error::ConfigError::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "name", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}, 
+				"value" : ""
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "to", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "core::typeinfo::TypeInfo", 
+					"type" : "struct"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "from", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "core::typeinfo::TypeInfo", 
+					"type" : "struct"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "subError", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "core::exception::Exception", 
+							"type" : "class"
+						}], 
+						"mut" : "false", 
+						"type" : "class_pointer"
+					}], 
+					"mut" : "false", 
+					"type" : "option"
+				}, 
+				"value" : "Err (null)"
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "field", 
+			"protection" : "pub", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}, 
+		{
+			"doc" : "/ The type from which we want a cast    ", 
+			"mut" : "false", 
+			"name" : "fr", 
+			"protection" : "pub", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "core::typeinfo::TypeInfo", 
+				"type" : "struct"
+			}
+		}, 
+		{
+			"doc" : "/ The type to which we want a cast", 
+			"mut" : "false", 
+			"name" : "to", 
+			"protection" : "pub", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "core::typeinfo::TypeInfo", 
+				"type" : "struct"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "subError", 
+			"protection" : "pub", 
+			"type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "core::exception::Exception", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}], 
+				"mut" : "false", 
+				"type" : "option"
+			}
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "\n          Just print the error to stdout\n         ", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/error.yr", 
+				"loc_line" : "32", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/error.yr", 
+			"loc_line" : "27", 
+			"name" : "std::config::error::ConfigError", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/error.yr", 
+		"loc_line" : "7", 
+		"methods" : [], 
+		"name" : "std::config::error::ConfigError", 
+		"protection" : "pub", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/config/error.yr", 
+	"loc_line" : "1", 
+	"name" : "std::config::error", 
+	"protection" : "prv", 
+	"type" : "module"
+}

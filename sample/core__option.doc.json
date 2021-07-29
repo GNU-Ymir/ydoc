@@ -1,0 +1,69 @@
+{
+	"childs" : [{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/option.yr", 
+			"loc_line" : "27", 
+			"name" : "toOption", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "x", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "X", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "(T)?", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a potentially unsafe function into a safe one\n  @example: \n  ================\n  def foo (x : i32)-> void\n     throws &AssertError\n  {\n     assert (x < 12);\n  }\n \n  def bar (x : i32)-> i32\n     throws &AssertError\n  {\n     assert (x < 12);\n     x + 1\n  }\n \n \n  let x = toOption!{foo} (12);\n  let y = toOption!{bar} (12);\n  }\n  ================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/option.yr", 
+		"loc_line" : "27", 
+		"name" : "core::option::toOption", 
+		"params" : ["F : fn (X)-> T", "T", "X..."], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/option.yr", 
+			"loc_line" : "54", 
+			"name" : "toOption", 
+			"params" : [], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "(T)?", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Transform a potentially unsafe function into a safe one\n  @example: \n  ================\n  def foo ()-> void\n     throws &AssertError\n  {\n     assert (false);\n  }\n \n  def bar ()-> i32\n     throws &AssertError\n  {\n     assert (true);\n     12\n  }\n \n \n  let x = toOption!{foo} ();\n  let y = toOption!{bar} ();\n  }\n  ================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/option.yr", 
+		"loc_line" : "54", 
+		"name" : "core::option::toOption", 
+		"params" : ["F : fn ()-> T", "T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/core/option.yr", 
+	"loc_line" : "1", 
+	"name" : "core::option", 
+	"protection" : "prv", 
+	"type" : "module"
+}

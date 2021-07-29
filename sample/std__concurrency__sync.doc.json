@@ -1,0 +1,223 @@
+{
+	"childs" : [{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      New mutex that allows synchronization between threads\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/sync.yr", 
+			"loc_line" : "26", 
+			"name" : "std::concurrency::sync::Mutex::self", 
+			"params" : [], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  Mutex are used to perform synchronization between basic threads\n  @example: \n  ===========\n  let mutex = Mutex::new ();\n  {\n      mutex.lock (); \n      // Do some atomic computation\n  } exit {\n      mutex.unlock ();\n  }\n  ===========\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_lock", 
+			"protection" : "pub", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "etc::runtime::thread::_yrt_thread_mutex_t", 
+				"type" : "struct"
+			}
+		}], 
+		"final" : "true", 
+		"impls" : [], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/sync.yr", 
+		"loc_line" : "19", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "\n      Wait for the mutex to be free\n      And then lock it\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/sync.yr", 
+			"loc_line" : "34", 
+			"name" : "lock", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Unlock the mutex\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/sync.yr", 
+			"loc_line" : "41", 
+			"name" : "unlock", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::concurrency::sync::Mutex", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/sync.yr", 
+			"loc_line" : "54", 
+			"name" : "std::concurrency::sync::Semaphore::self", 
+			"params" : [], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  Semaphore are used to perform synchronization between basic threads\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_sem", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "etc::runtime::thread::sem_t", 
+				"type" : "struct"
+			}
+		}], 
+		"final" : "true", 
+		"impls" : [], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/sync.yr", 
+		"loc_line" : "50", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/sync.yr", 
+			"loc_line" : "58", 
+			"name" : "post", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/sync.yr", 
+			"loc_line" : "62", 
+			"name" : "wait", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::concurrency::sync::Semaphore", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/sync.yr", 
+			"loc_line" : "72", 
+			"name" : "std::concurrency::sync::Condition::self", 
+			"params" : [], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_cond", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "etc::runtime::thread::_yrt_thread_cond_t", 
+				"type" : "struct"
+			}
+		}], 
+		"final" : "true", 
+		"impls" : [], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/sync.yr", 
+		"loc_line" : "68", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/sync.yr", 
+			"loc_line" : "76", 
+			"name" : "wait", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "mutex", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::concurrency::sync::Mutex", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/sync.yr", 
+			"loc_line" : "80", 
+			"name" : "signal", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::concurrency::sync::Condition", 
+		"protection" : "pub", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/sync.yr", 
+	"loc_line" : "1", 
+	"name" : "std::concurrency::sync", 
+	"protection" : "prv", 
+	"type" : "module"
+}

@@ -1,0 +1,779 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/errno.yr", 
+		"loc_line" : "3", 
+		"name" : "etc::runtime::errno::_yrt_get_errno_", 
+		"params" : [], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "etc::runtime::errno::ErrnoValue", 
+			"type" : "enum"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/errno.yr", 
+		"loc_line" : "4", 
+		"name" : "etc::runtime::errno::_yrt_set_errno_", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "err", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "etc::runtime::errno::ErrnoValue", 
+				"type" : "enum"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"doc" : "", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "etc::runtime::errno::ErrnoValue", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "EPERM", 
+			"value" : "1"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOENT", 
+			"value" : "2"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ESRCH", 
+			"value" : "3"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EI32R", 
+			"value" : "4"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EIO", 
+			"value" : "5"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENXIO", 
+			"value" : "6"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "E2BIG", 
+			"value" : "7"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOEXEC", 
+			"value" : "8"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EBADF", 
+			"value" : "9"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ECHILD", 
+			"value" : "10"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EAGAIN", 
+			"value" : "11"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOMEM", 
+			"value" : "12"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EACCES", 
+			"value" : "13"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EFAULT", 
+			"value" : "14"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOTBLK", 
+			"value" : "15"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EBUSY", 
+			"value" : "16"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EEXIST", 
+			"value" : "17"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EXDEV", 
+			"value" : "18"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENODEV", 
+			"value" : "19"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOTDIR", 
+			"value" : "20"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EISDIR", 
+			"value" : "21"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EINVAL", 
+			"value" : "22"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENFILE", 
+			"value" : "23"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EMFILE", 
+			"value" : "24"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOTTY", 
+			"value" : "25"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ETXTBSY", 
+			"value" : "26"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EFBIG", 
+			"value" : "27"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOSPC", 
+			"value" : "28"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ESPIPE", 
+			"value" : "29"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EROFS", 
+			"value" : "30"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EMLINK", 
+			"value" : "31"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EPIPE", 
+			"value" : "32"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EDOM", 
+			"value" : "33"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ERANGE", 
+			"value" : "34"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EDEADLK", 
+			"value" : "35"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENAMETOOLONG", 
+			"value" : "36"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOLCK", 
+			"value" : "37"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOSYS", 
+			"value" : "38"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOTEMPTY", 
+			"value" : "39"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ELOOP", 
+			"value" : "40"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EWOULDBLOCK", 
+			"value" : "11"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOMSG", 
+			"value" : "42"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EIDRM", 
+			"value" : "43"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ECHRNG", 
+			"value" : "44"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EL2NSYNC", 
+			"value" : "45"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EL3HLT", 
+			"value" : "46"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EL3RST", 
+			"value" : "47"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ELNRNG", 
+			"value" : "48"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EUNATCH", 
+			"value" : "49"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOCSI", 
+			"value" : "50"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EL2HLT", 
+			"value" : "51"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EBADE", 
+			"value" : "52"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EBADR", 
+			"value" : "53"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EXFULL", 
+			"value" : "54"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOANO", 
+			"value" : "55"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EBADRQC", 
+			"value" : "56"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EBADSLT", 
+			"value" : "57"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EDEADLOCK", 
+			"value" : "35"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EBFONT", 
+			"value" : "59"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOSTR", 
+			"value" : "60"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENODATA", 
+			"value" : "61"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ETIME", 
+			"value" : "62"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOSR", 
+			"value" : "63"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENONET", 
+			"value" : "64"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOPKG", 
+			"value" : "65"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EREMOTE", 
+			"value" : "66"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOLINK", 
+			"value" : "67"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EADV", 
+			"value" : "68"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ESRMNT", 
+			"value" : "69"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ECOMM", 
+			"value" : "70"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EPROTO", 
+			"value" : "71"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EMULTIHOP", 
+			"value" : "72"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EDOTDOT", 
+			"value" : "73"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EBADMSG", 
+			"value" : "74"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EOVERFLOW", 
+			"value" : "75"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOTUNIQ", 
+			"value" : "76"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EBADFD", 
+			"value" : "77"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EREMCHG", 
+			"value" : "78"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ELIBACC", 
+			"value" : "79"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ELIBBAD", 
+			"value" : "80"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ELIBSCN", 
+			"value" : "81"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ELIBMAX", 
+			"value" : "82"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ELIBEXEC", 
+			"value" : "83"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EILSEQ", 
+			"value" : "84"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ERESTART", 
+			"value" : "85"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ESTRPIPE", 
+			"value" : "86"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EUSERS", 
+			"value" : "87"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOTSOCK", 
+			"value" : "88"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EDESTADDRREQ", 
+			"value" : "89"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EMSGSIZE", 
+			"value" : "90"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EPROTOTYPE", 
+			"value" : "91"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOPROTOOPT", 
+			"value" : "92"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EPROTONOSUPPORT", 
+			"value" : "93"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ESOCKTNOSUPPORT", 
+			"value" : "94"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EOPNOTSUPP", 
+			"value" : "95"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOTSUP", 
+			"value" : "95"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EPFNOSUPPORT", 
+			"value" : "96"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EAFNOSUPPORT", 
+			"value" : "97"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EADDRINUSE", 
+			"value" : "98"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EADDRNOTAVAIL", 
+			"value" : "99"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENETDOWN", 
+			"value" : "100"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENETUNREACH", 
+			"value" : "101"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENETRESET", 
+			"value" : "102"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ECONNABORTED", 
+			"value" : "103"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ECONNRESET", 
+			"value" : "104"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOBUFS", 
+			"value" : "105"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EISCONN", 
+			"value" : "106"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOTCONN", 
+			"value" : "107"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ESHUTDOWN", 
+			"value" : "108"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ETOOMANYREFS", 
+			"value" : "109"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ETIMEDOUT", 
+			"value" : "110"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ECONNREFUSED", 
+			"value" : "111"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EHOSTDOWN", 
+			"value" : "112"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EHOSTUNREACH", 
+			"value" : "113"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EALREADY", 
+			"value" : "114"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EINPROGRESS", 
+			"value" : "115"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ESTALE", 
+			"value" : "116"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EUCLEAN", 
+			"value" : "117"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOTNAM", 
+			"value" : "118"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENAVAIL", 
+			"value" : "119"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EISNAM", 
+			"value" : "120"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EREMOTEIO", 
+			"value" : "121"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EDQUOT", 
+			"value" : "122"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOMEDIUM", 
+			"value" : "123"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EMEDIUMTYPE", 
+			"value" : "124"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ECANCELED", 
+			"value" : "125"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOKEY", 
+			"value" : "126"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EKEYEXPIRED", 
+			"value" : "127"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EKEYREVOKED", 
+			"value" : "128"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EKEYREJECTED", 
+			"value" : "129"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EOWNERDEAD", 
+			"value" : "130"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ENOTRECOVERABLE", 
+			"value" : "131"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ERFKILL", 
+			"value" : "132"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "EHWPOISON", 
+			"value" : "133"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/errno.yr", 
+		"loc_line" : "141", 
+		"name" : "etc::runtime::errno::ErrnoValue", 
+		"protection" : "pub", 
+		"type" : "enum"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: the value of errno\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/errno.yr", 
+		"loc_line" : "146", 
+		"name" : "etc::runtime::errno::errno", 
+		"params" : [], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "etc::runtime::errno::ErrnoValue", 
+			"type" : "enum"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  Set the value of errno\n  @params : \n  - val: the value to set to errno\n  @returns: The value of errno\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/errno.yr", 
+		"loc_line" : "156", 
+		"name" : "etc::runtime::errno::errno", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "val", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "etc::runtime::errno::ErrnoValue", 
+				"type" : "enum"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "etc::runtime::errno::ErrnoValue", 
+			"type" : "enum"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/errno.yr", 
+	"loc_line" : "1", 
+	"name" : "etc::runtime::errno", 
+	"protection" : "prv", 
+	"type" : "module"
+}

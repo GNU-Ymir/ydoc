@@ -1,0 +1,413 @@
+{
+	"childs" : [{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Create a new tokenizer, with a set of tokens\n      @params: \n        - tokens: the list of token that will split the string\n      @example: \n      ============\n      let dmut tzer = Tokenizer::new (tokens-> [\"(\", \")\", \"=>\", \":\", \"<\", \">\", \",\", \" \"]);\n      let str = \"(x, y) => x > y\";\n      let lst = tzer.tokenize (str);\n      assert (lst == [\"(\", \"x\", \",\", \" \", \"y\", \")\", \" \", \"=>\", \" \", \"x\", \" \", \">\", \" \", \"y\"]); \n      ============\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+			"loc_line" : "44", 
+			"name" : "std::tokenizer::Tokenizer::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "tokens", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "c32", 
+							"type" : "char"
+						}], 
+						"mut" : "false", 
+						"type" : "slice"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}, 
+				"value" : "[]"
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  A tokenizer is an enhanced string splitter, that splits strings using tokens instead of just chars\n  Tokenizer are really usefull for grammar visitor, and can be associated with Lexers pretty easily\n  @example: \n  ============\n  // using a tokenizer, tokens can be multiple letter long, and there can be collision between tokens\n  // For example, the token '=' and '=>' won't be a problem for the tokenizer\n  let dmut tzer = Tokenizer::new (tokens-> [\"(\", \")\", \"=>\", \",\", \" \", \"=\"]);\n  let str = \"(x, y) => x = y\";\n  let lst = tzer.tokenize (str);\n  \n  // the tokenized str, contains the token '=>' and '=', that are correctly rendering in the splitted array \n  assert (lst == [\"(\", \"x\", \",\", \" \", \"y\", \")\", \" \", \"=>\", \" \", \"x\", \" \", \"=\", \" \", \"y\"]); \n  ============\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_heads", 
+			"protection" : "prv", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::collection::map::HashMap(c32,&(std::tokenizer::internal::Node))::HashMap", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::collection::map::HashMap(c32,&(std::tokenizer::internal::Node))::HashMap) ()"
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+			"loc_line" : "167", 
+			"name" : "std::tokenizer::Tokenizer", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+		"loc_line" : "28", 
+		"methods" : [{
+			"attributes" : ["mut"], 
+			"doc" : "\n      Insert a new token in the tokenizer\n      @params: \n         - token: the token to insert\n      @example: \n      ================\n      let dmut tzer = Tokenizer::new ();\n      tzer:.insert (\"+\");\n      tzer:.insert (\"+=\");\n      tzer:.insert (\" \");\n      let lst = tzer.tokenize (\"x += y\");\n      assert (lst == [\"x\", \" \", \"+=\", \" \", \"y\"]);\n      ================\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+			"loc_line" : "64", 
+			"name" : "insert", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "token", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the length of the next token inside the str\n      @example: \n      ============\n      let dmut tzer = Tokenizer::new ([\"+\", \" \"]);\n      let mut str = \"fst + scd\";\n      let mut len = tzer.next (str);\n      assert (len == 3us); // \"fst\"\n      \n      str = str [len .. $];     \n      len = tzer.next (str);\n      assert (len == 1us); // \" \"\n     \n      str = str [len .. $];     \n      len = tzer.next (str);\n      assert (len == 1us); // \"+\"\n     \n      str = str [len .. $];     \n      len = tzer.next (str);\n      assert (len == 1us); // \" \"\n     \n      str = str [len .. $];     \n      len = tzer.next (str);\n      assert (len == 3us); // \"scd\" \n     \n      str = str [len .. $];     \n      len = tzer.next (str);\n      assert (len == 0us); \n      ============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+			"loc_line" : "112", 
+			"name" : "next", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "usize", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Split the string in a list of token, according to the token registered in the tokenizer\n      @example: \n      =============== \n      let dmut tzer = Tokenizer::new (tokens-> [\"+=\", \"+\", \" \"]);     * \n      \n      let lst = tzer.tokenize (\"x += y\");\n      assert (lst == [\"x\", \" \", \"+=\", \" \", \"y\"]);\n      ===============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+			"loc_line" : "150", 
+			"name" : "tokenize", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "str", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::tokenizer::Tokenizer", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"childs" : [{
+			"asserts" : [], 
+			"cstrs" : [{
+				"doc" : "\n          Construct a new Token node\n          @params: \n            - key: the value of the node\n            - isToken: can terminate a token \n            - heads: the list of possible continuation\n         ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+				"loc_line" : "195", 
+				"name" : "std::tokenizer::internal::Node::self", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "key", 
+					"ref" : "false", 
+					"type" : {
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "isToken", 
+					"ref" : "false", 
+					"type" : {
+						"mut" : "false", 
+						"name" : "bool", 
+						"type" : "bool"
+					}, 
+					"value" : "false"
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "heads", 
+					"ref" : "false", 
+					"type" : {
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "std::collection::map::HashMap(c32,&(std::tokenizer::internal::Node))::HashMap", 
+							"type" : "class"
+						}], 
+						"mut" : "false", 
+						"type" : "class_pointer"
+					}, 
+					"value" : "{
+					self ()-> mut &(mut std::collection::map::HashMap(c32,&(std::tokenizer::internal::Node))::HashMap) ()
+				}
+				"
+				}], 
+				"protection" : "pub", 
+				"type" : "cstr"
+			}], 
+			"doc" : "\n      A node of a tokenizer, that stores information about tokens\n     ", 
+			"fields" : [{
+				"doc" : " The current value of the node", 
+				"mut" : "false", 
+				"name" : "_key", 
+				"protection" : "prot", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}
+			}, 
+			{
+				"doc" : " Can terminate a token? or is part of bigger tokens", 
+				"mut" : "false", 
+				"name" : "_isToken", 
+				"protection" : "prot", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "false"
+			}, 
+			{
+				"doc" : " The list of possible continuation of the token", 
+				"mut" : "false", 
+				"name" : "_heads", 
+				"protection" : "prot", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::collection::map::HashMap(c32,&(std::tokenizer::internal::Node))::HashMap", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"final" : "true", 
+			"impls" : [{
+				"childs" : [{
+					"attributes" : [], 
+					"doc" : "\n              For debug purposes, tokenizer Nodes are printable\n             ", 
+					"loc_col" : "22", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+					"loc_line" : "302", 
+					"name" : "print", 
+					"over" : "true", 
+					"params" : [], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"mut" : "false", 
+						"name" : "void", 
+						"type" : "void"
+					}, 
+					"type" : "method"
+				}], 
+				"doc" : "", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+				"loc_line" : "298", 
+				"name" : "std::tokenizer::internal::Node", 
+				"protection" : "prot", 
+				"trait" : "std::io::Printable", 
+				"type" : "impl"
+			}], 
+			"loc_col" : "22", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+			"loc_line" : "177", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n          Insert sub tokens accepted tokens\n          @params: \n              - str: the rest to read to create a valid token\n          @example: \n          ==============\n          // let say that \"[+]\" is a token, but \"[\" is not, nor is \"[+\"\n          let mut node = Node::new ('['); \n          node = node.insert (\"+]\"); \n          println (node); // [:false, +:false, ]:true \n          // In that configuration the only token that will be accepted is \"[+]\"\n          assert (node.len (\"[+]\") == 3); // accepted\n          assert (node.len (\"[\") == 0us); // not accepted\n          assert (node.len (\"[+\") == 0us); // not accepted\n          \n          // Now we want to accept \"[-]\"\n          node = node.insert (\"-]\");\n          // and simply \"[\"\n          node = node.insert (\"\"); \n          println (node); // [:true, \n                          //     +:false, ]:true \n                          //     -: false, ]:true\n          \n          assert (node.len (\"[+]\") == 3); // still accepted\n          assert (node.len (\"[\") == 1us); // accepted this time\n          assert (node.len (\"[+\") == 1us); // accept only the '['\n          assert (node.len (\"[-]\") == 3); // accepted\n          assert (node.len (\"[-\") == 1us); // accept only the '['\n          ==============\n         ", 
+				"loc_col" : "17", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+				"loc_line" : "228", 
+				"name" : "insert", 
+				"over" : "false", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "str", 
+					"ref" : "false", 
+					"type" : {
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "c32", 
+							"type" : "char"
+						}], 
+						"mut" : "false", 
+						"type" : "slice"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::tokenizer::internal::Node", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}, 
+				"type" : "method"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n          @returns: the length of the token at the beginning of the string content\n          @example: \n          =================\n          let mut node = Node::new ('+', isToken-> true);\n          node = node.insert (\"=\");\n          // Our grammar accept the tokens, \"+\" and \"+=\"\n          assert (node.len (\"+\") == 1us); // \"+\" are accepted\n          assert (node.len (\"+=\") == 2us); // \"+=\" are accepted\n          assert (node.len (\" +=\") == 0us); // \" +=\" are not accepted\n          assert (node.len (\"+ and some rest\") == 1us); // \" +\" are accepted\n          =================\n         ", 
+				"loc_col" : "17", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+				"loc_line" : "270", 
+				"name" : "len", 
+				"over" : "false", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "content", 
+					"ref" : "false", 
+					"type" : {
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "c32", 
+							"type" : "char"
+						}], 
+						"mut" : "false", 
+						"type" : "slice"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "usize", 
+					"type" : "int"
+				}, 
+				"type" : "method"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n          @returns: the key of the node\n         ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+				"loc_line" : "294", 
+				"name" : "key", 
+				"over" : "false", 
+				"params" : [], 
+				"protection" : "prot", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}, 
+				"type" : "method"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n          Debug print of the node on stdout\n         ", 
+				"loc_col" : "17", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+				"loc_line" : "310", 
+				"name" : "innerPrint", 
+				"over" : "false", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "i", 
+					"ref" : "false", 
+					"type" : {
+						"mut" : "false", 
+						"name" : "i32", 
+						"type" : "int"
+					}
+				}], 
+				"protection" : "prv", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"name" : "std::tokenizer::internal::Node", 
+			"protection" : "pub", 
+			"type" : "class"
+		}], 
+		"doc" : "", 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+		"loc_line" : "172", 
+		"name" : "std::tokenizer::internal", 
+		"protection" : "prv", 
+		"type" : "module"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/tokenizer.yr", 
+	"loc_line" : "1", 
+	"name" : "std::tokenizer", 
+	"protection" : "prv", 
+	"type" : "module"
+}

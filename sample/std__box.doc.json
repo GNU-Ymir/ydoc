@@ -1,0 +1,427 @@
+{
+	"childs" : [{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "\n      Create a new box on the heap with a default value\n      @params: \n         - v: the value to store\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+				"loc_line" : "41", 
+				"name" : "self", 
+				"param" : [{
+					"mut" : "false", 
+					"name" : "v", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "", 
+			"fields" : [{
+				"doc" : "", 
+				"mut" : "true", 
+				"name" : "_value", 
+				"protection" : "pub", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "18", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+			"loc_line" : "32", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Change the value in the box\n      @params: \n         - v: the new value to store\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+				"loc_line" : "48", 
+				"name" : "set", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "v", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Change the value in the box\n      @returns: the value stored in the box\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+				"loc_line" : "56", 
+				"name" : "get", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "Box", 
+			"others" : [{
+				"child" : {
+					"attributes" : [], 
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+					"loc_line" : "64", 
+					"name" : "opUnary", 
+					"params" : [{
+						"mut" : "false", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				"doc" : "\n      Alias of self.get ()\n      @returns: the value stored in the box\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+				"loc_line" : "64", 
+				"name" : "opUnary", 
+				"params" : ["*"], 
+				"protection" : "pub", 
+				"type" : "template"
+			}, 
+			{
+				"child" : {
+					"attributes" : [], 
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+					"loc_line" : "73", 
+					"name" : "opUnaryAssign", 
+					"params" : [{
+						"mut" : "true", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}, 
+					{
+						"mut" : "false", 
+						"name" : "v", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "T", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				"doc" : "\n      Change the value in the box\n      @params: \n         - v: the new value to store\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+				"loc_line" : "73", 
+				"name" : "opUnaryAssign", 
+				"params" : ["*"], 
+				"protection" : "pub", 
+				"type" : "template"
+			}, 
+			{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+				"loc_line" : "79", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  A box class is a mutable pointer to a value that is allocated on the heap\n  They can be used to change values of closure, inside a closure\n  The inner value is not mutable\n  @example: \n  =============\n  import std::box;\n  \n  def foo () -> (dg () -> i32) {\n     let dmut x = Box::new (0);\n     let closure = move || {\n         x.get ()\n     };\n     x:.set(42);\n     return closure;\n  }\n  \n  def main () \n      throws &AssertError \n  {\n      let enclosed_value = foo ();\n      assert (enclosed_value () == 42);\n  }\n  =============\n ", 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+		"loc_line" : "32", 
+		"name" : "std::box::Box", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"cstrs" : [{
+				"doc" : "\n      Create an new box allocated on the heap with a default value\n      @params: \n         - v : the value to store\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+				"loc_line" : "96", 
+				"name" : "self", 
+				"param" : [{
+					"mut" : "false", 
+					"name" : "v", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "", 
+			"fields" : [{
+				"doc" : "", 
+				"mut" : "false", 
+				"name" : "_value", 
+				"protection" : "pub", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "18", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+			"loc_line" : "87", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      Change the value in the box\n      @params: \n         - v: the new value to store\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+				"loc_line" : "103", 
+				"name" : "set", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}, 
+				{
+					"mut" : "false", 
+					"name" : "v", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "void", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "\n      Change the value in the box\n      @returns: the value stored in the box\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+				"loc_line" : "111", 
+				"name" : "get", 
+				"params" : [{
+					"mut" : "true", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "dmut T", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "Box", 
+			"others" : [{
+				"child" : {
+					"attributes" : [], 
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+					"loc_line" : "119", 
+					"name" : "opUnary", 
+					"params" : [{
+						"mut" : "true", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "dmut T", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				"doc" : "\n      Alias of self.get ()\n      @returns: the value stored in the box\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+				"loc_line" : "119", 
+				"name" : "opUnary", 
+				"params" : ["*"], 
+				"protection" : "pub", 
+				"type" : "template"
+			}, 
+			{
+				"child" : {
+					"attributes" : [], 
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+					"loc_line" : "127", 
+					"name" : "opUnary", 
+					"params" : [{
+						"mut" : "false", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				"doc" : "\n      Alias of self.get ()\n      @returns: the value stored in the box\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+				"loc_line" : "127", 
+				"name" : "opUnary", 
+				"params" : ["*"], 
+				"protection" : "pub", 
+				"type" : "template"
+			}, 
+			{
+				"child" : {
+					"attributes" : [], 
+					"doc" : "", 
+					"loc_col" : "13", 
+					"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+					"loc_line" : "137", 
+					"name" : "opUnaryAssign", 
+					"params" : [{
+						"mut" : "true", 
+						"name" : "self", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "", 
+							"type" : "unknown"
+						}
+					}, 
+					{
+						"mut" : "false", 
+						"name" : "v", 
+						"ref" : "false", 
+						"type" : {
+							"name" : "T", 
+							"type" : "unknown"
+						}
+					}], 
+					"protection" : "pub", 
+					"ret_type" : {
+						"name" : "dmut T", 
+						"type" : "unknown"
+					}, 
+					"throwers" : [], 
+					"type" : "function"
+				}, 
+				"doc" : "\n      Change the value in the box\n      @params: \n         - v: the new value to store\n      @returns: alias v\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+				"loc_line" : "137", 
+				"name" : "opUnaryAssign", 
+				"params" : ["*"], 
+				"protection" : "pub", 
+				"type" : "template"
+			}, 
+			{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+				"loc_line" : "143", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  A box class is a mutable pointer to a value that is allocated on the heap\n  They can be used to change values of closure, inside a closure\n  The inner value is mutable\n ", 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+		"loc_line" : "87", 
+		"name" : "std::box::Box", 
+		"params" : ["T of dmut U", "class U"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/box.yr", 
+	"loc_line" : "1", 
+	"name" : "std::box", 
+	"protection" : "prv", 
+	"type" : "module"
+}

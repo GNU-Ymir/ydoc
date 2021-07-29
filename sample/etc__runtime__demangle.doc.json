@@ -1,0 +1,39 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/demangle.yr", 
+		"loc_line" : "4", 
+		"name" : "etc::runtime::demangle::_yrt_mangle_class_name", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/runtime/demangle.yr", 
+	"loc_line" : "1", 
+	"name" : "etc::runtime::demangle", 
+	"protection" : "prv", 
+	"type" : "module"
+}

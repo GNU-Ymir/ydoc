@@ -1,0 +1,616 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+		"loc_line" : "5", 
+		"name" : "core::exception::_yrt_exc_rethrow", 
+		"params" : [], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+		"loc_line" : "6", 
+		"name" : "core::exception::_yrt_exc_get_stack_trace", 
+		"params" : [], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"childs" : [{
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}], 
+			"mut" : "false", 
+			"type" : "slice"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+		"loc_line" : "7", 
+		"name" : "core::exception::_yrt_exc_resolve_stack_trace", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "trc", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "void", 
+						"type" : "void"
+					}], 
+					"mut" : "false", 
+					"type" : "pointer"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "c8", 
+				"type" : "char"
+			}], 
+			"mut" : "false", 
+			"type" : "slice"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+		"loc_line" : "9", 
+		"name" : "core::exception::_yrt_jmp_buf_type", 
+		"protection" : "pub", 
+		"type" : "aka", 
+		"value" : "[u8 ; 200]"
+	}, 
+	{
+		"abstract" : "true", 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+			"loc_line" : "16", 
+			"name" : "core::exception::Exception::self", 
+			"params" : [], 
+			"protection" : "prot", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "trace", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "void", 
+						"type" : "void"
+					}], 
+					"mut" : "false", 
+					"type" : "pointer"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "19", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+				"loc_line" : "20", 
+				"name" : "__stdio__printContent", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "prot", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"type" : "method"
+			}, 
+			{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+				"loc_line" : "24", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+			"loc_line" : "18", 
+			"name" : "core::exception::Exception", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "21", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+		"loc_line" : "12", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "14", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+			"loc_line" : "36", 
+			"name" : "hasTrace", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "prot", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["final"], 
+			"doc" : "", 
+			"loc_col" : "20", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+			"loc_line" : "40", 
+			"name" : "getStackTrace", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["final"], 
+			"doc" : "", 
+			"loc_col" : "20", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+			"loc_line" : "44", 
+			"name" : "printStackTrace", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "core::exception::Exception", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "core::exception::Exception", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+			"loc_line" : "54", 
+			"name" : "core::exception::AssertError::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "msg", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c32", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "msg", 
+			"protection" : "pub", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+				"loc_line" : "57", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+			"loc_line" : "56", 
+			"name" : "core::exception::AssertError", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+		"loc_line" : "51", 
+		"methods" : [], 
+		"name" : "core::exception::AssertError", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "core::exception::Exception", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+			"loc_line" : "66", 
+			"name" : "core::exception::RuntimeError::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "msg", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "msg", 
+			"protection" : "pub", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+				"loc_line" : "69", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+			"loc_line" : "68", 
+			"name" : "core::exception::RuntimeError", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+		"loc_line" : "63", 
+		"methods" : [], 
+		"name" : "core::exception::RuntimeError", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "core::exception::Exception", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+			"loc_line" : "76", 
+			"name" : "core::exception::SegFault::self", 
+			"params" : [], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [], 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+				"loc_line" : "79", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+			"loc_line" : "78", 
+			"name" : "core::exception::SegFault", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+		"loc_line" : "75", 
+		"methods" : [], 
+		"name" : "core::exception::SegFault", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+		"loc_line" : "85", 
+		"name" : "core::exception::abort", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "test", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "msg", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c32", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "core::exception::AssertError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+		"loc_line" : "92", 
+		"name" : "core::exception::abort", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "test", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "core::exception::AssertError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+		"loc_line" : "99", 
+		"name" : "core::exception::rethrow", 
+		"params" : [], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+		"loc_line" : "103", 
+		"name" : "core::exception::_yrt_throw_seg_fault", 
+		"params" : [], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "core::exception::SegFault", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+		"loc_line" : "109", 
+		"name" : "core::exception::_yrt_throw_runtime_abort", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "c", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [{
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "core::exception::RuntimeError", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}], 
+		"type" : "function"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/core/exception.yr", 
+	"loc_line" : "1", 
+	"name" : "core::exception", 
+	"protection" : "prv", 
+	"type" : "module"
+}

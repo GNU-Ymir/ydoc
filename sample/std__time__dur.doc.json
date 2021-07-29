@@ -1,0 +1,693 @@
+{
+	"childs" : [{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+			"loc_line" : "15", 
+			"name" : "std::time::dur::Duration::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "sec", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "usec", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "negative", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "false"
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}, 
+		{
+			"doc" : "\n      Create a new duration with given values\n      @example: \n      ================\n      let d = Duration::new (w-> 1u64, d-> 2u64, h-> 3u64, ms-> 89u64);\n      assert (d.to![c8] () == \"1w2d3h89ms\"s8);\n     \n      let d2 = Duration::new (d-> 6u64, h-> 23u64, m-> 59u64, s-> 59u64, ms-> 999u64, us-> 999u64);\n      assert ((d2 + dur::micros (1u64)).to![c8] () == \"1w\"s8);\n      ================\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+			"loc_line" : "30", 
+			"name" : "std::time::dur::Duration::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "w", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}, 
+				"value" : "0"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "d", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}, 
+				"value" : "0"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "h", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}, 
+				"value" : "0"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "m", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}, 
+				"value" : "0"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "s", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}, 
+				"value" : "0"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "ms", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}, 
+				"value" : "0"
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "us", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "u64", 
+					"type" : "int"
+				}, 
+				"value" : "0"
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  Class representing a duration of time of weeks or less.\n ", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "negative", 
+			"protection" : "pub", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "bool", 
+				"type" : "bool"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "sec", 
+			"protection" : "pub", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "usec", 
+			"protection" : "pub", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+				"loc_line" : "258", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+			"loc_line" : "257", 
+			"name" : "std::time::dur::Duration", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+		"loc_line" : "9", 
+		"methods" : [{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the number of weeks in the duration \n      @example: \n      ================\n      let x = dur::days (89u64);\n      assert (x.weeks () == 12u64)\n      ================\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+			"loc_line" : "44", 
+			"name" : "weeks", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the number of days in the duration \n      @example: \n      ================\n      let x = dur::days (89u64);\n      assert (x.days () == 5u64)\n      assert (x.days (all-> true) == 89u64)\n      ================\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+			"loc_line" : "57", 
+			"name" : "days", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "all", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "false"
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the number of hours in the duration \n      @example: \n      ================\n      let x = dur::hours (427u64);\n      assert (x.hours () == 5u64)\n      assert (x.hours (all-> true) == 5u64)\n      ================\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+			"loc_line" : "74", 
+			"name" : "hours", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "all", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "false"
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the number of minutes in the duration \n      @example: \n      ================\n      let x = dur::minutes (478u64);\n      assert (x.minutes () == 58u64)\n      assert (x.minutes (all-> true) == 478u64)\n      ================\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+			"loc_line" : "91", 
+			"name" : "minutes", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "all", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "false"
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the number of seconds in the duration \n      @example: \n      ================\n      let x = dur::minutes (120u64);\n      assert (x.seconds () == 0u64)\n      assert (x.seconds (all-> true) == 7200u64)\n      ================\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+			"loc_line" : "108", 
+			"name" : "seconds", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "all", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "false"
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the number of milliseconds in the duration \n      @example: \n      ================\n      let x = dur::minutes (59u64);\n      assert (x.millis () == 0u64)\n      assert (x.millis (all-> true) == 7200_000u64)\n      ================\n      @warning: For capacity of u64 representation, if all is true, only the seconds, minutes, hours and days will be added (weeks will be omitted)\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+			"loc_line" : "126", 
+			"name" : "millis", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "all", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "false"
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      @returns: the number of microseconds in the duration \n      @example: \n      ================\n      let x = dur::minutes (59u64);\n      assert (x.micros () == 0u64)\n      assert (x.micros (all-> true) == 7200_000u64)\n      \n      let d = Duration::new (d-> 6u64, h-> 23u64, m-> 59u64, s-> 59u64, ms-> 999u64, us-> 999u64);\n      assert (d.micros (all-> true) == 604799999999u64);\n      assert ((d + dur::micros (1u64)).micros (all-> true) == 0u64);\n      ================\n      @warning: For capacity of u64 representation, if all is true, only the seconds, minutes, hours and days will be added (weeks will be omitted)\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+			"loc_line" : "148", 
+			"name" : "micros", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "all", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "bool", 
+					"type" : "bool"
+				}, 
+				"value" : "false"
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : [], 
+			"doc" : "\n      Compare two durations\n      @example: \n      ===============\n      let start = dur::seconds (2u64);\n      let end = dur::seconds (1u64);\n      assert (start > end);\n      assert (start == start);\n      ===============\n     ", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+			"loc_line" : "237", 
+			"name" : "opCmp", 
+			"over" : "false", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "right", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::time::dur::Duration", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::time::dur::Duration", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: A duration of week weeks\n  @example: \n  ====================\n  sleep ((2u64).dur::weeks ());\n  ====================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+		"loc_line" : "273", 
+		"name" : "std::time::dur::weeks", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "week", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::time::dur::Duration", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: A duration of day days\n  @example: \n  ====================\n  sleep ((2u64).dur::days ());\n  ====================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+		"loc_line" : "284", 
+		"name" : "std::time::dur::days", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "day", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::time::dur::Duration", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: A duration of hou hours\n  @example: \n  ====================\n  sleep ((2u64).dur::hours ());\n  ====================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+		"loc_line" : "295", 
+		"name" : "std::time::dur::hours", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "hou", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::time::dur::Duration", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: A duration of min minutes\n  @example: \n  ====================\n  sleep ((2u64).dur::minutes ());\n  ====================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+		"loc_line" : "307", 
+		"name" : "std::time::dur::minutes", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "mins", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::time::dur::Duration", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: A duration of secs seconds\n  @example: \n  ====================\n  sleep ((2u64).dur::seconds ());\n  ====================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+		"loc_line" : "318", 
+		"name" : "std::time::dur::seconds", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "secs", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::time::dur::Duration", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: A duration of mil milliseconds\n  @example: \n  ====================\n  sleep ((2_000u64).dur::millis ());\n  ====================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+		"loc_line" : "329", 
+		"name" : "std::time::dur::millis", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "mil", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::time::dur::Duration", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "\n  @returns: A duration of mic microseconds\n  @example: \n  ====================\n  sleep ((2_000_000u64).dur::micros ());\n  ====================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+		"loc_line" : "340", 
+		"name" : "std::time::dur::micros", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "mic", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "false", 
+				"name" : "std::time::dur::Duration", 
+				"type" : "class"
+			}], 
+			"mut" : "false", 
+			"type" : "class_pointer"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+			"loc_line" : "352", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "val", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Converts the Duration into a readable string\n  @example: \n  ================\n  let d = dur::seconds (2u64) + dur::millis (300u64);\n  assert (d.to![c8] () == \"2s300ms\"s8);\n  ================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+		"loc_line" : "352", 
+		"name" : "std::time::dur::to", 
+		"params" : ["C of [U]", "U of c8", "T of &(Duration)"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+			"loc_line" : "389", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "val", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c32]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "\n  Converts the Duration into a readable string\n  @example: \n  ================\n  let d = dur::seconds (2u64) + dur::millis (300u64);\n  assert (d.to![c32] () == \"2s300ms\");\n  ================\n ", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+		"loc_line" : "389", 
+		"name" : "std::time::dur::to", 
+		"params" : ["C of [U]", "U of c32", "T of &(Duration)"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/time/dur.yr", 
+	"loc_line" : "1", 
+	"name" : "std::time::dur", 
+	"protection" : "prv", 
+	"type" : "module"
+}

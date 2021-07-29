@@ -1,0 +1,248 @@
+{
+	"childs" : [{
+		"doc" : "", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "std::fs::errors::FsErrorCode", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "FILE_CLOSED", 
+			"value" : "1"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "NOT_READABLE", 
+			"value" : "2"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "NOT_WRITABLE", 
+			"value" : "3"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "PERMISSION_DENIED", 
+			"value" : "4"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "PARENT_DONT_EXIST", 
+			"value" : "5"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "NOT_FOUND", 
+			"value" : "6"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "ALREADY_EXISTS", 
+			"value" : "7"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "IO_ERROR", 
+			"value" : "8"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "LINK_LOOP", 
+			"value" : "9"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "PATH_TOO_LONG", 
+			"value" : "10"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "DIR_NOT_EMPTY", 
+			"value" : "11"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/errors.yr", 
+		"loc_line" : "20", 
+		"name" : "std::fs::errors::FsErrorCode", 
+		"protection" : "pub", 
+		"type" : "enum"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "core::exception::Exception", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/errors.yr", 
+			"loc_line" : "27", 
+			"name" : "std::fs::errors::FsError::self", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "code", 
+				"ref" : "false", 
+				"type" : {
+					"mut" : "false", 
+					"name" : "std::fs::errors::FsErrorCode", 
+					"type" : "enum"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "msg", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "msg", 
+			"protection" : "pub", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "code", 
+			"protection" : "pub", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "std::fs::errors::FsErrorCode", 
+				"type" : "enum"
+			}
+		}], 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/errors.yr", 
+				"loc_line" : "30", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/errors.yr", 
+			"loc_line" : "29", 
+			"name" : "std::fs::errors::FsError", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/errors.yr", 
+		"loc_line" : "22", 
+		"methods" : [], 
+		"name" : "std::fs::errors::FsError", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/errors.yr", 
+			"loc_line" : "41", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "err", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "ErrnoValue", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "FsErrorCode", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/errors.yr", 
+		"loc_line" : "41", 
+		"name" : "std::fs::errors::to", 
+		"params" : ["T of FsErrorCode"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"child" : {
+			"attributes" : [], 
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/errors.yr", 
+			"loc_line" : "55", 
+			"name" : "to", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "err", 
+				"ref" : "false", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"name" : "[c8]", 
+				"type" : "unknown"
+			}, 
+			"throwers" : [], 
+			"type" : "function"
+		}, 
+		"doc" : "", 
+		"loc_col" : "9", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/errors.yr", 
+		"loc_line" : "55", 
+		"name" : "std::fs::errors::to", 
+		"params" : ["C of [U]", "U of c8", "T of FsErrorCode"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/fs/errors.yr", 
+	"loc_line" : "1", 
+	"name" : "std::fs::errors", 
+	"protection" : "prv", 
+	"type" : "module"
+}

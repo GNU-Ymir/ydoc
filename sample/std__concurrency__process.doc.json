@@ -1,0 +1,619 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+		"loc_line" : "14", 
+		"name" : "std::concurrency::process::dup2", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "stream", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "type", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+		"loc_line" : "15", 
+		"name" : "std::concurrency::process::_yrt_print_error", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "format", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+		"loc_line" : "16", 
+		"name" : "std::concurrency::process::fork", 
+		"params" : [], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "u32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+		"loc_line" : "17", 
+		"name" : "std::concurrency::process::execvp", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "cmd", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "args", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "pointer"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+		"loc_line" : "18", 
+		"name" : "std::concurrency::process::_yrt_exit", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "i", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+		"loc_line" : "19", 
+		"name" : "std::concurrency::process::waitpid", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "pid", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u32", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "status", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "i32", 
+					"type" : "int"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "ig", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "16", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+		"loc_line" : "20", 
+		"name" : "std::concurrency::process::chdir", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "prv", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Run a process in parallel of this process execution\n      \n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+			"loc_line" : "40", 
+			"name" : "std::concurrency::process::SubProcess::self::run", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "cmd", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "args", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "c8", 
+							"type" : "char"
+						}], 
+						"mut" : "false", 
+						"type" : "slice"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "cwd", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::fs::path::Path", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}, 
+				"value" : "self (path : [c32])-> mut &(mut std::fs::path::Path) (.)"
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}, 
+		{
+			"doc" : "", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+			"loc_line" : "44", 
+			"name" : "std::concurrency::process::SubProcess::self::run", 
+			"params" : [{
+				"mut" : "false", 
+				"name" : "path", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::fs::path::Path", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "args", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"childs" : [{
+							"mut" : "false", 
+							"name" : "c8", 
+							"type" : "char"
+						}], 
+						"mut" : "false", 
+						"type" : "slice"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}
+			}, 
+			{
+				"mut" : "false", 
+				"name" : "cwd", 
+				"ref" : "false", 
+				"type" : {
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "std::fs::path::Path", 
+						"type" : "class"
+					}], 
+					"mut" : "false", 
+					"type" : "class_pointer"
+				}, 
+				"value" : "self (path : [c32])-> mut &(mut std::fs::path::Path) (.)"
+			}], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "cmd", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "args", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"childs" : [{
+						"mut" : "false", 
+						"name" : "c8", 
+						"type" : "char"
+					}], 
+					"mut" : "false", 
+					"type" : "slice"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "cwd", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "slice"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "true", 
+			"name" : "pid", 
+			"protection" : "prot", 
+			"type" : {
+				"mut" : "true", 
+				"name" : "u32", 
+				"type" : "int"
+			}, 
+			"value" : "0"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_stdin", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::concurrency::pipe::IOPipe", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::concurrency::pipe::IOPipe) ()"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_stdout", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::concurrency::pipe::IOPipe", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::concurrency::pipe::IOPipe) ()"
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "_stderr", 
+			"protection" : "prot", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::concurrency::pipe::IOPipe", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"value" : "self ()-> mut &(mut std::concurrency::pipe::IOPipe) ()"
+		}], 
+		"final" : "true", 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : ["mut"], 
+				"doc" : "", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+				"loc_line" : "107", 
+				"name" : "dispose", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+			"loc_line" : "105", 
+			"name" : "std::concurrency::process::SubProcess", 
+			"protection" : "prot", 
+			"trait" : "core::dispose::Disposable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "18", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+		"loc_line" : "22", 
+		"methods" : [{
+			"attributes" : ["mut"], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+			"loc_line" : "46", 
+			"name" : "run", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+			"loc_line" : "62", 
+			"name" : "child", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "prv", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "void", 
+				"type" : "void"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+			"loc_line" : "87", 
+			"name" : "stdin", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::concurrency::pipe::OPipe", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+			"loc_line" : "91", 
+			"name" : "stdout", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::concurrency::pipe::IPipe", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+			"loc_line" : "95", 
+			"name" : "stderr", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "std::concurrency::pipe::IPipe", 
+					"type" : "class"
+				}], 
+				"mut" : "true", 
+				"type" : "class_pointer"
+			}, 
+			"type" : "method"
+		}, 
+		{
+			"attributes" : ["mut"], 
+			"doc" : "", 
+			"loc_col" : "13", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+			"loc_line" : "99", 
+			"name" : "wait", 
+			"over" : "false", 
+			"params" : [], 
+			"protection" : "pub", 
+			"ret_type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}, 
+			"type" : "method"
+		}], 
+		"name" : "std::concurrency::process::SubProcess", 
+		"protection" : "pub", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/concurrency/process.yr", 
+	"loc_line" : "1", 
+	"name" : "std::concurrency::process", 
+	"protection" : "prv", 
+	"type" : "module"
+}

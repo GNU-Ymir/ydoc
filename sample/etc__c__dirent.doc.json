@@ -1,0 +1,380 @@
+{
+	"childs" : [{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/dirent.yr", 
+		"loc_line" : "3", 
+		"name" : "etc::c::dirent::opendir", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "true", 
+				"name" : "void", 
+				"type" : "void"
+			}], 
+			"mut" : "true", 
+			"type" : "pointer"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/dirent.yr", 
+		"loc_line" : "5", 
+		"name" : "etc::c::dirent::closedir", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "dir", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "void", 
+			"type" : "void"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/dirent.yr", 
+		"loc_line" : "7", 
+		"name" : "etc::c::dirent::mkdir", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "permission", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/dirent.yr", 
+		"loc_line" : "9", 
+		"name" : "etc::c::dirent::rmdir", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/dirent.yr", 
+		"loc_line" : "11", 
+		"name" : "etc::c::dirent::readdir", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "dir", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"childs" : [{
+				"mut" : "true", 
+				"name" : "etc::c::dirent::dirent", 
+				"type" : "struct"
+			}], 
+			"mut" : "true", 
+			"type" : "pointer"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/dirent.yr", 
+		"loc_line" : "13", 
+		"name" : "etc::c::dirent::readlink", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "ret", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "true", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "true", 
+				"type" : "pointer"
+			}
+		}, 
+		{
+			"mut" : "false", 
+			"name" : "len", 
+			"ref" : "false", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "i32", 
+				"type" : "int"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"loc_col" : "20", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/dirent.yr", 
+		"loc_line" : "15", 
+		"name" : "etc::c::dirent::unlink", 
+		"params" : [{
+			"mut" : "false", 
+			"name" : "path", 
+			"ref" : "false", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"type" : "pointer"
+			}
+		}], 
+		"protection" : "pub", 
+		"ret_type" : {
+			"mut" : "false", 
+			"name" : "i32", 
+			"type" : "int"
+		}, 
+		"throwers" : [], 
+		"type" : "function"
+	}, 
+	{
+		"attributes" : [], 
+		"doc" : "", 
+		"fields" : [{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "d_ino", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "d_off", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u64", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "d_reclen", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u16", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "d_type", 
+			"type" : {
+				"mut" : "false", 
+				"name" : "u8", 
+				"type" : "int"
+			}
+		}, 
+		{
+			"doc" : "", 
+			"mut" : "false", 
+			"name" : "d_name", 
+			"type" : {
+				"childs" : [{
+					"mut" : "false", 
+					"name" : "c8", 
+					"type" : "char"
+				}], 
+				"mut" : "false", 
+				"size" : "100", 
+				"type" : "array"
+			}
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/dirent.yr", 
+		"loc_line" : "23", 
+		"name" : "etc::c::dirent::dirent", 
+		"protection" : "pub", 
+		"type" : "struct"
+	}, 
+	{
+		"doc" : "", 
+		"en_type" : {
+			"mut" : "false", 
+			"name" : "etc::c::dirent::DirEntryTypes", 
+			"type" : "enum"
+		}, 
+		"fields" : [{
+			"doc" : "", 
+			"name" : "DT_UNKNOWN", 
+			"value" : "0"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "DT_REG", 
+			"value" : "8"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "DT_DIR", 
+			"value" : "4"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "DT_SOCK", 
+			"value" : "12"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "DT_FIFO", 
+			"value" : "1"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "DT_CHR", 
+			"value" : "2"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "DT_BLK", 
+			"value" : "6"
+		}, 
+		{
+			"doc" : "", 
+			"name" : "DT_LNK", 
+			"value" : "10"
+		}], 
+		"loc_col" : "5", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/dirent.yr", 
+		"loc_line" : "34", 
+		"name" : "etc::c::dirent::DirEntryTypes", 
+		"protection" : "pub", 
+		"type" : "enum"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/etc/c/dirent.yr", 
+	"loc_line" : "1", 
+	"name" : "etc::c::dirent", 
+	"protection" : "prv", 
+	"type" : "module"
+}

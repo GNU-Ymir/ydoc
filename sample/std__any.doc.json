@@ -1,0 +1,180 @@
+{
+	"childs" : [{
+		"abstract" : "true", 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      The class is abstract, \n      only the successor have acces to the constructor\n     ", 
+			"loc_col" : "10", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/any.yr", 
+			"loc_line" : "22", 
+			"name" : "std::any::Any::self", 
+			"params" : [], 
+			"protection" : "prot", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  An any type, that can store anything\n  This type is immutable, so it only can store immutable value\n ", 
+		"fields" : [], 
+		"impls" : [{
+			"childs" : [], 
+			"doc" : "\n      An any type is printable\n     ", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/any.yr", 
+			"loc_line" : "43", 
+			"name" : "std::any::Any", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "21", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/any.yr", 
+		"loc_line" : "16", 
+		"methods" : [], 
+		"name" : "std::any::Any", 
+		"protection" : "pub", 
+		"type" : "class"
+	}, 
+	{
+		"child" : {
+			"ancestor" : "Any", 
+			"cstrs" : [{
+				"doc" : "\n      @params: \n         - val: a value of type T\n     ", 
+				"loc_col" : "9", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/any.yr", 
+				"loc_line" : "63", 
+				"name" : "self", 
+				"param" : [{
+					"mut" : "false", 
+					"name" : "val", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "T", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"throwers" : [], 
+				"type" : "cstrs"
+			}], 
+			"doc" : "", 
+			"fields" : [{
+				"doc" : "/ The value", 
+				"mut" : "false", 
+				"name" : "_val", 
+				"protection" : "prot", 
+				"type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}
+			}], 
+			"loc_col" : "11", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/any.yr", 
+			"loc_line" : "54", 
+			"methods" : [{
+				"attributes" : [], 
+				"doc" : "\n      @returns: the value stored\n     ", 
+				"loc_col" : "13", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/any.yr", 
+				"loc_line" : "68", 
+				"name" : "unwrap", 
+				"params" : [{
+					"mut" : "false", 
+					"name" : "self", 
+					"ref" : "false", 
+					"type" : {
+						"name" : "", 
+						"type" : "unknown"
+					}
+				}], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"name" : "T", 
+					"type" : "unknown"
+				}, 
+				"throwers" : [], 
+				"type" : "function"
+			}], 
+			"name" : "Some", 
+			"others" : [{
+				"doc" : "", 
+				"loc_col" : "5", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/any.yr", 
+				"loc_line" : "73", 
+				"name" : "impl", 
+				"protection" : "prot", 
+				"trait" : "((std :: io) :: Printable)", 
+				"type" : "impl"
+			}], 
+			"protection" : "prv", 
+			"type" : "template_class"
+		}, 
+		"doc" : "\n  An any value, that actually store a value\n  @templates: \n     - T: the type of value that is stored\n  @info: the stored value is immutable\n ", 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/any.yr", 
+		"loc_line" : "54", 
+		"name" : "std::any::Some", 
+		"params" : ["T"], 
+		"protection" : "pub", 
+		"type" : "template"
+	}, 
+	{
+		"ancestor" : {
+			"mut" : "false", 
+			"name" : "std::any::Any", 
+			"type" : "class"
+		}, 
+		"asserts" : [], 
+		"cstrs" : [{
+			"doc" : "\n      Stores nothing\n     ", 
+			"loc_col" : "9", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/any.yr", 
+			"loc_line" : "98", 
+			"name" : "std::any::None::self", 
+			"params" : [], 
+			"protection" : "pub", 
+			"type" : "cstr"
+		}], 
+		"doc" : "\n  An any value, that stores nothing\n  It can be used as a unit type \n ", 
+		"fields" : [], 
+		"impls" : [{
+			"childs" : [{
+				"attributes" : [], 
+				"doc" : "\n          Prints it type name\n         ", 
+				"loc_col" : "18", 
+				"loc_file" : "/home/emile/ymir/Runtime/midgard/std/any.yr", 
+				"loc_line" : "105", 
+				"name" : "print", 
+				"over" : "true", 
+				"params" : [], 
+				"protection" : "pub", 
+				"ret_type" : {
+					"mut" : "false", 
+					"name" : "void", 
+					"type" : "void"
+				}, 
+				"type" : "method"
+			}], 
+			"doc" : "", 
+			"loc_col" : "5", 
+			"loc_file" : "/home/emile/ymir/Runtime/midgard/std/any.yr", 
+			"loc_line" : "100", 
+			"name" : "std::any::None", 
+			"protection" : "prot", 
+			"trait" : "std::io::Printable", 
+			"type" : "impl"
+		}], 
+		"loc_col" : "11", 
+		"loc_file" : "/home/emile/ymir/Runtime/midgard/std/any.yr", 
+		"loc_line" : "93", 
+		"methods" : [], 
+		"name" : "std::any::None", 
+		"protection" : "pub", 
+		"type" : "class"
+	}], 
+	"doc" : "", 
+	"loc_col" : "5", 
+	"loc_file" : "/home/emile/ymir/Runtime/midgard/std/any.yr", 
+	"loc_line" : "1", 
+	"name" : "std::any", 
+	"protection" : "prv", 
+	"type" : "module"
+}
