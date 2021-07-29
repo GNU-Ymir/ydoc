@@ -7,73 +7,73 @@ title = "socket"
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, socket]), vec[ydoc::dom::text::Text(socket)])ydoc::dom::text::Text(::)`htons`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[socket](./../../../etc/c/socket)::`htons`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, socket]), vec[ydoc::dom::text::Text(socket)])ydoc::dom::text::Text(::)`htonl`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[socket](./../../../etc/c/socket)::`htonl`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, socket]), vec[ydoc::dom::text::Text(socket)])ydoc::dom::text::Text(::)`ntohs`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[socket](./../../../etc/c/socket)::`ntohs`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, socket]), vec[ydoc::dom::text::Text(socket)])ydoc::dom::text::Text(::)`ntohl`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[socket](./../../../etc/c/socket)::`ntohl`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, socket]), vec[ydoc::dom::text::Text(socket)])ydoc::dom::text::Text(::)`socket`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[socket](./../../../etc/c/socket)::`socket`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, socket]), vec[ydoc::dom::text::Text(socket)])ydoc::dom::text::Text(::)`bind`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[socket](./../../../etc/c/socket)::`bind`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, socket]), vec[ydoc::dom::text::Text(socket)])ydoc::dom::text::Text(::)`listen`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[socket](./../../../etc/c/socket)::`listen`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, socket]), vec[ydoc::dom::text::Text(socket)])ydoc::dom::text::Text(::)`connect`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[socket](./../../../etc/c/socket)::`connect`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, socket]), vec[ydoc::dom::text::Text(socket)])ydoc::dom::text::Text(::)`accept`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[socket](./../../../etc/c/socket)::`accept`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, socket]), vec[ydoc::dom::text::Text(socket)])ydoc::dom::text::Text(::)`write`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[socket](./../../../etc/c/socket)::`write`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, socket]), vec[ydoc::dom::text::Text(socket)])ydoc::dom::text::Text(::)`read`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[socket](./../../../etc/c/socket)::`read`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, socket]), vec[ydoc::dom::text::Text(socket)])ydoc::dom::text::Text(::)`close`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[socket](./../../../etc/c/socket)::`close`
 _____________________
 
 

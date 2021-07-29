@@ -7,67 +7,67 @@ title = "files"
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, files]), vec[ydoc::dom::text::Text(files)])ydoc::dom::text::Text(::)`fopen`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[files](./../../../etc/c/files)::`fopen`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, files]), vec[ydoc::dom::text::Text(files)])ydoc::dom::text::Text(::)`fclose`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[files](./../../../etc/c/files)::`fclose`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, files]), vec[ydoc::dom::text::Text(files)])ydoc::dom::text::Text(::)`fseek`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[files](./../../../etc/c/files)::`fseek`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, files]), vec[ydoc::dom::text::Text(files)])ydoc::dom::text::Text(::)`ftell`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[files](./../../../etc/c/files)::`ftell`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, files]), vec[ydoc::dom::text::Text(files)])ydoc::dom::text::Text(::)`fgets`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[files](./../../../etc/c/files)::`fgets`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, files]), vec[ydoc::dom::text::Text(files)])ydoc::dom::text::Text(::)`fread`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[files](./../../../etc/c/files)::`fread`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, files]), vec[ydoc::dom::text::Text(files)])ydoc::dom::text::Text(::)`feof`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[files](./../../../etc/c/files)::`feof`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, files]), vec[ydoc::dom::text::Text(files)])ydoc::dom::text::Text(::)`fgetc`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[files](./../../../etc/c/files)::`fgetc`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, files]), vec[ydoc::dom::text::Text(files)])ydoc::dom::text::Text(::)`fwrite`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[files](./../../../etc/c/files)::`fwrite`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, files]), vec[ydoc::dom::text::Text(files)])ydoc::dom::text::Text(::)`access`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[files](./../../../etc/c/files)::`access`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, files]), vec[ydoc::dom::text::Text(files)])ydoc::dom::text::Text(::)`stat`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[files](./../../../etc/c/files)::`stat`
 _____________________
 
 

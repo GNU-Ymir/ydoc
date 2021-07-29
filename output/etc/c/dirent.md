@@ -7,43 +7,43 @@ title = "dirent"
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, dirent]), vec[ydoc::dom::text::Text(dirent)])ydoc::dom::text::Text(::)`opendir`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[dirent](./../../../etc/c/dirent)::`opendir`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, dirent]), vec[ydoc::dom::text::Text(dirent)])ydoc::dom::text::Text(::)`closedir`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[dirent](./../../../etc/c/dirent)::`closedir`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, dirent]), vec[ydoc::dom::text::Text(dirent)])ydoc::dom::text::Text(::)`mkdir`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[dirent](./../../../etc/c/dirent)::`mkdir`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, dirent]), vec[ydoc::dom::text::Text(dirent)])ydoc::dom::text::Text(::)`rmdir`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[dirent](./../../../etc/c/dirent)::`rmdir`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, dirent]), vec[ydoc::dom::text::Text(dirent)])ydoc::dom::text::Text(::)`readdir`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[dirent](./../../../etc/c/dirent)::`readdir`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, dirent]), vec[ydoc::dom::text::Text(dirent)])ydoc::dom::text::Text(::)`readlink`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[dirent](./../../../etc/c/dirent)::`readlink`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, dirent]), vec[ydoc::dom::text::Text(dirent)])ydoc::dom::text::Text(::)`unlink`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[dirent](./../../../etc/c/dirent)::`unlink`
 _____________________
 
 

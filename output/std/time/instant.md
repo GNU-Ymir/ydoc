@@ -7,19 +7,19 @@ title = "instant"
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time]), vec[ydoc::dom::text::Text(time)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time, instant]), vec[ydoc::dom::text::Text(instant)])ydoc::dom::text::Text(::)`now`
+#### Function [std](./../../../std)::[time](./../../../std/time)::[instant](./../../../std/time/instant)::`now`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time]), vec[ydoc::dom::text::Text(time)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time, instant]), vec[ydoc::dom::text::Text(instant)])ydoc::dom::text::Text(::)`zero`
+#### Function [std](./../../../std)::[time](./../../../std/time)::[instant](./../../../std/time/instant)::`zero`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time]), vec[ydoc::dom::text::Text(time)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time, instant]), vec[ydoc::dom::text::Text(instant)])ydoc::dom::text::Text(::)`opCmp`
+#### Function [std](./../../../std)::[time](./../../../std/time)::[instant](./../../../std/time/instant)::`opCmp`
 _____________________
 
 

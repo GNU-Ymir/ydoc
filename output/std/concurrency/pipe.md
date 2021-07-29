@@ -7,19 +7,19 @@ title = "pipe"
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency]), vec[ydoc::dom::text::Text(concurrency)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency, pipe]), vec[ydoc::dom::text::Text(pipe)])ydoc::dom::text::Text(::)`pipe`
+#### Function [std](./../../../std)::[concurrency](./../../../std/concurrency)::[pipe](./../../../std/concurrency/pipe)::`pipe`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency]), vec[ydoc::dom::text::Text(concurrency)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency, pipe]), vec[ydoc::dom::text::Text(pipe)])ydoc::dom::text::Text(::)`fcntl`
+#### Function [std](./../../../std)::[concurrency](./../../../std/concurrency)::[pipe](./../../../std/concurrency/pipe)::`fcntl`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency]), vec[ydoc::dom::text::Text(concurrency)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency, pipe]), vec[ydoc::dom::text::Text(pipe)])ydoc::dom::text::Text(::)`createPipes`
+#### Function [std](./../../../std)::[concurrency](./../../../std/concurrency)::[pipe](./../../../std/concurrency/pipe)::`createPipes`
 _____________________
 
 

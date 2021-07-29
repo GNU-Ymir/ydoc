@@ -3,84 +3,84 @@ title = "fs"
 +++
 ## Modules
 
-+ ydoc::dom::link::Link(std::fs::path::Path(vec[file]), vec[ydoc::dom::text::Text(file)])
-+ ydoc::dom::link::Link(std::fs::path::Path(vec[iteration]), vec[ydoc::dom::text::Text(iteration)])
-+ ydoc::dom::link::Link(std::fs::path::Path(vec[path]), vec[ydoc::dom::text::Text(path)])
-+ ydoc::dom::link::Link(std::fs::path::Path(vec[_]), vec[ydoc::dom::text::Text(_)])
-+ ydoc::dom::link::Link(std::fs::path::Path(vec[errors]), vec[ydoc::dom::text::Text(errors)])
++ [file](file)
++ [iteration](iteration)
++ [path](path)
++ [_](_)
++ [errors](errors)
 ## Functions
 
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, fs]), vec[ydoc::dom::text::Text(fs)])ydoc::dom::text::Text(::)`createDir`
+#### Function [std](./../../std)::[fs](./../../std/fs)::`createDir`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, fs]), vec[ydoc::dom::text::Text(fs)])ydoc::dom::text::Text(::)`isDir`
+#### Function [std](./../../std)::[fs](./../../std/fs)::`isDir`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, fs]), vec[ydoc::dom::text::Text(fs)])ydoc::dom::text::Text(::)`removeDir`
+#### Function [std](./../../std)::[fs](./../../std/fs)::`removeDir`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, fs]), vec[ydoc::dom::text::Text(fs)])ydoc::dom::text::Text(::)`readDir`
+#### Function [std](./../../std)::[fs](./../../std/fs)::`readDir`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, fs]), vec[ydoc::dom::text::Text(fs)])ydoc::dom::text::Text(::)`createFile`
+#### Function [std](./../../std)::[fs](./../../std/fs)::`createFile`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, fs]), vec[ydoc::dom::text::Text(fs)])ydoc::dom::text::Text(::)`fileDate`
+#### Function [std](./../../std)::[fs](./../../std/fs)::`fileDate`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, fs]), vec[ydoc::dom::text::Text(fs)])ydoc::dom::text::Text(::)`isFile`
+#### Function [std](./../../std)::[fs](./../../std/fs)::`isFile`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, fs]), vec[ydoc::dom::text::Text(fs)])ydoc::dom::text::Text(::)`isWritable`
+#### Function [std](./../../std)::[fs](./../../std/fs)::`isWritable`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, fs]), vec[ydoc::dom::text::Text(fs)])ydoc::dom::text::Text(::)`isReadable`
+#### Function [std](./../../std)::[fs](./../../std/fs)::`isReadable`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, fs]), vec[ydoc::dom::text::Text(fs)])ydoc::dom::text::Text(::)`isExecutable`
+#### Function [std](./../../std)::[fs](./../../std/fs)::`isExecutable`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, fs]), vec[ydoc::dom::text::Text(fs)])ydoc::dom::text::Text(::)`removeFile`
+#### Function [std](./../../std)::[fs](./../../std/fs)::`removeFile`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, fs]), vec[ydoc::dom::text::Text(fs)])ydoc::dom::text::Text(::)`removeFsEntry`
+#### Function [std](./../../std)::[fs](./../../std/fs)::`removeFsEntry`
 _____________________
 
 

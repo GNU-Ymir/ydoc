@@ -7,19 +7,19 @@ title = "env"
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, env]), vec[ydoc::dom::text::Text(env)])ydoc::dom::text::Text(::)`args`
+#### Function [std](./../../std)::[env](./../../std/env)::`args`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, env]), vec[ydoc::dom::text::Text(env)])ydoc::dom::text::Text(::)`currentDir`
+#### Function [std](./../../std)::[env](./../../std/env)::`currentDir`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, env]), vec[ydoc::dom::text::Text(env)])ydoc::dom::text::Text(::)`whoami`
+#### Function [std](./../../std)::[env](./../../std/env)::`whoami`
 _____________________
 
 

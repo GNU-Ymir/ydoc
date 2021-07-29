@@ -7,31 +7,31 @@ title = "thread"
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency]), vec[ydoc::dom::text::Text(concurrency)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency, thread]), vec[ydoc::dom::text::Text(thread)])ydoc::dom::text::Text(::)`spawn`
+#### Function [std](./../../../std)::[concurrency](./../../../std/concurrency)::[thread](./../../../std/concurrency/thread)::`spawn`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency]), vec[ydoc::dom::text::Text(concurrency)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency, thread]), vec[ydoc::dom::text::Text(thread)])ydoc::dom::text::Text(::)`spawn`
+#### Function [std](./../../../std)::[concurrency](./../../../std/concurrency)::[thread](./../../../std/concurrency/thread)::`spawn`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency]), vec[ydoc::dom::text::Text(concurrency)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency, thread]), vec[ydoc::dom::text::Text(thread)])ydoc::dom::text::Text(::)`spawnNoPipe`
+#### Function [std](./../../../std)::[concurrency](./../../../std/concurrency)::[thread](./../../../std/concurrency/thread)::`spawnNoPipe`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency]), vec[ydoc::dom::text::Text(concurrency)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency, thread]), vec[ydoc::dom::text::Text(thread)])ydoc::dom::text::Text(::)`join`
+#### Function [std](./../../../std)::[concurrency](./../../../std/concurrency)::[thread](./../../../std/concurrency/thread)::`join`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency]), vec[ydoc::dom::text::Text(concurrency)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, concurrency, thread]), vec[ydoc::dom::text::Text(thread)])ydoc::dom::text::Text(::)`kill`
+#### Function [std](./../../../std)::[concurrency](./../../../std/concurrency)::[thread](./../../../std/concurrency/thread)::`kill`
 _____________________
 
 

@@ -7,175 +7,175 @@ title = "io"
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`putchar`
+#### Function [std](./../../std)::[io](./../../std/io)::`putchar`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`_yrt_putwchar`
+#### Function [std](./../../std)::[io](./../../std/io)::`_yrt_putwchar`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`_yrt_getwchar`
+#### Function [std](./../../std)::[io](./../../std/io)::`_yrt_getwchar`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`printf`
+#### Function [std](./../../std)::[io](./../../std/io)::`printf`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`scanf`
+#### Function [std](./../../std)::[io](./../../std/io)::`scanf`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`_yrt_printf32`
+#### Function [std](./../../std)::[io](./../../std/io)::`_yrt_printf32`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`_yrt_printf64`
+#### Function [std](./../../std)::[io](./../../std/io)::`_yrt_printf64`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`_yrt_fflush_stdout`
+#### Function [std](./../../std)::[io](./../../std/io)::`_yrt_fflush_stdout`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, io]), vec[ydoc::dom::text::Text(io)])ydoc::dom::text::Text(::)`print`
+#### Function [std](./../../std)::[io](./../../std/io)::`print`
 _____________________
 
 

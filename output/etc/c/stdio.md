@@ -7,25 +7,25 @@ title = "stdio"
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, stdio]), vec[ydoc::dom::text::Text(stdio)])ydoc::dom::text::Text(::)`read`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[stdio](./../../../etc/c/stdio)::`read`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, stdio]), vec[ydoc::dom::text::Text(stdio)])ydoc::dom::text::Text(::)`write`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[stdio](./../../../etc/c/stdio)::`write`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, stdio]), vec[ydoc::dom::text::Text(stdio)])ydoc::dom::text::Text(::)`close`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[stdio](./../../../etc/c/stdio)::`close`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc]), vec[ydoc::dom::text::Text(etc)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c]), vec[ydoc::dom::text::Text(c)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., etc, c, stdio]), vec[ydoc::dom::text::Text(stdio)])ydoc::dom::text::Text(::)`fflush`
+#### Function [etc](./../../../etc)::[c](./../../../etc/c)::[stdio](./../../../etc/c/stdio)::`fflush`
 _____________________
 
 

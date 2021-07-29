@@ -7,91 +7,91 @@ title = "hash"
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, hash]), vec[ydoc::dom::text::Text(hash)])ydoc::dom::text::Text(::)`hash`
+#### Function [std](./../../std)::[hash](./../../std/hash)::`hash`
 _____________________
 
 

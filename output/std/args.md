@@ -7,19 +7,19 @@ title = "args"
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, args]), vec[ydoc::dom::text::Text(args)])ydoc::dom::text::Text(::)`printf`
+#### Function [std](./../../std)::[args](./../../std/args)::`printf`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, args]), vec[ydoc::dom::text::Text(args)])ydoc::dom::text::Text(::)`parseString`
+#### Function [std](./../../std)::[args](./../../std/args)::`parseString`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., std, args]), vec[ydoc::dom::text::Text(args)])ydoc::dom::text::Text(::)`usageValue`
+#### Function [std](./../../std)::[args](./../../std/args)::`usageValue`
 _____________________
 
 

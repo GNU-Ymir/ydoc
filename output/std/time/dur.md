@@ -7,43 +7,43 @@ title = "dur"
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time]), vec[ydoc::dom::text::Text(time)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time, dur]), vec[ydoc::dom::text::Text(dur)])ydoc::dom::text::Text(::)`weeks`
+#### Function [std](./../../../std)::[time](./../../../std/time)::[dur](./../../../std/time/dur)::`weeks`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time]), vec[ydoc::dom::text::Text(time)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time, dur]), vec[ydoc::dom::text::Text(dur)])ydoc::dom::text::Text(::)`days`
+#### Function [std](./../../../std)::[time](./../../../std/time)::[dur](./../../../std/time/dur)::`days`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time]), vec[ydoc::dom::text::Text(time)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time, dur]), vec[ydoc::dom::text::Text(dur)])ydoc::dom::text::Text(::)`hours`
+#### Function [std](./../../../std)::[time](./../../../std/time)::[dur](./../../../std/time/dur)::`hours`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time]), vec[ydoc::dom::text::Text(time)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time, dur]), vec[ydoc::dom::text::Text(dur)])ydoc::dom::text::Text(::)`minutes`
+#### Function [std](./../../../std)::[time](./../../../std/time)::[dur](./../../../std/time/dur)::`minutes`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time]), vec[ydoc::dom::text::Text(time)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time, dur]), vec[ydoc::dom::text::Text(dur)])ydoc::dom::text::Text(::)`seconds`
+#### Function [std](./../../../std)::[time](./../../../std/time)::[dur](./../../../std/time/dur)::`seconds`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time]), vec[ydoc::dom::text::Text(time)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time, dur]), vec[ydoc::dom::text::Text(dur)])ydoc::dom::text::Text(::)`millis`
+#### Function [std](./../../../std)::[time](./../../../std/time)::[dur](./../../../std/time/dur)::`millis`
 _____________________
 ### 
 
 
 _____________________
-#### Function ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std]), vec[ydoc::dom::text::Text(std)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time]), vec[ydoc::dom::text::Text(time)])ydoc::dom::text::Text(::)ydoc::dom::link::Link(std::fs::path::Path(vec[., .., .., .., std, time, dur]), vec[ydoc::dom::text::Text(dur)])ydoc::dom::text::Text(::)`micros`
+#### Function [std](./../../../std)::[time](./../../../std/time)::[dur](./../../../std/time/dur)::`micros`
 _____________________
 
 
